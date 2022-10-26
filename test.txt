@@ -1,0 +1,25 @@
+let content = "";
+content+=`<tr class = "align-middle text-center" >`;
+content+=`<th scope = "row">`+stt+`</th>`;
+content+=`<td>`+taiKhoan.email+`</td>`;
+content+=`<td>`+taiKhoan.ten_tai_khoan+`</td>`;
+content+=`<td>`+taiKhoan.nam_sinh+`</td>`;
+content+=`<td>`+taiKhoan.gioi_tinh+`</td>`;
+content+=`<td>`+taiKhoan.so_dien_thoai+`</td>`;
+content+=`<td>`;
+if(tai_khoan.tinh_trang==1)
+content+=`<button class = "btn btn-primary doiTrangThai">Hoạt Động</button>`;
+else
+content+=`<button class = "btn btn-danger doiTrangThai">Khoá</button>`;
+content+=`</td>`;
+if(tai_khoan.loai_tai_khoan==0)
+content+=`<td>Admin</td>`;
+else if(tai_khoan.loai_tai_khoan==1)
+content+=`<td>Nhân Viên</td>`;
+else
+content+=`<td>Khách Hàng</td>`;
+content+=`<td>`;
+content+=`<button class="btn btn-info m-1 edit" data-bs-toggle="modal" data-bs-target="#editModal"> Sửa </button>`;
+content+=`<button class = "btn btn-danger m-1 delete" data-bs-toggle="modal" data-bs-target="#deleteModal"> Xoá </button>`;
+content+=`</td>`;
+content+=`</tr>`;
