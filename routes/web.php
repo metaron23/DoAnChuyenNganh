@@ -58,7 +58,6 @@ Route::group(['prefix' => '/admin', 'middleware' => 'checkAdminTaiKhoan'], funct
 
     Route::group(['prefix' => '/don-hang'], function () {
         Route::get('/', [\App\Http\Controllers\Customer\OrderController::class, 'index']);
-
     });
 });
 // Page is not need login
@@ -74,6 +73,10 @@ Route::post('/login', [\App\Http\Controllers\CustomerController::class, 'actionL
 Route::get('/register', [\App\Http\Controllers\CustomerController::class, 'viewRegister']);
 Route::post('/register', [\App\Http\Controllers\CustomerController::class, 'actionRegister']);
 Route::get('/kich-hoat/{hash}', [\App\Http\Controllers\CustomerController::class, 'active']);
+Route::post('/changePass', [\App\Http\Controllers\CustomerController::class, 'changePass']);
+Route::get('/confirmChangePass/{hash}', [\App\Http\Controllers\CustomerController::class, 'viewChangePass']);
+Route::post('/confirmChangePass', [\App\Http\Controllers\CustomerController::class, 'newPass']);
+
 
 Route::get('/logout', [\App\Http\Controllers\HomepageController::class, 'actionLogout']);
 

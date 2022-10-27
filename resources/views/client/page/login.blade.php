@@ -70,9 +70,11 @@
                                 </div>
                                 <div class="form-group mb-0">
                                     <div class="checkbox p-0">
-                                        <input id="checkbox1" type="checkbox">
+                                        <input id="checkbox1" type="checkbox" value="isRememberMe">
                                         <label class="text-muted" for="checkbox1">Nhớ mật khẩu</label>
-                                    </div><a class="link" href="forget-password.html">Quên mật khẩu?</a>
+                                    </div>
+                                    <a class="link" href="#" id="forgetPass" data-bs-toggle="modal" data-bs-target="#exampleModal">Quên mật
+                                        khẩu?</a>
                                     <div class="text-end mt-3">
                                         <button class="btn btn-primary btn-block w-100" type="submit">Đăng nhập</button>
                                     </div>
@@ -142,7 +144,25 @@
             </div>
         </div>
     </div>
-
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nhập vào email để đổi mật khẩu!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label class="form-label">Email</label>
+                    <input class="form-control" id="emailForChange" name="emailForChange" type="email" placeholder="Nhập vào Email">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="sendChangePass">Gửi</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- latest jquery-->
     <script src="/admin/assets/js/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap js-->
@@ -162,9 +182,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
     <script src="\js\app.js"></script>
     <script>
+        toastr.options = {
+            "timeOut": "1500",
+        };
         $(document).ready(function() {
             $('#loginForm').submit(function(e) {
                 e.preventDefault();
+                isRememberMe();
                 let payLoad = window.getFormData($(this));
                 axios
                     .post('/login', payLoad)
@@ -246,9 +270,61 @@
                 window.location.href = "/login";
             });
 
-            // $('body').on('click', '.link-nav', function() {
-            //     $('.link-nav').addClass('active');
-            // })
+            $('.login-main .show-hide').click(function() {
+                if ($('.show-hide span').attr('class') == 'show') {
+                    $('#password1').attr('type', 'password');
+                } else {
+                    $('#password1').attr('type', 'text');
+                }
+            });
+            //Save password---------------------------------------------------
+            const rmCheck = document.getElementById("checkbox1"),
+                emailInput = document.getElementById("user_name"),
+                password = document.getElementById("password1");
+
+            if (localStorage.checkbox && localStorage.checkbox !== "") {
+                rmCheck.setAttribute("checked", "checked");
+                emailInput.value = localStorage.username;
+                password.value = localStorage.password;
+            } else {
+                rmCheck.removeAttribute("checked");
+                emailInput.value = "";
+                password.value = "";
+            }
+
+            function isRememberMe() {
+                if (rmCheck.checked && emailInput.value !== "") {
+                    localStorage.username = emailInput.value;
+                    localStorage.checkbox = rmCheck.value;
+                    localStorage.password = password.value;
+                } else {
+                    localStorage.username = "";
+                    localStorage.checkbox = "";
+                    localStorage.password = "";
+                }
+            }
+            //save password---------------------------------------------------
+            $('#sendChangePass').click(function(e) {
+                e.preventDefault();
+                let payLoad = {
+                    'email': $('#emailForChange').val(),
+                }
+                axios
+                    .post('/changePass', payLoad)
+                    .then((res) => {
+                        if (res.data.status) {
+                            toastr.success('Vui lòng kiểm tra hộp thư email để đổi mật khẩu!');
+                        } else {
+                            toastr.error('Email không tồn tại!');
+                        }
+                    })
+                    .catch((res) => {
+                        var listError = res.response.data.errors;
+                        $.each(listError, function(key, value) {
+                            toastr.error(value[0]);
+                        });
+                    });
+            })
         });
     </script>
 </body>

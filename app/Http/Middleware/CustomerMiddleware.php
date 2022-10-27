@@ -20,8 +20,9 @@ class CustomerMiddleware
                 return redirect('/login');
             }
             return $next($request);
-        } elseif ($check && $customer->loai_tai_khoan != 2) {
+        } else if ($check && $customer->loai_tai_khoan != 2) {
             toastr()->error('Tài khoản không tồn tại');
+            Auth::guard('customer')->logout();
             return redirect('/login');
         } else {
             toastr()->error('Bạn phải đăng nhập để thực hiện chức năng này');
