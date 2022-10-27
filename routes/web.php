@@ -3,6 +3,10 @@
 header("Set-Cookie: cross-site-cookie=whatever; SameSite=None; Secure");
 use Illuminate\Support\Facades\Route;
 
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => 'checkAdminTaiKhoan'], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
 Route::group(['prefix' => '/admin', 'middleware' => 'checkAdminTaiKhoan'], function () {
     Route::group(['prefix' => '/danh-muc-mon-an'], function () {
         Route::get('/index', [\App\Http\Controllers\DanhMucMonAnController::class, 'index']);
@@ -58,7 +62,6 @@ Route::group(['prefix' => '/admin', 'middleware' => 'checkAdminTaiKhoan'], funct
 
     Route::group(['prefix' => '/don-hang'], function () {
         Route::get('/', [\App\Http\Controllers\Customer\OrderController::class, 'index']);
-
     });
 });
 // Page is not need login
@@ -74,8 +77,9 @@ Route::post('/login', [\App\Http\Controllers\CustomerController::class, 'actionL
 Route::get('/register', [\App\Http\Controllers\CustomerController::class, 'viewRegister']);
 Route::post('/register', [\App\Http\Controllers\CustomerController::class, 'actionRegister']);
 Route::get('/kich-hoat/{hash}', [\App\Http\Controllers\CustomerController::class, 'active']);
-
-Route::get('/logout', [\App\Http\Controllers\HomepageController::class, 'actionLogout']);
+Route::post('/changePass', [\App\Http\Controllers\CustomerController::class, 'changePass']);
+Route::get('/confirmChangePass/{hash}', [\App\Http\Controllers\CustomerController::class, 'viewChangePass']);
+Route::post('/confirmChangePass', [\App\Http\Controllers\CustomerController::class, 'newPass']);
 
 Route::group(['prefix' => '/customer', 'middleware' => 'checkCustomerTaiKhoan'], function () {
     Route::group(['prefix' => '/cart'], function () {

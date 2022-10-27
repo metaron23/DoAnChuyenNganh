@@ -266,21 +266,37 @@
             </div>
         </div>
     </div>
+     <div class="input-group">
+   <span class="input-group-btn">
+     <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+       <i class="fa fa-picture-o"></i> Choose
+     </a>
+   </span>
+   <input id="thumbnail" class="form-control" type="text" name="filepath">
+ </div>
+ <img id="holder" style="margin-top:15px;max-height:100px;">
 @endsection
 
 @section('js')
-    <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+    <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
     <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
-    <script src="https://unpkg.com/sticky-table-headers"></script>
+    <script>
+        var options = {
+            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+            filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token={{ csrf_token() }}',
+            filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+            filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token={{ csrf_token() }}'
+        };
+    </script>
     <script>
         $('#hinh_anh').filemanager('image');
         $('#hinh_anh_edit').filemanager('image');
-        CKEDITOR.replace('mo_ta_chi_tiet');
+        CKEDITOR.replace('mo_ta_chi_tiet', options);
         CKEDITOR.replace('mo_ta_chi_tiet_edit');
     </script>
 
     <script>
-        $('table').stickyTableHeaders();
         $(document).ready(function() {
             //Chuyển chuỗi string sang slug----------------------
             function convertToSlug(str) {
