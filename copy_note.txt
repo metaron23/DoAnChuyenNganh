@@ -1,0 +1,66 @@
+//AJAX-----------------------------------------------------------------------------------------
+//POST-----------------------
+$.ajax({
+    url     :   '',
+    type    :   'post',
+    data    :   payLoad,
+    success :   function(res){
+
+    },
+    error   :   function(res){
+        var listError = res.responseJSON.errors;
+        $.each(listError, function(key, value){
+            toastr.error(value[0]);
+        });
+    },
+});
+//GET------------------------
+$.ajax({
+    url     :   '',
+    type    :   'get',
+    success :   function(res){
+
+    },
+});
+//AJAX-----------------------------------------------------------------------------------------
+
+//CKEDITOR-----------------------------------------------------------------------------------------
+//link script
+<script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
+//lệnh thay thế cho id nào đó
+CKEDITOR.replace('mo_ta_chi_tiet');
+//lấy data khi nhập vào CKE
+CKEDITOR.instances['mo_ta_chi_tiet'].getData(),
+//CKEDITOR-----------------------------------------------------------------------------------------
+
+//filemanager-----------------------------------------------------------------------------------------
+
+composer require unisharp/laravel-filemanager:~1.8
+
+php artisan vendor:publish
+
+//giải quuyết 2 thằng là config và public
+
+php artisan storage:link
+
+php artisan route:clear
+
+php artisan config:clear
+
+//filemanager-----------------------------------------------------------------------------------------
+//chạy lệnh cài toastr
+composer require yoeunes/toastr
+//copy đến config/app/
+Yoeunes\Toastr\ToastrServiceProvider::class,
+
+//
+window.getFormData = function ($form){
+    var unindexed_arry = $form.serializeArray();
+    var indexed_arry = {};
+    console.log(unindexed_arry);
+    $.map(unindexed_arry, function (n,i) {
+        indexed_arry[n["name] = n["value]];
+    });
+    return indexed_arry;
+}
+
