@@ -3,10 +3,6 @@
 header("Set-Cookie: cross-site-cookie=whatever; SameSite=None; Secure");
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => 'checkAdminTaiKhoan'], function () {
-    \UniSharp\LaravelFilemanager\Lfm::routes();
-});
-
 Route::group(['prefix' => '/admin', 'middleware' => 'checkAdminTaiKhoan'], function () {
     Route::group(['prefix' => '/danh-muc-mon-an'], function () {
         Route::get('/index', [\App\Http\Controllers\DanhMucMonAnController::class, 'index']);
@@ -122,3 +118,5 @@ Route::get('/menu/search/{key}', [App\Http\Controllers\MenuController::class, 's
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index']);
 Route::get('/gallery', [\App\Http\Controllers\GalleryController::class, 'index']);
 Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'index']);
+
+
