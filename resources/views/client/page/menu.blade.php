@@ -1,7 +1,7 @@
 @extends('client.share.master')
 
 @section('content')
-    <div id="menu">
+    <div id="menu_client">
         <!-- Start Bradcaump area -->
         <div class="ht__bradcaump__area bg-image--18">
             <div class="ht__bradcaump__wrap d-flex align-items-center">
@@ -127,7 +127,7 @@
 @section('js')
     <script>
         new Vue({
-            el: '#menu',
+            el: '#menu_client',
             data: {
                 listCategoryFood: [],
                 listFood: [],

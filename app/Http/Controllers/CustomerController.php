@@ -6,6 +6,7 @@ use App\Http\Requests\Client\TaiKhoan\LoginRequest;
 use App\Http\Requests\Client\TaiKhoan\RegisterRequest;
 use App\Http\Requests\CreateTaiKhoan;
 use App\Jobs\sendMailActiveJob;
+use App\Jobs\sendMailChangePass;
 use App\Mail\ActiveCustomerMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -59,6 +60,7 @@ class CustomerController extends Controller
                 }
             }
         } else {
+            Auth::guard('customer')->logout();
             return response()->json(['status'=>0]);
         }
     }
@@ -93,5 +95,50 @@ class CustomerController extends Controller
         }
 
         return redirect('/home');
+    }
+
+    public function changePass(Request $request)
+    {
+        $hash_reset = Str::uuid()->toString();
+        $email = $request->email;
+        $user = TaiKhoan::where('email', $email)
+                        ->where('loai_tai_khoan', 2)
+                        ->first();
+        $link = env('APP_URL') . '/confirmChangePass/' . $hash_reset;
+        if ($user) {
+            $user->hash_reset = $hash_reset;
+            $user->save();
+            sendMailChangePass::dispatch($user->ho_va_ten, $link, $email);
+            return response()->json(['status'=>true]);
+        } else {
+            return response()->json(['status'=>false]);
+        }
+    }
+
+    public function viewChangePass($hash_reset)
+    {
+        $user = TaiKhoan::where('hash_reset', $hash_reset)->first();
+        if ($user) {
+            return view('mail.changePassPage', compact('hash_reset'));
+        } else {
+            toastr()->warning('Mã đã sử dụng!');
+            return redirect('/login');
+        }
+    }
+
+    public function newPass(Request $request)
+    {
+        $password = $request->password;
+        $hash_reset = $request->hash_reset;
+        $user = TaiKhoan::where('hash_reset', $hash_reset)->first();
+        if ($user) {
+            $hash_reset_new = Str::uuid()->toString();
+            $user->password = bcrypt($password);
+            $user->hash_reset = $hash_reset_new;
+            $user->save();
+            return response()->json(['status'=>true]);
+        } else {
+            return response()->json(['status'=>false]);
+        }
     }
 }

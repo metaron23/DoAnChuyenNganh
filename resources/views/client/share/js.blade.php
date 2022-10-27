@@ -9,7 +9,7 @@
 
 <script>
     toastr.options = {
-        "timeOut": "2000",
+        "timeOut": "1500",
     };
     $(document).ready(function() {
         $('.log__in img').hover(function() {

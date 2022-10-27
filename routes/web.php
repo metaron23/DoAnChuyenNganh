@@ -77,6 +77,8 @@ Route::post('/changePass', [\App\Http\Controllers\CustomerController::class, 'ch
 Route::get('/confirmChangePass/{hash}', [\App\Http\Controllers\CustomerController::class, 'viewChangePass']);
 Route::post('/confirmChangePass', [\App\Http\Controllers\CustomerController::class, 'newPass']);
 
+Route::get('/logout', [\App\Http\Controllers\HomepageController::class, 'actionLogout']);
+
 Route::group(['prefix' => '/customer', 'middleware' => 'checkCustomerTaiKhoan'], function () {
     Route::group(['prefix' => '/cart'], function () {
         Route::get('/add-to-cart/{id_mon_an}', [\App\Http\Controllers\GioHangController::class, 'store']);
