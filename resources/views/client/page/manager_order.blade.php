@@ -29,8 +29,9 @@
                                     <div class="cartbox__btn">
                                         <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
                                             <li><a href="#" data-id="0" v-on:click.prevent="clickTab($event)">New Orders</a></li>
-                                            <li><a href="#" data-id="1" v-on:click.prevent="clickTab($event)">Shipped Orders</a></li>
-                                            <li><a href="#" data-id="2" v-on:click.prevent="clickTab($event)">Cancelled Orders</a></li>
+                                            <li><a href="#" data-id="1" v-on:click.prevent="clickTab($event)">Shipping Orders</a></li>
+                                            <li><a href="#" data-id="2" v-on:click.prevent="clickTab($event)">Shipped Orders</a></li>
+                                            <li><a href="#" data-id="3" v-on:click.prevent="clickTab($event)">Cancelled Orders</a></li>
                                         </ul>
                                     </div>
                                     <div id="newOrders">
@@ -77,6 +78,44 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div id="shippingOrders">
+                                        <div class="card-header">
+                                            <h5>Shipping Orders</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-xxl-4 col-md-6" v-for="(value, key) in listShipping">
+                                                    <div class="prooduct-details-box">
+                                                        <div class="media">
+                                                            <img class="align-self-center img-fluid" v-on:click="getDetailOrder($event), showModal=true"
+                                                                v-bind:data-id="value.id" style="height: 100px" v-bind:src="value.food[0].hinh_anh"
+                                                                alt="#">
+                                                            <div class="media-body ms-3">
+                                                                <div class="product-name">
+                                                                    <h6><a href="#" v-on:click.prevent="getDetailOrder($event), showModal=true"
+                                                                            data-bs-original-title="" v-bind:data-id="value.id"
+                                                                            title="">@{{ value.food[0].ten_mon_an }}</a>
+                                                                    </h6>
+                                                                </div>
+                                                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                                                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                                                </div>
+                                                                <div class="price d-flex">
+                                                                    <div class="text-muted me-2">Price</div>: @{{ value.tong_tien.toLocaleString() }} VND
+                                                                </div>
+                                                                <div class="avaiabilty">
+                                                                    <div class="text-success">@{{ value.trang_thai_thanh_toan == 0 ? "Not Paid" : "Paid" }}</div>
+                                                                </div>
+                                                                <a class="btn btn-success btn-xs" href="#" data-bs-original-title=""
+                                                                    title=""
+                                                                    style="pointer-events: none;cursor: default;font-size:14px">Shipping</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div id="shippedOrders">
                                         <div class="card-header">
                                             <h5>Shipped Orders</h5>
@@ -105,7 +144,7 @@
                                                                 <div class="avaiabilty">
                                                                     <div class="text-success">@{{ value.trang_thai_thanh_toan == 0 ? "Not Paid" : "Paid" }}</div>
                                                                 </div>
-                                                                <a class="btn btn-success btn-xs" href="#" data-bs-original-title=""
+                                                                <a class="btn btn-warning btn-xs" href="#" data-bs-original-title=""
                                                                     title=""
                                                                     style="pointer-events: none;cursor: default;font-size:14px">Shipped</a>
                                                             </div>
@@ -231,6 +270,7 @@
                     listOrder: [],
                     listNew: [],
                     listShipped: [],
+                    listShipping: [],
                     listCancelled: [],
                     showModal: false,
                     listDetailOrder: [],
@@ -243,21 +283,26 @@
                     getData() {
                         let listNewTest = [];
                         let listShippedTest = [];
+                        let listShippingTest = [];
                         let listCancelledTest = [];
                         axios
                             .get('/customer/order/get-data')
                             .then((res) => {
                                 this.listOrder = res.data.donHang;
                                 this.listOrder.forEach(element => {
-                                    if (element.trang_thai_don_hang == 0)
+                                    if(element.trang_thai_don_hang == 0){
                                         listNewTest.push(element);
-                                    else if (element.trang_thai_don_hang == 1)
+                                    }else if(element.trang_thai_don_hang == 1){
+                                        listShippingTest.push(element);
+                                    }else if(element.trang_thai_don_hang == 2){
                                         listShippedTest.push(element);
-                                    else
+                                    }else{
                                         listCancelledTest.push(element);
+                                    }
                                 });
                                 this.listNew = listNewTest;
                                 this.listShipped = listShippedTest;
+                                this.listShipping = listShippingTest;
                                 this.listCancelled = listCancelledTest;
                             });
                     },
@@ -267,21 +312,29 @@
                             event.target.setAttribute("style", "background: #60ba62 none repeat scroll 0 0;color: #fff");
                             if (event.target.getAttribute('data-id') == 0) {
                                 $('#newOrders').show();
+                                $('#shippingOrders').hide();
                                 $('#shippedOrders').hide();
                                 $('#cancelledOrders').hide();
                             } else if (event.target.getAttribute('data-id') == 1) {
                                 $('#newOrders').hide();
+                                $('#shippingOrders').show();
+                                $('#shippedOrders').hide();
+                                $('#cancelledOrders').hide();
+                            } else if (event.target.getAttribute('data-id') == 2) {
+                                $('#newOrders').hide();
+                                $('#shippingOrders').hide();
                                 $('#shippedOrders').show();
                                 $('#cancelledOrders').hide();
                             } else {
                                 $('#newOrders').hide();
+                                $('#shippingOrders').hide();
                                 $('#shippedOrders').hide();
                                 $('#cancelledOrders').show();
                             }
-
                         } catch {
                             $('.cart__btn__list a').first().attr("style", "background: #60ba62 none repeat scroll 0 0;color: #fff");
                             $('#newOrders').show();
+                            $('#shippingOrders').hide();
                             $('#shippedOrders').hide();
                             $('#cancelledOrders').hide();
                         }

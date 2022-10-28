@@ -53,32 +53,24 @@
                         <div class="login-main">
                             <form class="theme-form">
                                 <h4>Đăng nhập tài khoản</h4>
-                                <p>Nhập email và mật khẩu để đăng nhập</p>
+                                <p>Nhập email Admin để đăng nhập trang admin</p>
                                 <div class="form-group">
-                                    <label class="col-form-label">Email Hoặc Số Điện Thoại</label>
+                                    <label class="col-form-label">Email</label>
                                     <input class="form-control" id="user_name" name="user_name" type="email" required=""
-                                        placeholder="Nhập vào email hoặc số điện thoại">
+                                        placeholder="Nhập vào email">
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label">Mật khẩu</label>
                                     <div class="form-input position-relative">
                                         <input class="form-control" type="password" id="password" name="password" required=""
                                             placeholder="Nhập vào mật khẩu">
-                                        <div class="show-hide"><span class="show"> </span></div>
                                     </div>
                                 </div>
                                 <div class="form-group mb-0">
-                                    <div class="checkbox p-0">
-                                        <input id="checkbox1" type="checkbox">
-                                        <label class="text-muted" for="checkbox1">Nhớ mật khẩu</label>
-                                    </div><a class="link" href="forget-password.html">Quên mật khẩu?</a>
                                     <div class="text-end mt-3">
                                         <button class="btn btn-primary btn-block w-100" type="button" id="login">Đăng nhập</button>
                                     </div>
                                 </div>
-
-                                <p class="mt-4 mb-0 text-center">Chưa có tài khoản?<a class="ms-2" href="sign-up.html">Tạo mới</a></p>
-                                <script></script>
                             </form>
                         </div>
                     </div>

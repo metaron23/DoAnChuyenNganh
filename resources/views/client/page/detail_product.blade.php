@@ -331,7 +331,6 @@
             methods: {
                 getdetailFood() {
                     this.detailFood = {!! json_encode($detailFood, JSON_HEX_TAG) !!};
-
                 },
                 update(value) {
                     value['so_luong_mua'] = this.amountCart;
