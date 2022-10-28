@@ -9,7 +9,8 @@
 
 <script>
     toastr.options = {
-        "timeOut": "1500",
+        "timeOut": "3000",
+        'progressBar' : true,
     };
     $(document).ready(function() {
         $('.log__in img').hover(function() {

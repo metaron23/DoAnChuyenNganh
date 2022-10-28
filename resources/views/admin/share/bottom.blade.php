@@ -37,3 +37,9 @@
 <!-- Plugin used-->
 {{-- link toastr js --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+<script>
+    toastr.options = {
+        "timeOut": "3000",
+        'progressBar' : true,
+    };
+</script>
