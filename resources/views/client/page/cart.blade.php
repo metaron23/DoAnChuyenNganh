@@ -8,7 +8,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="bradcaump__inner text-center">
-                                <h2 class="bradcaump-title">Trang giỏ hàng</h2>
+                                <h2 class="bradcaump-title">giỏ hàng</h2>
                                 <nav class="bradcaump-inner">
                                     <a class="breadcrumb-item" href="/home">trang chủ</a>
 
@@ -47,7 +47,7 @@
                                                 </span>
                                             </td>
                                             <td class="product-quantity">
-                                                <input v-on:change="update(value)" v-model="value.so_luong_mua" type="number" min=1>
+                                                <input v-on:change="update(value)" v-model="value.so_luong_mua" readonly type="number" min=1>
                                             </td>
                                             <td class="product-subtotal">
                                                 @{{ (donGia(value.don_gia_khuyen_mai, value.don_gia_ban) * value.so_luong_mua).toLocaleString() }} VND
@@ -82,8 +82,8 @@
                                 </span>
                             </div>
                             <div class="cart__total__tk">
-                                <div class="cartbox__buttons" style="width:24%;float: right;">
-                                    <a class="food__btn" href="/customer/checkout/"><span>Xác nhận</span></a>
+                                <div class="cartbox__buttons" style="width:30%;float: right;">
+                                    <a class="food__btn" href="/customer/checkout/"><span>đặt hàng</span></a>
                                 </div>
                             </div>
                         </div>

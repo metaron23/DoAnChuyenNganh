@@ -11,7 +11,7 @@
                             <div class="bradcaump__inner text-center">
                                 <h2 class="bradcaump-title">Chi tiết món ăn</h2>
                                 <nav class="bradcaump-inner">
-                                    <a class="breadcrumb-item" href="home">Home</a>
+                                    <a class="breadcrumb-item" href="/home">Home</a>
                                     <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
                                     <span class="breadcrumb-item active">Chi tiết món ăn</span>
                                 </nav>

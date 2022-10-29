@@ -76,7 +76,7 @@
                                     <a class="link" href="#" id="forgetPass" data-bs-toggle="modal" data-bs-target="#exampleModal">Quên mật
                                         khẩu?</a>
                                     <div class="text-end mt-3">
-                                        <button class="btn btn-primary btn-block w-100" id="login"type="button">Đăng nhập</button>
+                                        <button class="btn btn-primary btn-block w-100" id="login" type="submit">Đăng nhập</button>
                                     </div>
                                 </div>
                                 <p class="mt-4 mb-0 text-center">Chưa có tài khoản?<a class="ms-2" role="button" id="registerButton">Tạo
@@ -187,6 +187,7 @@
         };
         $(document).ready(function() {
             $('#loginForm').submit(function(e) {
+                console.log(1);
                 e.preventDefault();
                 isRememberMe();
                 let payLoad = window.getFormData($(this));

@@ -11,7 +11,7 @@
                             <div class="bradcaump__inner text-center">
                                 <h2 class="bradcaump-title">Thực đơn</h2>
                                 <nav class="bradcaump-inner">
-                                    <a class="breadcrumb-item" href="index.html">Trang chủ</a>
+                                    <a class="breadcrumb-item" href="/home">Trang chủ</a>
                                     <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
                                     <span class="breadcrumb-item active">Thực đơn</span>
                                 </nav>
