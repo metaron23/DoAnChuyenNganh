@@ -8,11 +8,11 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="bradcaump__inner text-center brad__white">
-                            <h2 class="bradcaump-title">contact us</h2>
+                            <h2 class="bradcaump-title">Liên hệ với chúng tôi</h2>
                             <nav class="bradcaump-inner">
-                                <a class="breadcrumb-item" href="index.html">Home</a>
+                                <a class="breadcrumb-item" href="index.html">Trang chủ</a>
                                 <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
-                                <span class="breadcrumb-item active">contact us</span>
+                                <span class="breadcrumb-item active">liên hệ</span>
                             </nav>
                         </div>
                     </div>
@@ -48,8 +48,8 @@
                     <i class="zmdi zmdi-phone"></i>
                 </div>
                 <div class="ct__address">
-                    <p><a href="#">+088 01673-453290</a></p>
-                    <p><a href="#">+088 01773-458290</a></p>
+                    <p><a href="#">+84 01673 453290</a></p>
+                    <p><a href="#">+84 01773 453290</a></p>
                 </div>
             </div>
             <!-- End Single Contact -->
@@ -59,7 +59,7 @@
                     <i class="zmdi zmdi-home"></i>
                 </div>
                 <div class="ct__address">
-                    <p>Elizabeth Tower. 6th Floor <br> Medtown, New York</p>
+                    <p>254 Nguyễn văn Linh<br> Đà Nẵng, Việt Nam</p>
                 </div>
             </div>
             <!-- End Single Contact -->
@@ -69,8 +69,8 @@
                     <i class="zmdi zmdi-email"></i>
                 </div>
                 <div class="ct__address">
-                    <p><a href="#">delivery@e-mail.com</a></p>
-                    <p><a href="#">Aahar@e-mail.com</a></p>
+                    <p><a href="#">brestaurant@gmail.com</a></p>
+                    <p><a href="#">bdelivery@email.com</a></p>
                 </div>
             </div>
             <!-- End Single Contact -->
@@ -82,23 +82,23 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="contact__form__wrap">
-                        <h2>Get In Touch With Aahar</h2>
+                        <h2>Bạn hãy điền thông tin để gửi liên lạc cho B-restaurant</h2>
                         <div class="contact__form__inner">
                             <form id="contact-form" action="https://demo.hasthemes.com/aahar-preview/aahar/mail.php" method="post">
                                 <div class="single-contact-form">
                                     <div class="contact-box name d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
-                                        <input type="text" name="name" placeholder="Your Name">
-                                        <input type="email" name="email" placeholder="E-mail">
-                                        <input type="text" name="phone" placeholder="Phone">
+                                        <input type="text" name="name" placeholder="Họ tên">
+                                        <input type="email" name="email" placeholder="Email">
+                                        <input type="text" name="phone" placeholder="Số điện thoại">
                                     </div>
                                 </div>
                                 <div class="single-contact-form">
                                     <div class="contact-box message">
-                                        <textarea name="message" placeholder="Message*"></textarea>
+                                        <textarea name="message" placeholder="Nội dung*"></textarea>
                                     </div>
                                 </div>
                                 <div class="contact-btn">
-                                    <button type="submit" class="food__btn">submit</button>
+                                    <button type="submit" class="food__btn">Gửi</button>
                                 </div>
                             </form>
                         </div>

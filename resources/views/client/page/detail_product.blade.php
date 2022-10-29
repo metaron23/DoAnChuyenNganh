@@ -9,11 +9,11 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="bradcaump__inner text-center">
-                                <h2 class="bradcaump-title">Menu Details</h2>
+                                <h2 class="bradcaump-title">Chi tiết món ăn</h2>
                                 <nav class="bradcaump-inner">
                                     <a class="breadcrumb-item" href="index.html">Home</a>
                                     <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
-                                    <span class="breadcrumb-item active">Menu Details</span>
+                                    <span class="breadcrumb-item active">Chi tiết món ăn</span>
                                 </nav>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                                         <h2>@{{ detailFood.ten_mon_an }}</h2>
                                         <ul class="food__dtl__prize d-flex">
                                             <li class="old__prize">@{{ detailFood.don_gia_ban.toLocaleString() }}VND</li>
-                                            <li>@{{ detailFood.don_gia_khuyen_mai.toLocaleString() }}VND</li>
+                                            {{-- <li>@{{ detailFood.don_gia_khuyen_mai.toLocaleString() }}VND</li> --}}
                                         </ul>
                                         <ul class="rating">
                                             <li><i class="fa fa-star"></i></li>
@@ -53,7 +53,7 @@
                                                 <div class="cart-plus-minus">
                                                     <input type="number" value="1" min="1" v-model="amountCart">
                                                     <div class="add__to__cart__btn">
-                                                        <a class="food__btn" v-bind:href="linkDetailFood" v-on:click="update(detailFood)">Add To Cart</a>
+                                                        <a class="food__btn" v-bind:href="linkDetailFood" v-on:click="update(detailFood)">Thêm vào giỏ</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -64,8 +64,8 @@
                             <!-- Start Product Descrive Area -->
                             <div class="menu__descrive__area">
                                 <div class="menu__nav nav nav-tabs" role="tablist">
-                                    <a class="active" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab">Description</a>
-                                    <a id="nav-breakfast-tab" data-toggle="tab" href="#nav-breakfast" role="tab">Reviews</a>
+                                    <a class="active" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab">Mô tả</a>
+                                    <a id="nav-breakfast-tab" data-toggle="tab" href="#nav-breakfast" role="tab">Đánh giá</a>
                                 </div>
                                 <!-- Start Tab Content -->
                                 <div class="menu__tab__content tab-content" id="nav-tabContent">
@@ -148,19 +148,19 @@
                                     </div>
                                     <div class="beef__hover__info">
                                         <div class="beef__hover__inner">
-                                            <span>Special</span>
-                                            <span>offer</span>
+                                            <span>Món</span>
+                                            <span>mới</span>
                                         </div>
                                     </div>
                                     <div class="beef__details">
-                                        <h4><a href="menu-details.html">Beef Burger</a></h4>
+                                        <h4><a href="menu-details.html">Bánh Bơ gơ Bò</a></h4>
                                         <ul class="beef__prize">
-                                            <li class="old__prize">$30</li>
-                                            <li>$30</li>
+
+                                             <li>79,000 VNĐ</li>
                                         </ul>
                                         <p>erve armesan may be added to the top of apLem ip, consectetur</p>
                                         <div class="beef__cart__btn">
-                                            <a href="cart.html">Add To Cart</a>
+                                            <a href="cart.html">Thêm vào giỏ</a>
                                         </div>
                                     </div>
                                 </div>
@@ -175,14 +175,14 @@
                                         </a>
                                     </div>
                                     <div class="beef__details">
-                                        <h4><a href="menu-details.html">Beef Burger</a></h4>
+                                        <h4><a href="menu-details.html">Bánh Bơ gơ Bò</a></h4>
                                         <ul class="beef__prize">
-                                            <li class="old__prize">$30</li>
-                                            <li>$30</li>
+
+                                             <li>79,000 VNĐ</li>
                                         </ul>
                                         <p>erve armesan may be added to the top of apLem ip, consectetur</p>
                                         <div class="beef__cart__btn">
-                                            <a href="cart.html">Add To Cart</a>
+                                            <a href="cart.html">Thêm vào giỏ</a>
                                         </div>
                                     </div>
                                 </div>
@@ -198,19 +198,19 @@
                                     </div>
                                     <div class="beef__hover__info">
                                         <div class="beef__hover__inner">
-                                            <span>Special</span>
-                                            <span>offer</span>
+                                            <span>10% </span>
+                                            <span>off</span>
                                         </div>
                                     </div>
                                     <div class="beef__details">
-                                        <h4><a href="menu-details.html">Beef Burger</a></h4>
+                                        <h4><a href="menu-details.html">Bánh Bơ gơ Bò</a></h4>
                                         <ul class="beef__prize">
-                                            <li class="old__prize">$30</li>
-                                            <li>$30</li>
+
+                                             <li>79,000 VNĐ</li>
                                         </ul>
                                         <p>erve armesan may be added to the top of apLem ip, consectetur</p>
                                         <div class="beef__cart__btn">
-                                            <a href="cart.html">Add To Cart</a>
+                                            <a href="cart.html">Thêm vào giỏ</a>
                                         </div>
                                     </div>
                                 </div>
@@ -221,17 +221,17 @@
                     <div class="col-lg-4 col-md-12 col-sm-12 md--mt--40 sm--mt--40">
                         <div class="food__sidebar">
                             <!-- Start Search Area -->
-                            <div class="food__search">
+                            {{-- <div class="food__search">
                                 <h4 class="side__title">Search</h4>
                                 <div class="serch__box">
                                     <input type="text" placeholder="Search keyword">
                                     <a href="#"><i class="fa fa-search"></i></a>
                                 </div>
-                            </div>
+                            </div> --}}
                             <!-- End Search Area -->
                             <!-- Start Recent Post -->
                             <div class="food__recent__post mt--60">
-                                <h4 class="side__title">Recent Posts</h4>
+                                <h4 class="side__title">Bài viết gần đây</h4>
                                 <div class="recent__post__wrap">
                                     <!-- Start Single Post -->
                                     <div class="single__recent__post d-flex">
@@ -290,14 +290,13 @@
                             <!-- End Recent Post -->
                             <!-- Start Category Area -->
                             <div class="food__category__area mt--60">
-                                <h4 class="side__title">Categories</h4>
+                                <h4 class="side__title">Danh mục</h4>
                                 <ul class="food__category">
-                                    <li><a href="#">Maxican Food <span>(20)</span></a></li>
-                                    <li><a href="#">Pizza <span>(30)</span></a></li>
-                                    <li><a href="#">Food & Beverage <span>(40)</span></a></li>
-                                    <li><a href="#">Maxican Food <span>(50)</span></a></li>
-                                    <li><a href="#">Asian Twist <span>(60)</span></a></li>
-                                    <li><a href="#">Taco Food <span>(20)</span></a></li>
+                                    <li><a href="#">Món ăn sáng<span>(20)</span></a></li>
+                                    <li><a href="#">Món ăn trưa <span>(30)</span></a></li>
+                                    <li><a href="#">Món ăn tối<span>(40)</span></a></li>
+                                    <li><a href="#">Bánh ngọt <span>(30)</span></a></li>
+                                    <li><a href="#">Đồ uống <span>(20)</span></a></li>
                                 </ul>
                             </div>
                             <!-- End Category Area -->

@@ -28,10 +28,17 @@
                                 <div class="card">
                                     <div class="cartbox__btn">
                                         <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
+<<<<<<< HEAD
+                                            <li><a href="#" data-id="0" v-on:click.prevent="clickTab($event)">New Orders</a></li>
+                                            <li><a href="#" data-id="1" v-on:click.prevent="clickTab($event)">Shipping Orders</a></li>
+                                            <li><a href="#" data-id="2" v-on:click.prevent="clickTab($event)">Shipped Orders</a></li>
+                                            <li><a href="#" data-id="3" v-on:click.prevent="clickTab($event)">Cancelled Orders</a></li>
+=======
                                             <li><a href="#" data-id="0" v-on:click.prevent="clickTab($event)">Chờ Xác Nhận</a></li>
                                             <li><a href="#" data-id="1" v-on:click.prevent="clickTab($event)">Đang Giao</a></li>
                                             <li><a href="#" data-id="2" v-on:click.prevent="clickTab($event)">Đã Giao</a></li>
                                             <li><a href="#" data-id="3" v-on:click.prevent="clickTab($event)">Đã Huỷ</a></li>
+>>>>>>> 4adcecea4d6c04244af5eab8c89833bab82c5c89
                                         </ul>
                                     </div>
                                     <div id="newOrders">
@@ -80,7 +87,11 @@
                                     </div>
                                     <div id="shippingOrders">
                                         <div class="card-header">
+<<<<<<< HEAD
+                                            <h5>Shipping Orders</h5>
+=======
                                             <h5>Đang giao</h5>
+>>>>>>> 4adcecea4d6c04244af5eab8c89833bab82c5c89
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -104,11 +115,19 @@
                                                                     <div class="text-muted me-2">Price</div>: @{{ value.tong_tien.toLocaleString() }} VND
                                                                 </div>
                                                                 <div class="avaiabilty">
+<<<<<<< HEAD
+                                                                    <div class="text-success">@{{ value.trang_thai_thanh_toan == 0 ? "Not Paid" : "Paid" }}</div>
+                                                                </div>
+                                                                <a class="btn btn-success btn-xs" href="#" data-bs-original-title=""
+                                                                    title=""
+                                                                    style="pointer-events: none;cursor: default;font-size:14px">Shipping</a>
+=======
                                                                     <div class="text-success">@{{ value.trang_thai_thanh_toan == 0 ? "Chưa Thanh Toán" : "Đã Thanh Toán" }}</div>
                                                                 </div>
                                                                 <a class="btn btn-success btn-xs" href="#" data-bs-original-title=""
                                                                     title=""
                                                                     style="pointer-events: none;cursor: default;font-size:14px">Đang giao</a>
+>>>>>>> 4adcecea4d6c04244af5eab8c89833bab82c5c89
                                                             </div>
                                                         </div>
                                                     </div>

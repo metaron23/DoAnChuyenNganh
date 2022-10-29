@@ -9,11 +9,11 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="bradcaump__inner text-center">
-                                <h2 class="bradcaump-title">menu List view</h2>
+                                <h2 class="bradcaump-title">Thực đơn món ăn</h2>
                                 <nav class="bradcaump-inner">
-                                    <a class="breadcrumb-item" href="index.html">Home</a>
+                                    <a class="breadcrumb-item" href="index.html">Trang chủ</a>
                                     <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
-                                    <span class="breadcrumb-item active">menu List view</span>
+                                    <span class="breadcrumb-item active">Thực đơn</span>
                                 </nav>
                             </div>
                         </div>
@@ -25,13 +25,13 @@
         <!-- Start Menu Grid Area -->
         <div class="row">
             <div class="food__search" style="width:30%;margin:20px 106px;">
-                <h4 class="side__title">Search</h4>
+                <h4 class="side__title">Tìm Kiếm </h4>
                 <div class="serch__box">
-                    <input type="text" placeholder="Search keyword" v-model="keySearch" v-on:keyup="getDataSearch()">
+                    <input type="text" placeholder="Tìm món" v-model="keySearch" v-on:keyup="getDataSearch()">
                     <a href="#"><i class="fa fa-search"></i></a>
                 </div>
                 <div id="content_search"
-                    style="position: absolute;z-index: 99999;background-color: #fff; width: 413px;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    style="position: absolute;z-index: 99999;background-color: #fff; width: 400px;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                     <div class="row" v-for="(value, key) in dataSearch">
                         <div class="m-3 d-flex flex-row justify-content-between">
                             <a href="menu-details.html">
@@ -52,7 +52,7 @@
                 <div class="row mt--30">
                     <div class="col-lg-12">
                         <div class="food__nav nav nav-tabs">
-                            <a class="nav-tab nav-tab-all" href="" v-on:click.prevent="loadListFood(0, $event)" v-bind:data-id="0">All</a>
+                            <a class="nav-tab nav-tab-all" href="" v-on:click.prevent="loadListFood(0, $event)" v-bind:data-id="0">Tất cả</a>
                             <div v-for="(value, key) in listCategoryFood">
                                 <a class="nav-tab" href="" v-bind:data-id="value.id"
                                     v-on:click.prevent="loadListFood(value.id, $event)">@{{ value.ten_danh_muc }} </a>
@@ -77,7 +77,7 @@
                                             <h2><a href="/menu/detailFood" v-on:click.prevent="detailFood(value.id)">@{{ value.ten_mon_an }}</a></h2>
                                             <p>@{{ value.mo_ta_ngan }}</p>
                                             <div class="list__btn">
-                                                <a class="food__btn grey--btn theme--hover" href="menu-details.html">Order Now</a>
+                                                <a class="food__btn grey--btn theme--hover" href="menu-details.html">Đặt món</a>
                                             </div>
                                         </div>
                                         <div class="food__rating">
