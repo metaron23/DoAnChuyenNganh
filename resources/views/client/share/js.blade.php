@@ -14,9 +14,9 @@
     };
     $(document).ready(function() {
         $('.log__in img').hover(function() {
-            let data = `</li><a href="">Account Management</a></li>
-            </li><a href="/customer/order">Order Management</a></li>
-            </li><a href="/logout" id="logout_home">Logout</a></li>`
+            let data = `</li><a href="">Quản lí tài khoản</a></li>
+            </li><a href="/customer/order">Quản lí đơn hàng</a></li>
+            </li><a href="/logout" id="logout_home">Đăng xuất</a></li>`
             $('.log__in .dropdown__menu').html(data);
         });
         $('.log__in').mouseleave(function() {

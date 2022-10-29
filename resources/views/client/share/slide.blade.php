@@ -7,10 +7,10 @@
                      <div class="col-lg-12 col-md-12 col-sm-12">
                          <div class="slider__content">
                              <div class="slider__inner">
-                                 <h2>We Are,</h2>
+                                 <h2>Chúng tôi là,</h2>
                                  <h1 style="font-size: 120px;">"B-restaurant"</h1>
-                                 <div class="slider__btn">
-                                     <a class="food__btn" href="#">Learn More</a>
+                                 <div class="slider__btn"> 
+                                     <a class="food__btn" href="#">Xem thêm</a>
                                  </div>
                              </div>
                          </div>

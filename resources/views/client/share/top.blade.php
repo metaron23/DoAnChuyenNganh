@@ -20,17 +20,15 @@
                         <div class="main__menu__wrap">
                             <nav class="main__menu__nav d-none d-lg-block">
                                 <ul class="mainmenu">
-                                    <li><a href="/home" id="home">Home</a>
+                                    <li><a href="/home" id="home">Trang Chủ</a>
                                     </li>
-                                    <li><a href="/about" id="about">About</a>
+                                    <li><a href="/menu" id="menu">Thực đơn</a>
                                     </li>
-                                    <li><a href="/menu" id="menu">Menu</a>
+                                    <li><a href="/gallery" id="gallery">Món ăn</a>
                                     </li>
-                                    <li><a href="/gallery" id="gallery">Gallery</a>
+                                    <li><a href="/blog" id="blog">Bài viết</a>
                                     </li>
-                                    <li><a href="/blog" id="blog">Blog</a>
-                                    </li>
-                                    <li><a href="/contact" id="contact">Contact</a>
+                                    <li><a href="/contact" id="contact">Liên hệ</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -160,14 +158,14 @@
                 </div>
                 <div class="cartbox__total">
                     <ul>
-                        <li><span class="cartbox__total__title">Subtotal</span><span class="price">@{{ total.toLocaleString() }} VND</span></li>
-                        <li class="shipping-charge"><span class="cartbox__total__title">Shipping Charge</span><span class="price"></span></li>
-                        <li class="grandtotal">Total<span class="price">@{{ total.toLocaleString() }} VND</span></li>
+                        <li><span class="cartbox__total__title">Tổng tiền</span><span class="price">@{{ total.toLocaleString() }} VND</span></li>
+                        <li class="shipping-charge"><span class="cartbox__total__title">Phí giao hàng</span><span class="price"></span></li>
+                        <li class="grandtotal">Thành tiền<span class="price">@{{ total.toLocaleString() }} VND</span></li>
                     </ul>
                 </div>
                 <div class="cartbox__buttons">
-                    <a class="food__btn" href="/customer/cart"><span>View cart</span></a>
-                    <a class="food__btn" href="/customer/checkout"><span>Checkout</span></a>
+                    <a class="food__btn" href="/customer/cart"><span>Xem giỏ hàng</span></a>
+                    <a class="food__btn" href="/customer/checkout"><span>Đặt hàng</span></a>
                 </div>
             </div>
         </div>

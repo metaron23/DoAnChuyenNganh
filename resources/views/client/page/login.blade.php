@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
+    <meta name="Mô tả"
         content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
@@ -76,7 +76,7 @@
                                     <a class="link" href="#" id="forgetPass" data-bs-toggle="modal" data-bs-target="#exampleModal">Quên mật
                                         khẩu?</a>
                                     <div class="text-end mt-3">
-                                        <button class="btn btn-primary btn-block w-100" type="submit">Đăng nhập</button>
+                                        <button class="btn btn-primary btn-block w-100" id="login"type="button">Đăng nhập</button>
                                     </div>
                                 </div>
                                 <p class="mt-4 mb-0 text-center">Chưa có tài khoản?<a class="ms-2" role="button" id="registerButton">Tạo

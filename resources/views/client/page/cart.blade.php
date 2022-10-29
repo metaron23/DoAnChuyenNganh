@@ -8,11 +8,10 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="bradcaump__inner text-center">
-                                <h2 class="bradcaump-title">cart page</h2>
+                                <h2 class="bradcaump-title">Trang giỏ hàng</h2>
                                 <nav class="bradcaump-inner">
-                                    <a class="breadcrumb-item" href="index.html">home</a>
-                                    <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
-                                    <span class="breadcrumb-item active">cart page</span>
+                                    <a class="breadcrumb-item" href="index.html">trang chủ</a>
+
                                 </nav>
                             </div>
                         </div>
@@ -29,12 +28,12 @@
                                 <table>
                                     <thead>
                                         <tr class="title-top">
-                                            <th class="product-thumbnail">Image</th>
-                                            <th class="product-name">Product</th>
-                                            <th class="product-price">Price</th>
-                                            <th class="product-quantity">Quantity</th>
-                                            <th class="product-subtotal">Total</th>
-                                            <th class="product-remove">Remove</th>
+                                            <th class="product-thumbnail">Hình ảnh</th>
+                                            <th class="product-name">Món ăn</th>
+                                            <th class="product-price">Giá</th>
+                                            <th class="product-quantity">Số lượng</th>
+                                            <th class="product-subtotal">Tổng cộng</th>
+                                            <th class="product-remove">Xóa </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -54,7 +53,7 @@
                                                 @{{ (donGia(value.don_gia_khuyen_mai, value.don_gia_ban) * value.so_luong_mua).toLocaleString() }} VND
                                             </td>
                                             <td class="product-remove">
-                                                <button class="food__btn" v-on:click.prevent="remove(value.id)"><span>Remove</span></button>
+                                                <button class="food__btn" v-on:click.prevent="remove(value.id)"><span>Xóa</span></button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -68,8 +67,8 @@
                         <div class="cartbox__total__area">
                             <div class="cartbox-total d-flex justify-content-between">
                                 <ul class="cart__total__list">
-                                    <li>Cart total</li>
-                                    <li>Discount</li>
+                                    <li>Tổng đơn hàng</li>
+                                    <li>Giảm giá</li>
                                 </ul>
                                 <ul class="cart__total__tk">
                                     <li>@{{ total.toLocaleString() }} VND
@@ -78,13 +77,13 @@
                                 </ul>
                             </div>
                             <div class="cart__total__amount">
-                                <span>Grand Total</span>
+                                <span>Thành tiền</span>
                                 <span>@{{ total.toLocaleString() }} VND
                                 </span>
                             </div>
                             <div class="cart__total__tk">
                                 <div class="cartbox__buttons" style="width:24%;float: right;">
-                                    <a class="food__btn" href="/customer/checkout/"><span>Checkout</span></a>
+                                    <a class="food__btn" href="/customer/checkout/"><span>Xác nhận</span></a>
                                 </div>
                             </div>
                         </div>

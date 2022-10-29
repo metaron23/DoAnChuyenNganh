@@ -8,11 +8,11 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="bradcaump__inner text-center brad__white">
-                            <h2 class="bradcaump-title">blog masonry grid</h2>
+                            <h2 class="bradcaump-title">Bài viết hàng tháng</h2>
                             <nav class="bradcaump-inner">
-                                <a class="breadcrumb-item" href="index.html">Home</a>
+                                <a class="breadcrumb-item" href="index.html">trang chủ</a>
                                 <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
-                                <span class="breadcrumb-item active">blog masonry grid</span>
+                                <span class="breadcrumb-item active">bài viết</span>
                             </nav>
                         </div>
                     </div>
