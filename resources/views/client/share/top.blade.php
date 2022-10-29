@@ -24,6 +24,8 @@
                                     </li>
                                     <li><a href="/menu" id="menu">Thực đơn</a>
                                     </li>
+                                    <li><a href="/about" id="menu">Thông tin</a>
+                                    </li>
                                     <li><a href="/gallery" id="gallery">Món ăn</a>
                                     </li>
                                     <li><a href="/blog" id="blog">Bài viết</a>
