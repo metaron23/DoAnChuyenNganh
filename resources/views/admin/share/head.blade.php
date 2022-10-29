@@ -38,6 +38,10 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 <style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
     i.fa {
         transform: translateX(-6px);
     }

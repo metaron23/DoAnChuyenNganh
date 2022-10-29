@@ -39,7 +39,7 @@ class ManagerOrderController extends Controller
         $donHang = DonHang::where('id_khach_hang', $user->id)
                                 ->where('id', $id)
                                 ->first();
-        $donHang->trang_thai_don_hang = 2;
+        $donHang->trang_thai_don_hang = 3;
         $donHang->save();
 
         return response()->json([

@@ -58,8 +58,11 @@ Route::group(['prefix' => '/admin', 'middleware' => 'checkAdminTaiKhoan'], funct
 
     Route::group(['prefix' => '/don-hang'], function () {
         Route::get('/', [\App\Http\Controllers\Admin\OrderController::class, 'index']);
-        Route::get('/changeToShipping', [\App\Http\Controllers\Admin\OrderController::class, 'changeToShipping']);
-        Route::get('/changeToShipped', [\App\Http\Controllers\Admin\OrderController::class, 'changeToShipped']);
+        Route::get('/get-data', [\App\Http\Controllers\Admin\OrderController::class, 'getData']);
+        Route::get('/changeToShipping/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'changeToShipping']);
+        Route::get('/changeToShipped/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'changeToShipped']);
+        Route::get('/changeToShippingAll', [\App\Http\Controllers\Admin\OrderController::class, 'changeToShippingAll']);
+        Route::get('/changeToShippedAll', [\App\Http\Controllers\Admin\OrderController::class, 'changeToShippedAll']);
     });
 });
 // Page is not need login
@@ -122,5 +125,3 @@ Route::get('/menu/search/{key}', [App\Http\Controllers\Customer\MenuController::
 Route::get('/blog', [\App\Http\Controllers\Customer\BlogController::class, 'index']);
 Route::get('/gallery', [\App\Http\Controllers\Customer\GalleryController::class, 'index']);
 Route::get('/contact', [\App\Http\Controllers\Customer\ContactController::class, 'index']);
-
-
