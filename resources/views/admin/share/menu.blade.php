@@ -38,33 +38,6 @@
                                                 </p>
                                             </div>
                                         </li>
-                                        {{-- <li class="sidebar-list">
-                                            <label class="badge badge-success">2</label><a
-                                                class="sidebar-link sidebar-title active"
-                                                href="#"><svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-home">
-                                                    <path
-                                                        d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
-                                                    </path>
-                                                    <polyline points="9 22 9 12 15 12 15 22">
-                                                    </polyline>
-                                                </svg><span class="lan-3">Dashboards</span>
-                                                <div class="according-menu"><i
-                                                        class="fa fa-angle-down"></i></div>
-                                            </a>
-                                            <ul class="sidebar-submenu" style="display: block;">
-                                                <li><a class="lan-4 active"
-                                                        href="index.html">Default</a></li>
-                                                <li><a class="lan-5"
-                                                        href="dashboard-02.html">Ecommerce</a></li>
-                                            </ul>
-                                        </li> --}}
-
                                         <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="/admin/danh-muc-mon-an/index">
                                                 <i class="fa fa-align-justify"></i>
                                                 <span>Quản Lý Danh Mục Món Ăn</span>
@@ -89,6 +62,25 @@
                                                 <div class="according-menu"></div>
                                             </a>
                                         </li>
+                                        <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="/admin/hoa-don/">
+                                            <i class="fa fa-credit-card"></i>
+                                                <span>Quản Lý Hoá Đơn</span>
+                                                <div class="according-menu"></div>
+                                            </a>
+                                        </li>
+                                        {{-- <li class="sidebar-list">
+                                            <a class="sidebar-link sidebar-title active" href="#">
+                                                <i class="fa fa-credit-card"></i>
+                                                <span>Quản lý hoá đơn</span>
+                                                <div class="according-menu">
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                            </a>
+                                            <ul class="sidebar-submenu" style="display: block;">
+                                                <li><a class="lan-4 active" href="index.html">Default</a></li>
+                                                <li><a class="lan-5" href="dashboard-02.html">Ecommerce</a></li>
+                                            </ul>
+                                        </li> --}}
                                         <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="/admin/logout">
                                                 <i class="fa fa-sign-out"></i>
                                                 <span>Đăng Xuất</span>

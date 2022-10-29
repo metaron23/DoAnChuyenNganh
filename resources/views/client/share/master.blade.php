@@ -34,16 +34,16 @@
     </div>
     @include('client.share.js')
     @yield('footer')
+    <script>
+        document.onreadystatechange = function() {
+            var state = document.readyState;
+            if (state == 'complete') {
+                document.getElementById('load').style.visibility = "hidden";
+                document.getElementById('contents').style.visibility = "visible";
+            }
+        }
+    </script>
     @yield('js')
 </body>
-<script>
-    document.onreadystatechange = function() {
-        var state = document.readyState;
-        if (state == 'complete') {
-            document.getElementById('load').style.visibility = "hidden";
-            document.getElementById('contents').style.visibility = "visible";
-        }
-    }
-</script>
 
 </html>

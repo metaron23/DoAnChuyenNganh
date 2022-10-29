@@ -64,6 +64,10 @@ Route::group(['prefix' => '/admin', 'middleware' => 'checkAdminTaiKhoan'], funct
         Route::get('/changeToShippingAll', [\App\Http\Controllers\Admin\OrderController::class, 'changeToShippingAll']);
         Route::get('/changeToShippedAll', [\App\Http\Controllers\Admin\OrderController::class, 'changeToShippedAll']);
     });
+
+    Route::group(['prefix' => '/hoa-don'], function () {
+        Route::get('/', [\App\Http\Controllers\Admin\HoaDonController::class, 'index']);
+    });
 });
 // Page is not need login
 Route::get('/admin/login', [\App\Http\Controllers\Admin\TaiKhoanController::class, 'viewLogin']);
