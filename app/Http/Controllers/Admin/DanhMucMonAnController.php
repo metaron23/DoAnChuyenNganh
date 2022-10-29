@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\CreateDanhMucMonAn as RequestsCreateDanhMucMonAn;
 use App\Http\Requests\DanhMucMonAn\CreateDanhMucMonAn;
 use App\Http\Requests\DanhMucMonAn\UpdateDanhMucMonAn;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateDanhMucMonAn as RequestsUpdateDanhMucMonAn;
 use App\Models\DanhMucMonAn;
 use Illuminate\Http\Request;

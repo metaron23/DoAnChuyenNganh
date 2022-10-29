@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\CreateTaiKhoan as RequestsCreateTaiKhoan;
 use App\Http\Requests\TaiKhoan\CreateTaiKhoan;
@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateTaiKhoan as RequestsUpdateTaiKhoan;
 use App\Models\TaiKhoan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
 
 class TaiKhoanController extends Controller
 {

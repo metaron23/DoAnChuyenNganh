@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Customer;
+use App\Http\Controllers\Controller;
 
 use App\Http\Requests\Client\UpdateCartRequest;
 use App\Models\GioHang;
