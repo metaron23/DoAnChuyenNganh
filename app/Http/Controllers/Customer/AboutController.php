@@ -9,7 +9,6 @@ class AboutController extends Controller
 {
     public function index(){
         $checkNav = 'about';
-
         return view('client.page.about', compact('checkNav'));
     }
 }

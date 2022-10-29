@@ -10,7 +10,7 @@
                             <div class="bradcaump__inner text-center">
                                 <h2 class="bradcaump-title">Trang giỏ hàng</h2>
                                 <nav class="bradcaump-inner">
-                                    <a class="breadcrumb-item" href="index.html">trang chủ</a>
+                                    <a class="breadcrumb-item" href="/home">trang chủ</a>
 
                                 </nav>
                             </div>

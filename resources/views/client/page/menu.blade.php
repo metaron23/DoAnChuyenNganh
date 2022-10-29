@@ -9,7 +9,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="bradcaump__inner text-center">
-                                <h2 class="bradcaump-title">Thực đơn món ăn</h2>
+                                <h2 class="bradcaump-title">Thực đơn</h2>
                                 <nav class="bradcaump-inner">
                                     <a class="breadcrumb-item" href="index.html">Trang chủ</a>
                                     <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
