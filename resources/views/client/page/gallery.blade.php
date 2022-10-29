@@ -8,11 +8,11 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="bradcaump__inner text-center">
-                            <h2 class="bradcaump-title">Món ăn</h2>
+                            <h2 class="bradcaump-title">Hình ảnh</h2>
                             <nav class="bradcaump-inner">
                                 <a class="breadcrumb-item" href="/home">Trang chủ</a>
                                 <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
-                                <span class="breadcrumb-item active">Món ăn</span>
+                                <span class="breadcrumb-item active">Hình Ảnh</span>
                             </nav>
                         </div>
                     </div>
