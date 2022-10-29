@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Auth;
 class OrderController extends Controller
 {
     public function index(){
-        return view('admin.pages.don_hang.order');
+        $checkMenu = 4;
+        return view('admin.pages.don_hang.order', compact('checkMenu'));
     }
 
     public function changeToShipping($id){

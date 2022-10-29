@@ -38,31 +38,31 @@
                                                 </p>
                                             </div>
                                         </li>
-                                        <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="/admin/danh-muc-mon-an/index">
+                                        <li class="sidebar-list" data-id='1'><a class="sidebar-link sidebar-title link-nav" href="/admin/danh-muc-mon-an/index">
                                                 <i class="fa fa-align-justify"></i>
                                                 <span>Quản Lý Danh Mục Món Ăn</span>
                                                 <div class="according-menu"></div>
                                             </a>
                                         </li>
-                                        <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="/admin/mon-an/index">
+                                        <li class="sidebar-list" data-id='2'><a class="sidebar-link sidebar-title link-nav" href="/admin/mon-an/index">
                                                 <i class="fa fa-coffee"></i>
                                                 <span>Quản Lý Món Ăn</span>
                                                 <div class="according-menu"></div>
                                             </a>
                                         </li>
-                                        <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="/admin/tai-khoan/index">
+                                        <li class="sidebar-list" data-id='3'><a class="sidebar-link sidebar-title link-nav" href="/admin/tai-khoan/index">
                                                 <i class="fa fa-users"></i>
                                                 <span>Quản Lý Tài Khoản</span>
                                                 <div class="according-menu"></div>
                                             </a>
                                         </li>
-                                        <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="/admin/don-hang">
+                                        <li class="sidebar-list" data-id='4'><a class="sidebar-link sidebar-title link-nav" href="/admin/don-hang">
                                                 <i class="fa fa-shopping-bag"></i>
                                                 <span>Quản Lý Đơn Hàng</span>
                                                 <div class="according-menu"></div>
                                             </a>
                                         </li>
-                                        <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="/admin/hoa-don/">
+                                        <li class="sidebar-list" data-id='5'><a class="sidebar-link sidebar-title link-nav" href="/admin/hoa-don/">
                                             <i class="fa fa-credit-card"></i>
                                                 <span>Quản Lý Hoá Đơn</span>
                                                 <div class="according-menu"></div>

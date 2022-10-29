@@ -15,7 +15,8 @@ class TaiKhoanController extends Controller
 {
     public function index()
     {
-        return view('admin.pages.tai_khoan.index');
+        $checkMenu = 3;
+        return view('admin.pages.tai_khoan.index', compact('checkMenu'));
     }
 
     public function checkEmail(Request $request)

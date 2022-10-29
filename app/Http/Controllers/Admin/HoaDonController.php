@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class HoaDonController extends Controller
 {
     public function index(){
-        return view('admin.pages.hoa_don.hoa_don');
+        $checkMenu = 5;
+        return view('admin.pages.hoa_don.hoa_don', compact('checkMenu'));
     }
 }

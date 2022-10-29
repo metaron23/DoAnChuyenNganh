@@ -16,6 +16,14 @@
         #contents {
             visibility: hidden;
         }
+
+        .active_menu {
+            background-color: rgba(115,102,255,0.12);
+            color: var(--theme-deafult);
+        }
+        .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li.sidebar-list:hover>a:hover{
+            background-color: transparent;
+        }
     </style>
 </head>
 
@@ -71,6 +79,15 @@
                 document.getElementById('contents').style.visibility = "visible";
             }
         }
+        $(document).ready(function() {
+            let check = {!! json_encode($checkMenu, JSON_HEX_TAG) !!};
+            let menuList = $('.sidebar-main .sidebar-list');
+            for (const child of menuList) {
+                if (child.getAttribute('data-id') == check) {
+                    child.classList.add('active_menu');
+                }
+            }
+        });
     </script>
 
     @yield('js')

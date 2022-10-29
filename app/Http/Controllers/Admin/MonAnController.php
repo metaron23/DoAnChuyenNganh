@@ -14,7 +14,8 @@ class MonAnController extends Controller
 {
     public function index()
     {
-        return view('admin.pages.mon_an.index');
+        $checkMenu = 2;
+        return view('admin.pages.mon_an.index', compact('checkMenu'));
     }
 
     public function getData()
