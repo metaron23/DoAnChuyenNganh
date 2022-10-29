@@ -7,11 +7,11 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="bradcaump__inner text-center">
-                                <h2 class="bradcaump-title">order</h2>
+                                <h2 class="bradcaump-title">đơn hàng</h2>
                                 <nav class="bradcaump-inner">
-                                    <a class="breadcrumb-item" href="index.html">Home</a>
+                                    <a class="breadcrumb-item" href="index.html">trang chủ</a>
                                     <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
-                                    <span class="breadcrumb-item active">order</span>
+                                    <span class="breadcrumb-item active">đơn hàng</span>
                                 </nav>
                             </div>
                         </div>
@@ -28,15 +28,22 @@
                                 <div class="card">
                                     <div class="cartbox__btn">
                                         <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
+<<<<<<< HEAD
                                             <li><a href="#" data-id="0" v-on:click.prevent="clickTab($event)">New Orders</a></li>
                                             <li><a href="#" data-id="1" v-on:click.prevent="clickTab($event)">Shipping Orders</a></li>
                                             <li><a href="#" data-id="2" v-on:click.prevent="clickTab($event)">Shipped Orders</a></li>
                                             <li><a href="#" data-id="3" v-on:click.prevent="clickTab($event)">Cancelled Orders</a></li>
+=======
+                                            <li><a href="#" data-id="0" v-on:click.prevent="clickTab($event)">Chờ Xác Nhận</a></li>
+                                            <li><a href="#" data-id="1" v-on:click.prevent="clickTab($event)">Đang Giao</a></li>
+                                            <li><a href="#" data-id="2" v-on:click.prevent="clickTab($event)">Đã Giao</a></li>
+                                            <li><a href="#" data-id="3" v-on:click.prevent="clickTab($event)">Đã Huỷ</a></li>
+>>>>>>> 4adcecea4d6c04244af5eab8c89833bab82c5c89
                                         </ul>
                                     </div>
                                     <div id="newOrders">
                                         <div class="card-header">
-                                            <h5>New Orders</h5>
+                                            <h5>Chờ Xác Nhận</h5>
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -59,10 +66,10 @@
                                                                     <div class="text-muted me-2">Price</div>: @{{ value.tong_tien.toLocaleString() }} VND
                                                                 </div>
                                                                 <div class="avaiabilty">
-                                                                    <div class="text-success">@{{ value.trang_thai_thanh_toan == 0 ? "Not Paid" : "Paid" }}</div>
+                                                                    <div class="text-success">@{{ value.trang_thai_thanh_toan == 0 ? "Chưa Thanh Toán" : "Đã Thanh Toán" }}</div>
                                                                 </div>
                                                                 <a class="btn btn-primary btn-xs" href="#" data-bs-original-title="" title=""
-                                                                    style="pointer-events: none;cursor: default;font-size:14px">Processing</a>
+                                                                    style="pointer-events: none;cursor: default;font-size:14px">Chờ xác nhận</a>
                                                                 <div class="cancel_order">
                                                                     <a href="">
                                                                         <i class="fa fa-spin fa-spinner" v-bind:data-id="value.id"
@@ -80,7 +87,11 @@
                                     </div>
                                     <div id="shippingOrders">
                                         <div class="card-header">
+<<<<<<< HEAD
                                             <h5>Shipping Orders</h5>
+=======
+                                            <h5>Đang giao</h5>
+>>>>>>> 4adcecea4d6c04244af5eab8c89833bab82c5c89
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -104,11 +115,19 @@
                                                                     <div class="text-muted me-2">Price</div>: @{{ value.tong_tien.toLocaleString() }} VND
                                                                 </div>
                                                                 <div class="avaiabilty">
+<<<<<<< HEAD
                                                                     <div class="text-success">@{{ value.trang_thai_thanh_toan == 0 ? "Not Paid" : "Paid" }}</div>
                                                                 </div>
                                                                 <a class="btn btn-success btn-xs" href="#" data-bs-original-title=""
                                                                     title=""
                                                                     style="pointer-events: none;cursor: default;font-size:14px">Shipping</a>
+=======
+                                                                    <div class="text-success">@{{ value.trang_thai_thanh_toan == 0 ? "Chưa Thanh Toán" : "Đã Thanh Toán" }}</div>
+                                                                </div>
+                                                                <a class="btn btn-success btn-xs" href="#" data-bs-original-title=""
+                                                                    title=""
+                                                                    style="pointer-events: none;cursor: default;font-size:14px">Đang giao</a>
+>>>>>>> 4adcecea4d6c04244af5eab8c89833bab82c5c89
                                                             </div>
                                                         </div>
                                                     </div>
@@ -118,7 +137,7 @@
                                     </div>
                                     <div id="shippedOrders">
                                         <div class="card-header">
-                                            <h5>Shipped Orders</h5>
+                                            <h5>Đã Giao</h5>
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -142,11 +161,11 @@
                                                                     <div class="text-muted me-2">Price</div>: @{{ value.tong_tien.toLocaleString() }} VND
                                                                 </div>
                                                                 <div class="avaiabilty">
-                                                                    <div class="text-success">@{{ value.trang_thai_thanh_toan == 0 ? "Not Paid" : "Paid" }}</div>
+                                                                    <div class="text-success">@{{ value.trang_thai_thanh_toan == 0 ? "Chưa Thanh Toán" : "Đã Thanh Toán" }}</div>
                                                                 </div>
                                                                 <a class="btn btn-warning btn-xs" href="#" data-bs-original-title=""
                                                                     title=""
-                                                                    style="pointer-events: none;cursor: default;font-size:14px">Shipped</a>
+                                                                    style="pointer-events: none;cursor: default;font-size:14px">Đã giao</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -156,7 +175,7 @@
                                     </div>
                                     <div id="cancelledOrders">
                                         <div class="card-header">
-                                            <h5>Cancelled Orders</h5>
+                                            <h5>Đã Huỷ</h5>
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -180,11 +199,11 @@
                                                                     <div class="text-muted me-2">Price</div>: @{{ value.tong_tien.toLocaleString() }} VND
                                                                 </div>
                                                                 <div class="avaiabilty">
-                                                                    <div class="text-success">@{{ value.trang_thai_thanh_toan == 0 ? "Not Paid" : "Paid" }}</div>
+                                                                    <div class="text-success">@{{ value.trang_thai_thanh_toan == 0 ? "Chưa Thanh Toán" : "Đã Thanh Toán" }}</div>
                                                                 </div>
                                                                 <a class="btn btn-danger btn-xs" href="#" data-bs-original-title=""
                                                                     title=""
-                                                                    style="pointer-events: none;cursor: default;font-size:14px">Cancelled</a>
+                                                                    style="pointer-events: none;cursor: default;font-size:14px">Đã hoàn trả</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -204,13 +223,12 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content" style="height:580px;width:100%;overflow:auto; ">
                         <div class="modal-header">
-                            <h4 class="modal-title" id="myLargeModalLabel">Detail Order</h4>
+                            <h4 class="modal-title" id="myLargeModalLabel">Chi Tiết Đơn Hàng</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" v-on:click.prevent="showModal=false">
                                 <span aria-hidden="true" style="font-size: 40px">×</span>
                             </button>
                         </div>
                         <div class="modal-body">
-
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 ol-lg-12">
                                     <form action="#">
@@ -218,11 +236,11 @@
                                             <table>
                                                 <thead>
                                                     <tr class="title-top">
-                                                        <th class="product-thumbnail">Image</th>
-                                                        <th class="product-name">Product</th>
-                                                        <th class="product-price">Price</th>
-                                                        <th class="product-quantity">Quantity</th>
-                                                        <th class="product-subtotal">Total</th>
+                                                        <th class="product-thumbnail">Hình Ảnh</th>
+                                                        <th class="product-name">Món Ăn</th>
+                                                        <th class="product-price">Giá</th>
+                                                        <th class="product-quantity">Số lượng</th>
+                                                        <th class="product-subtotal">Tiền</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -247,13 +265,32 @@
                                     </form>
                                 </div>
                             </div>
+                            <div class="row mt-2">
+                                <div class="col-md-6 col-sm-6 ol-lg-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Tên người giao</label>
+                                        <input type="text" class="form-control" v-bind:value="listDetailOrder.ten_ship">
+                                  </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 ol-lg-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Số điện thoại giao hàng</label>
+                                        <input type="text" class="form-control" v-bind:value="listDetailOrder.phone_ship">
+                                  </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 ol-lg-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Địa chỉ giao hàng</label>
+                                        <input type="text" class="form-control" v-bind:value="listDetailOrder.dia_chi_ship">
+                                  </div>
+                                </div>
+                            </div>
                             <div class="col-lg-6 offset-lg-6">
                                 <div class="cartbox__total__area" style="margin-top:20px">
-                                    <div class="cart__total__amount"><span>Grand Total</span> <span>@{{ listDetailOrder.tong_tien.toLocaleString() }} VND
+                                    <div class="cart__total__amount"><span>Tổng tiền</span> <span>@{{ listDetailOrder.tong_tien.toLocaleString() }} VND
                                         </span></div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

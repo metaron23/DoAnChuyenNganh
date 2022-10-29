@@ -13,14 +13,14 @@
                     <div class="square">
                         <div class="feature text-center">
                             <div class="feature__thumb">
-                                <a href="menu-details.html">
+                                <a href="/gallery">
                                     <img src="/assets_client/images/service/1.png" alt="feature images">
                                 </a>
                             </div>
                             <div class="feature__details">
-                                <h4><a href="menu-details.html">Breakfast</a></h4>
-                                <h6>All types of Bread Iteam are available</h6>
-                                <p>adipisicing elid tempor in dolore magna alua. Ut enim ad minim veniamexercitation llamco laboris nisi ut aliqui</p>
+                                <h4><a href="/gallery">Bữa sáng</a></h4>
+                                <h6>Tất cả các món đều đã sẵn sàng chờ bạn !</h6>
+                                <p>Đã có B-restaurant đây rồi, bạn sẽ không phải đau đầu suy nghĩ xem mỗi ngày phải ăn gì hoặc nấu món gì vừa ngon vừa dinh dưỡng. </p>
                             </div>
                         </div>
                     </div>
@@ -31,14 +31,14 @@
                     <div class="square">
                         <div class="feature text-center">
                             <div class="feature__thumb">
-                                <a href="menu-details.html">
+                                <a href="/gallery">
                                     <img src="/assets_client/images/service/2.png" alt="feature images">
                                 </a>
                             </div>
                             <div class="feature__details">
-                                <h4><a href="menu-details.html">Lunch</a></h4>
-                                <h6>All types of Muffin Iteam are available</h6>
-                                <p>adipisicing elid tempor in dolore magna alua. Ut enim ad minim veniamexercitation llamco laboris nisi ut aliqui</p>
+                                <h4><a href="/gallery">Buổi trưa</a></h4>
+                                <h6>Tất cả các món đều đã sẵn sàng chờ bạn !</h6>
+                                <p>Đã có B-restaurant đây rồi, bạn sẽ không phải đau đầu suy nghĩ xem mỗi ngày phải ăn gì hoặc nấu món gì vừa ngon vừa dinh dưỡng. </p>
                             </div>
                         </div>
                     </div>
@@ -49,14 +49,14 @@
                     <div class="square">
                         <div class="feature text-center">
                             <div class="feature__thumb">
-                                <a href="menu-details.html">
+                                <a href="/gallery">
                                     <img src="/assets_client/images/service/3.png" alt="feature images">
                                 </a>
                             </div>
                             <div class="feature__details">
-                                <h4><a href="menu-details.html">Dinner</a></h4>
-                                <h6>All types of Pastry Iteam are available</h6>
-                                <p>adipisicing elid tempor in dolore magna alua. Ut enim ad minim veniamexercitation llamco laboris nisi ut aliqui</p>
+                                <h4><a href="/gallery">Buổi tối</a></h4>
+                                <h6>Tất cả các món đều đã sẵn sàng chờ bạn !</h6>
+                                <p>Đã có B-restaurant đây rồi, bạn sẽ không phải đau đầu suy nghĩ xem mỗi ngày phải ăn gì hoặc nấu món gì vừa ngon vừa dinh dưỡng. </p>
                             </div>
                         </div>
                     </div>
@@ -73,28 +73,25 @@
             <div class="row">
                 <div class="col-lg-12 col-lg-12">
                     <div class="section__title title__style--2 service__align--center">
-                        <h2 class="title__line">Why Choose Us</h2>
-                        <p>The process of our service </p>
+                        <h2 class="title__line">Hãy đến với chúng tôi</h2>
+                        <p>Với những quy trình dịch vụ</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 col-lg-12">
                     <div class="choose__wrap text-center mt--50">
-                        <p>Lorem ipsutempor incididunt ut laveniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conseq
-                            uat.
-                            Duccaecat cupid Cganjam proident, sunt in culpa qui officia deserunt molperspiciatis.</p>
+
                         <ul class="fd__choose__list d-flex justify-content-center">
-                            <li>1. Ontime Delivery</li>
-                            <li>2. Free Delivery Cost</li>
-                            <li>3. Best Quality Food</li>
+                            <li>1. Giao hàng đúng giờ.</li>
+                            <li>2. Phí giao hàng miễn phí.</li>
+                            <li>3. Chất lượng dịch vụ tốt nhất.</li>
                         </ul>
-                        <p>t voluptatem accusantium doloremque laudantium, totaeaque ipsa quae ab illo inventore veritarchibeatae vitae dicta sunt
-                            explicabo. voluptat evoluptas sit aspernatur aut odit aut fugit, seconsequumagni dolores eosvolupadipisci velit, sed quia
-                            non
-                            numquam eius modi tempora incidunt ut labore.</p>
+                        <p>B-restaurant là chuỗi nhà hàng nổi tiếng nhất miền Trung, được xây dựng vào đầu thu năm 2022. Với những món ăn đặc trưng
+                            bạn chỉ có thể tìm thấy ở nhà hàng chúng tôi.
+                        </p>
                         <div class="chooseus__btn">
-                            <a class="food__btn" href="#">Read More</a>
+                            <a class="food__btn" href="#">Xem thêm</a>
                         </div>
                     </div>
                 </div>
@@ -114,8 +111,8 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="section__title title__style--2 service__align--center">
-                        <h2 class="title__line">Our Special Offer</h2>
-                        <p>The process of our service </p>
+                        <h2 class="title__line">Những ưu đãi đặc biệt</h2>
+                        <p>Quy trình dịch vụ của chúng tôi</p>
                     </div>
                 </div>
             </div>
@@ -144,7 +141,7 @@
                                         <a class="food__btn grey--btn mid-height addToCart mt-4" href="" data-id={{ $value->id }}>Order
                                             Now</a>
                                     @else
-                                        <a class="food__btn grey--btn mid-height accountbox-trigger mt-4" href="" data-id={{ $value->id }}>Order Now</a>
+                                        <a class="food__btn grey--btn mid-height accountbox-trigger mt-4" href="" data-id={{ $value->id }}>Đặt món</a>
                                     @endif
 
                                 </div>
@@ -156,7 +153,7 @@
             </div>
         </div>
         <div style="text-align:center;font-size:18px;font-weight:600; border-bottom:1px solid #ccc">
-            <a href="/menu">View All</a>
+            <a href="/menu.blade.php">View All</a>
         </div>
         <!-- Start Banner Area -->
         <div class="banner__area mt--40">
@@ -222,8 +219,8 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="section__title title__style--2 service__align--center section__bg__black">
-                        <h2 class="title__line">Our Special Offer</h2>
-                        <p>The process of our service </p>
+                        <h2 class="title__line">Những ưu đãi đặc biệt</h2>
+                        <p>Quy trình dịch vụ của chúng tôi </p>
                     </div>
                 </div>
             </div>
@@ -232,12 +229,12 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 foo">
                     <div class="popular__food">
                         <div class="pp_food__thumb">
-                            <a href="menu-details.html">
+                            <a href="/gallery">
                                 <img src="/assets_client/images/popular/1.jpg" alt="popular food">
                             </a>
                             <div class="pp__food__prize active offer">
-                                <span class="new">new</span>
-                                <span>$50</span>
+                                <span class="new">Mới</span>
+                                <span>{{ $value->don_gia_ban }}</span>
                             </div>
                         </div>
                         <div class="pp__food__inner">
@@ -245,7 +242,7 @@
                                 <img src="/assets_client/images/popular/icon/1.png" alt="icon images">
                             </div>
                             <div class="pp__food__details">
-                                <h4><a href="menu-details.html">Food Type : Donuts</a></h4>
+                                <h4><a href="/gallery">Loại bánh : Donuts</a></h4>
                                 <ul class="rating">
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li><i class="zmdi zmdi-star"></i></li>
@@ -253,10 +250,10 @@
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li class="rating__opasity"><i class="zmdi zmdi-star"></i></li>
                                 </ul>
-                                <p>Delivery Time : 60 min, Free Delivery</p>
+                                <p>Thời gian giao : 25 min, Free Ship</p>
                                 <div class="pp__food__bottom d-flex justify-content-between align-items-center">
                                     <div class="pp__btn">
-                                        <a class="food__btn btn--transparent btn__hover--theme btn__hover--theme" href="#">Order Online</a>
+                                        <a class="food__btn btn--transparent btn__hover--theme btn__hover--theme" href="#">Đặt ngay</a>
                                     </div>
                                     <ul class="pp__meta d-flex">
                                         <li><a href="#"><i class="zmdi zmdi-comment-outline"></i>03</a></li>
@@ -272,12 +269,12 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 foo">
                     <div class="popular__food">
                         <div class="pp_food__thumb">
-                            <a href="menu-details.html">
+                            <a href="/gallery">
                                 <img src="/assets_client/images/popular/2.jpg" alt="popular food">
                             </a>
                             <div class="pp__food__prize offer">
                                 <span class="new">off</span>
-                                <span>$50</span>
+                                <span>15%</span>
                             </div>
                         </div>
                         <div class="pp__food__inner">
@@ -285,7 +282,7 @@
                                 <img src="/assets_client/images/popular/icon/2.png" alt="icon images">
                             </div>
                             <div class="pp__food__details">
-                                <h4><a href="menu-details.html">Food Type : Muffin</a></h4>
+                                <h4><a href="/gallery">Loại bánh : Muffin</a></h4>
                                 <ul class="rating">
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li><i class="zmdi zmdi-star"></i></li>
@@ -293,10 +290,10 @@
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li class="rating__opasity"><i class="zmdi zmdi-star"></i></li>
                                 </ul>
-                                <p>Delivery Time : 60 min, Free Delivery</p>
+                                <p>Thời gian giao : 25 min, Free Ship</p>
                                 <div class="pp__food__bottom d-flex justify-content-between align-items-center">
                                     <div class="pp__btn">
-                                        <a class="food__btn btn--transparent btn__hover--theme" href="#">Order Online</a>
+                                        <a class="food__btn btn--transparent btn__hover--theme" href="#">Đặt ngay</a>
                                     </div>
                                     <ul class="pp__meta d-flex">
                                         <li><a href="#"><i class="zmdi zmdi-comment-outline"></i>03</a></li>
@@ -312,12 +309,12 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 foo">
                     <div class="popular__food">
                         <div class="pp_food__thumb">
-                            <a href="menu-details.html">
+                            <a href="/gallery">
                                 <img src="/assets_client/images/popular/3.jpg" alt="popular food">
                             </a>
                             <div class="pp__food__prize offer">
                                 <span class="new">hot</span>
-                                <span>$50</span>
+                                <span>{{ $value->don_gia_ban }}</span>
                             </div>
                         </div>
                         <div class="pp__food__inner">
@@ -325,7 +322,7 @@
                                 <img src="/assets_client/images/popular/icon/3.png" alt="icon images">
                             </div>
                             <div class="pp__food__details">
-                                <h4><a href="menu-details.html">Food Type : Bun</a></h4>
+                                <h4><a href="/gallery">Loại bánh : Bun</a></h4>
                                 <ul class="rating">
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li><i class="zmdi zmdi-star"></i></li>
@@ -333,10 +330,10 @@
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li class="rating__opasity"><i class="zmdi zmdi-star"></i></li>
                                 </ul>
-                                <p>Delivery Time : 60 min, Free Delivery</p>
+                                <p>Thời gian giao : 25 min, Free Ship</p>
                                 <div class="pp__food__bottom d-flex justify-content-between align-items-center">
                                     <div class="pp__btn">
-                                        <a class="food__btn btn--transparent btn__hover--theme" href="#">Order Online</a>
+                                        <a class="food__btn btn--transparent btn__hover--theme" href="#">Đặt ngay</a>
                                     </div>
                                     <ul class="pp__meta d-flex">
                                         <li><a href="#"><i class="zmdi zmdi-comment-outline"></i>03</a></li>
@@ -352,11 +349,11 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 foo">
                     <div class="popular__food">
                         <div class="pp_food__thumb">
-                            <a href="menu-details.html">
+                            <a href="/gallery">
                                 <img src="/assets_client/images/popular/4.jpg" alt="popular food">
                             </a>
                             <div class="pp__food__prize active">
-                                <span>$40</span>
+                                <span>{{ $value->don_gia_ban }}</span>
                             </div>
                         </div>
                         <div class="pp__food__inner">
@@ -364,18 +361,19 @@
                                 <img src="/assets_client/images/popular/icon/4.png" alt="icon images">
                             </div>
                             <div class="pp__food__details">
-                                <h4><a href="menu-details.html">Food Type : Cup Cake</a></h4>
+                                <h4><a href="/gallery">Loại bánh : Cup Cake</a></h4>
                                 <ul class="rating">
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li><i class="zmdi zmdi-star"></i></li>
-                                    <li class="rating__opasity"><i class="zmdi zmdi-star"></i></li>
+                                    <li><i class="zmdi zmdi-star"></i></li>
+                                    {{-- <li class="rating__opasity"><i class="zmdi zmdi-star"></i></li> --}}
                                 </ul>
-                                <p>Delivery Time : 60 min, Free Delivery</p>
+                                <p>Thời gian giao : 25 min, Free Ship</p>
                                 <div class="pp__food__bottom d-flex justify-content-between align-items-center">
                                     <div class="pp__btn">
-                                        <a class="food__btn btn--transparent btn__hover--theme" href="#">Order Online</a>
+                                        <a class="food__btn btn--transparent btn__hover--theme" href="#">Đặt ngay</a>
                                     </div>
                                     <ul class="pp__meta d-flex">
                                         <li><a href="#"><i class="zmdi zmdi-comment-outline"></i>03</a></li>
@@ -391,11 +389,11 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 foo">
                     <div class="popular__food">
                         <div class="pp_food__thumb">
-                            <a href="menu-details.html">
+                            <a href="/gallery">
                                 <img src="/assets_client/images/popular/5.jpg" alt="popular food">
                             </a>
                             <div class="pp__food__prize">
-                                <span>$40</span>
+                                <span>{{ $value->don_gia_ban }}</span>
                             </div>
                         </div>
                         <div class="pp__food__inner">
@@ -403,7 +401,7 @@
                                 <img src="/assets_client/images/popular/icon/5.png" alt="icon images">
                             </div>
                             <div class="pp__food__details">
-                                <h4><a href="menu-details.html">Food Type : Donuts</a></h4>
+                                <h4><a href="/gallery">Loại bánh : Donuts</a></h4>
                                 <ul class="rating">
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li><i class="zmdi zmdi-star"></i></li>
@@ -411,10 +409,10 @@
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li class="rating__opasity"><i class="zmdi zmdi-star"></i></li>
                                 </ul>
-                                <p>Delivery Time : 60 min, Free Delivery</p>
+                                <p>Thời gian giao : 25 min, Free Ship</p>
                                 <div class="pp__food__bottom d-flex justify-content-between align-items-center">
                                     <div class="pp__btn">
-                                        <a class="food__btn btn--transparent btn__hover--theme" href="#">Order Online</a>
+                                        <a class="food__btn btn--transparent btn__hover--theme" href="#">Đặt ngay</a>
                                     </div>
                                     <ul class="pp__meta d-flex">
                                         <li><a href="#"><i class="zmdi zmdi-comment-outline"></i>03</a></li>
@@ -430,11 +428,11 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 foo">
                     <div class="popular__food">
                         <div class="pp_food__thumb">
-                            <a href="menu-details.html">
+                            <a href="/gallery">
                                 <img src="/assets_client/images/popular/6.jpg" alt="popular food">
                             </a>
                             <div class="pp__food__prize active">
-                                <span>$40</span>
+                                <span>{{ $value->don_gia_ban }}</span>
                             </div>
                         </div>
                         <div class="pp__food__inner">
@@ -442,7 +440,7 @@
                                 <img src="/assets_client/images/popular/icon/6.png" alt="icon images">
                             </div>
                             <div class="pp__food__details">
-                                <h4><a href="menu-details.html">Food Type : Bread</a></h4>
+                                <h4><a href="/gallery">Loại bánh : Bread</a></h4>
                                 <ul class="rating">
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li><i class="zmdi zmdi-star"></i></li>
@@ -450,10 +448,10 @@
                                     <li><i class="zmdi zmdi-star"></i></li>
                                     <li class="rating__opasity"><i class="zmdi zmdi-star"></i></li>
                                 </ul>
-                                <p>Delivery Time : 60 min, Free Delivery</p>
+                                <p>Thời gian giao : 25 min, Free Ship</p>
                                 <div class="pp__food__bottom d-flex justify-content-between align-items-center">
                                     <div class="pp__btn">
-                                        <a class="food__btn btn--transparent btn__hover--theme" href="#">Order Online</a>
+                                        <a class="food__btn btn--transparent btn__hover--theme" href="#">Đặt ngay</a>
                                     </div>
                                     <ul class="pp__meta d-flex">
                                         <li><a href="#"><i class="zmdi zmdi-comment-outline"></i>03</a></li>
@@ -469,94 +467,7 @@
         </div>
     </section>
     <!-- End Popular Food Area -->
-    <!-- Start Our Team Area -->
-    <section class="food__team__area bg--white section-padding--lg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="section__title title__style--2 service__align--center">
-                        <h2 class="title__line">Meet Our Team</h2>
-                        <p>The process of our service </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt--40">
-                <!-- Start Single Team -->
-                <div class="col-lg-4 col-md-6 col-sm-12 foo">
-                    <div class="team text-center">
-                        <div class="team__thumb">
-                            <a href="team-details.html">
-                                <img src="/assets_client/images/team/team-list/1.jpg" alt="team images">
-                            </a>
-                        </div>
-                        <div class="team__content">
-                            <div class="team__info">
-                                <h4><a href="team-details.html">Wiliam Devid</a></h4>
-                                <h6>Co-Founder</h6>
-                            </div>
-                            <p>adipisicing elid tempor in dolore magna alua. Ut enim ad minim veniamexercitation llamco laboris nisi ut aliqui</p>
-                            <ul class="team__social__net">
-                                <li><a href="#"><i class="zmdi zmdi-google"></i></a></li>
-                                <li><a href="#"><i class="zmdi zmdi-rss"></i></a></li>
-                                <li><a href="#"><i class="zmdi zmdi-tumblr"></i></a></li>
-                                <li><a href="#"><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Team -->
-                <!-- Start Single Team -->
-                <div class="col-lg-4 col-md-6 col-sm-12 foo">
-                    <div class="team text-center">
-                        <div class="team__thumb">
-                            <a href="team-details.html">
-                                <img src="/assets_client/images/team/team-list/2.jpg" alt="team images">
-                            </a>
-                        </div>
-                        <div class="team__content">
-                            <div class="team__info">
-                                <h4><a href="team-details.html">Najnin Supa</a></h4>
-                                <h6>CFounder</h6>
-                            </div>
-                            <p>adipisicing elid tempor in dolore magna alua. Ut enim ad minim veniamexercitation llamco laboris nisi ut aliqui</p>
-                            <ul class="team__social__net">
-                                <li><a href="#"><i class="zmdi zmdi-google"></i></a></li>
-                                <li><a href="#"><i class="zmdi zmdi-rss"></i></a></li>
-                                <li><a href="#"><i class="zmdi zmdi-tumblr"></i></a></li>
-                                <li><a href="#"><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Team -->
-                <!-- Start Single Team -->
-                <div class="col-lg-4 col-md-6 col-sm-12 foo">
-                    <div class="team text-center">
-                        <div class="team__thumb">
-                            <a href="team-details.html">
-                                <img src="/assets_client/images/team/team-list/3.jpg" alt="team images">
-                            </a>
-                        </div>
-                        <div class="team__content">
-                            <div class="team__info">
-                                <h4><a href="team-details.html">Devid Smith</a></h4>
-                                <h6>Supplier</h6>
-                            </div>
-                            <p>adipisicing elid tempor in dolore magna alua. Ut enim ad minim veniamexercitation llamco laboris nisi ut aliqui</p>
-                            <ul class="team__social__net">
-                                <li><a href="#"><i class="zmdi zmdi-google"></i></a></li>
-                                <li><a href="#"><i class="zmdi zmdi-rss"></i></a></li>
-                                <li><a href="#"><i class="zmdi zmdi-tumblr"></i></a></li>
-                                <li><a href="#"><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Team -->
-            </div>
-        </div>
-    </section>
-    <!-- End Our Team Area -->
+
     <!-- Start Blog Area -->
     <section class="fb__blog__ara section-padding--lg bg--white blog--2">
         <div class="container">
@@ -564,8 +475,8 @@
                 <div class="col-md-12 col-lg-12">
                     <div class="col-lg-12 col-md-12">
                         <div class="section__title title__style--2 service__align--center">
-                            <h2 class="title__line">Latest News Blog</h2>
-                            <p>The process of our service </p>
+                            <h2 class="title__line">Bài viết mới nhất</h2>
+                            <p>Thơm ngon mời bạn ăn nha !</p>
                         </div>
                     </div>
                 </div>
@@ -582,11 +493,9 @@
                         <div class="blog__details">
                             <h2><a href="blog-details.html">Maxican Food Fev</a></h2>
                             <span>1st Oct, 2o17</span>
-                            <p>Lorem ipsum dolor sit amadipisicing elit, seddo eiusmoddolore magna aliqua. Ut enim ad miveniam, quis noion ullamco
-                                laboris
-                                nisi umt aliquip ex ea cequat.</p>
+                            <p>Món bánh mới nhất của B-restaurant được xem là best-seller của tháng này !!</p>
                             <div class="blog__btn">
-                                <a class="food__btn grey--btn theme--hover" href="blog-details.html">Read More</a>
+                                <a class="food__btn grey--btn theme--hover" href="blog-details.html">Xem thêm</a>
                             </div>
                         </div>
                     </div>
@@ -603,11 +512,9 @@
                         <div class="blog__details">
                             <h2><a href="blog-details.html">Italian Pizza Fev</a></h2>
                             <span>1st Oct, 2o17</span>
-                            <p>Lorem ipsum dolor sit amadipisicing elit, seddo eiusmoddolore magna aliqua. Ut enim ad miveniam, quis noion ullamco
-                                laboris
-                                nisi umt aliquip ex ea cequat.</p>
+                            <p>Món bánh mới nhất của B-restaurant được xem là best-seller của tháng này !!</p>
                             <div class="blog__btn">
-                                <a class="food__btn grey--btn theme--hover" href="blog-details.html">Read More</a>
+                                <a class="food__btn grey--btn theme--hover" href="blog-details.html">Xem thêm</a>
                             </div>
                         </div>
                     </div>
@@ -624,11 +531,9 @@
                         <div class="blog__details">
                             <h2><a href="blog-details.html">Asian Food F</a></h2>
                             <span>1st Oct, 2o17</span>
-                            <p>Lorem ipsum dolor sit amadipisicing elit, seddo eiusmoddolore magna aliqua. Ut enim ad miveniam, quis noion ullamco
-                                laboris
-                                nisi umt aliquip ex ea cequat.</p>
+                            <p>Món bánh mới nhất của B-restaurant được xem là best-seller của tháng này !!</p>
                             <div class="blog__btn">
-                                <a class="food__btn grey--btn theme--hover" href="blog-details.html">Read More</a>
+                                <a class="food__btn grey--btn theme--hover" href="blog-details.html">Xem thêm</a>
                             </div>
                         </div>
                     </div>
@@ -648,10 +553,11 @@
                         <div class="testimonial-inner--3">
                             <div class="testimonial__inner">
                                 <div class="testimonial__content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                        magna aliqua. Ut enim ad minim veniammco laboris nisi ut </p>
+                                   <p> Với món Salad đặc biệt sẽ mang tới lợi ích của việc ăn uống lành mạnh, kiểm soát được lượng calo in –
+                                    calo out là “chìa khóa”
+                                    giảm cân bền vững và duy trì cân nặng hợp lý.</p>
                                     <div class="test__info">
-                                        <h4>Hanchika Browny</h4>
+                                        <h4>Chuyên gia B-restaurant</h4>
                                         <span>Food Lovers</span>
                                     </div>
                                 </div>
@@ -688,7 +594,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="subscribe__inner subscribe--3">
-                            <h2>Subscribe to our newsletter</h2>
+                            <h2>Hãy đóng góp ý kiến của bạn cho chúng tôi nhé !</h2>
                             <div id="mc_embed_signup">
                                 <div id="enter__email__address">
                                     <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
@@ -702,7 +608,7 @@
                                             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                                             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
                                                     name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
-                                            <div class="clearfix subscribe__btn"><input type="submit" value="Send Now" name="subscribe"
+                                            <div class="clearfix subscribe__btn"><input type="submit" value="Gửi" name="subscribe"
                                                     id="mc-embedded-subscribe" class="sign__up food__btn">
                                             </div>
                                         </div>

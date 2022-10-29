@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\CreateMonAn as RequestsCreateMonAn;
 use App\Http\Requests\MonAn\CreateMonAn;
@@ -8,6 +8,7 @@ use App\Http\Requests\MonAn\UpdateMonAn;
 use App\Http\Requests\UpdateMonAn as RequestsUpdateMonAn;
 use App\Models\MonAn;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class MonAnController extends Controller
 {

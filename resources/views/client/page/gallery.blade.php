@@ -8,11 +8,11 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="bradcaump__inner text-center">
-                            <h2 class="bradcaump-title">our gallery</h2>
+                            <h2 class="bradcaump-title">Món ăn</h2>
                             <nav class="bradcaump-inner">
-                                <a class="breadcrumb-item" href="/home">Home</a>
+                                <a class="breadcrumb-item" href="/home">Trang chủ</a>
                                 <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
-                                <span class="breadcrumb-item active">our gallery</span>
+                                <span class="breadcrumb-item active">Món ăn</span>
                             </nav>
                         </div>
                     </div>
@@ -28,11 +28,11 @@
                 <div class="col-lg-12">
                     <div class="portfolio__menu d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-center">
                         <button data-filter="*" class="is-checked">View All</button>
-                        <button data-filter=".cat--1">Breakfast</button>
-                        <button data-filter=".cat--2">Lunch</button>
-                        <button data-filter=".cat--3">Dinner</button>
-                        <button data-filter=".cat--4">Snacks</button>
-                        <button data-filter=".cat--5">Others</button>
+                        <button data-filter=".cat--1">Ăn sáng</button>
+                        <button data-filter=".cat--2">Ăn trưa</button>
+                        <button data-filter=".cat--3">Ăn tối</button>
+                        <button data-filter=".cat--4">Mó ăn nhanh</button>
+                        <button data-filter=".cat--5">Đồ uống</button>
                     </div>
                 </div>
             </div>
