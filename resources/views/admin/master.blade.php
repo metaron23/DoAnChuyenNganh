@@ -51,7 +51,7 @@
                     </div>
                     <!-- Container-fluid starts-->
                     <div class="container-fluid">
-                        <div class="row second-chart-list third-news-update">
+                        <div class="row">
                             @yield('content')
                         </div>
                     </div>
@@ -91,7 +91,6 @@
     </script>
 
     @yield('js')
-
 </body>
 
 </html>
