@@ -15,6 +15,26 @@
         <li><a href="index.html">Home</a></li>
         <li><a class="breadcrumb_active" href="#">User-Profile</a></li>
     </ul>
+    {{-- end breadcrumb --}}
+    <div class="ht__bradcaump__area bg-image--18">
+        <div class="ht__bradcaump__wrap d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="bradcaump__inner text-center">
+                            <h2 class="bradcaump-title">Người dùng</h2>
+                            <nav class="bradcaump-inner">
+                                <a class="breadcrumb-item" href="/home">Trang chủ</a>
+                                <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
+                                <span class="breadcrumb-item active">người dùng</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container" method="POST">
         <div class="col-4">
             <div class="avatar-user">
