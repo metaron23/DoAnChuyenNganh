@@ -1,5 +1,7 @@
 @extends('client.share.master')
-
+<head>
+    <title>Thực đơn</title>
+</head>
 @section('content')
     <div id="menu_client">
         <!-- Start Bradcaump area -->

@@ -1,5 +1,7 @@
 @extends('client.share.master')
-
+<head>
+    <title>Giỏ hàng</title>
+</head>
 @section('content')
     <div id="app_cart">
         <div class="ht__bradcaump__area bg-image--18">

@@ -48,9 +48,9 @@
             <div class="col-md-7 p-0">
                 <div class="login-card">
                     <div>
-                        <div style="width:450px"><a class="logo text-start" href="/home"><img class="img-fluid for-light w-50"
-                                    src="/assets_client/images/logo/foody3.png" alt="icon_login"></a>
-                        </div>
+                        {{-- <div style="width:450px"><a class="logo text-start" href="/home"><img class="img-fluid for-light w-50"
+                                    src="/assets_client/images/logo/foody4.png" alt="icon_login"></a>
+                        </div> --}}
                         <div class="login-main">
                             <form class="theme-form" id="loginForm">
                                 <h4>Đăng nhập tài khoản</h4>

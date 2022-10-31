@@ -140,7 +140,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="section__title title__style--2 service__align--center">
-                        <h2 class="title__line">Những ưu đãi đặc biệt</h2>
+                        <h2 class="title__line">Những món mới đặc biệt của chúng tôi</h2>
                         <p>Quy trình dịch vụ của chúng tôi</p>
                     </div>
                 </div>
