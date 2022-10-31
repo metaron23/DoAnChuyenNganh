@@ -38,7 +38,7 @@
                                 <img v-bind:src="value.hinh_anh" alt="list food images" style="width:100px" class="mr-2">
                             </a>
                             <div class="food__list__details" style="width: 134px">
-                                <p><a href="menu-details.html">@{{ value.ten_mon_an }}</a></p>
+                                <p><a href="/menu/detailFood/" v-on:click.prevent="detailFood(value.id)">@{{ value.ten_mon_an }}</a></p>
                             </div>
                             <span style="font-size: 16px;margin-left: 6px">@{{ (value.don_gia_khuyen_mai == 0 ? value.don_gia_ban : value.don_gia_khuyen_mai).toLocaleString() }} VND</span>
                         </div>
