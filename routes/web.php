@@ -71,6 +71,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'checkAdminTaiKhoan'], funct
         Route::get('/get-data', [\App\Http\Controllers\Admin\HoaDonController::class, 'getData']);
     });
 });
+
 // Page is not need login
 Route::get('/admin/login', [\App\Http\Controllers\Admin\TaiKhoanController::class, 'viewLogin']);
 Route::post('/admin/login', [\App\Http\Controllers\Admin\TaiKhoanController::class, 'actionLogin']);
@@ -108,6 +109,9 @@ Route::group(['prefix' => '/customer', 'middleware' => 'checkCustomerTaiKhoan'],
         Route::get('/', [\App\Http\Controllers\Customer\ManagerOrderController::class, 'index']);
         Route::get('/get-data', [\App\Http\Controllers\Customer\ManagerOrderController::class, 'getData']);
         Route::get('/deleteOrder/{id}', [\App\Http\Controllers\Customer\ManagerOrderController::class, 'delete']);
+    });
+    Route::group(['prefix' => '/account'], function () {
+        Route::get('/', [\App\Http\Controllers\Customer\ManagerAccountController::class, 'index']);
     });
 });
 Route::get('/customer/cart/data', [\App\Http\Controllers\Customer\GioHangController::class, 'dataCart']);

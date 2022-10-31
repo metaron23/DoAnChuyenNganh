@@ -1,8 +1,9 @@
 <div class="sidebar-wrapper close_icon">
     <div>
         <div class="logo-wrapper">
-            <div style="width:400px"><a class="logo text-start" href="/home"><img class="img-fluid for-light w-50"
-                        src="/assets_client/images/logo/foody3.png" alt="icon_login"></a>
+            <div style="width:400px"><a class="logo text-start" href="/home"><img style="    max-width: 100%;
+                object-fit: scale-down; height: 63px;"class="img-fluid for-light w-50"
+                        src="/assets_client/images/logo/foody4.png" alt="icon_login"></a>
             </div>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
         </div>

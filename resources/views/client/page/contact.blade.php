@@ -1,5 +1,7 @@
 @extends('client.share.master')
-
+<head>
+    <title>Liên hệ</title>
+</head>
 @section('content')
     <!-- Start Bradcaump area -->
     <div class="ht__bradcaump__area bg-image--24">
@@ -27,7 +29,7 @@
     <!-- End Contact Map -->
     <!-- Start Address -->
     <div class="food__contact">
-        <div class="food__contact__wrapper d-flex flex-wrap flex-lg-nowrap">
+        <div class="food__contact__wrapper d-flex flex-wrap flex-md-nowrap">
             <!-- Start Single Contact -->
             <div class="contact">
                 <div class="ct__icon">

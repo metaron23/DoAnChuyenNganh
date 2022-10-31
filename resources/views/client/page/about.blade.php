@@ -1,5 +1,7 @@
 @extends('client.share.master')
-
+<head>
+    <title>Thông tin</title>
+</head>
 @section('content')
     <!-- Main wrapper -->
 	<div class="wrapper" id="wrapper">
@@ -60,7 +62,7 @@
                                 <div class="acc-header" role="tab" id="headingTwo">
                                   <h5>
                                     <a class="collapsed" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
-                                        <span>2.</span>Những chi nhánh hiện có của B-restaurant ?.
+                                        <span>2.</span>Những chi nhánh hiện có của B-restaurant ?
                                     </a>
                                   </h5>
                                 </div>
@@ -73,7 +75,7 @@
                                 <div class="acc-header" role="tab" id="headingThree">
                                   <h5>
                                     <a class="collapsed" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
-                                        <span>3.</span>Những chương trình ưu đãi sẽ có trong năm ?.
+                                        <span>3.</span>Những chương trình ưu đãi sẽ có trong năm ?
                                     </a>
                                   </h5>
                                 </div>

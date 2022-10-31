@@ -1,5 +1,7 @@
 @extends('client.share.master')
-
+<head>
+    <title>Thực đơn</title>
+</head>
 @section('content')
     <div id="menu_client">
         <!-- Start Bradcaump area -->
@@ -34,11 +36,11 @@
                     style="position: absolute;z-index: 99999;background-color: #fff; width: 400px;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                     <div class="row" v-for="(value, key) in dataSearch">
                         <div class="m-3 d-flex flex-row justify-content-between">
-                            <a href="menu-details.html">
+                            <a href="#" v-on:click.prevent="detailFood(value.id)">
                                 <img v-bind:src="value.hinh_anh" alt="list food images" style="width:100px" class="mr-2">
                             </a>
                             <div class="food__list__details" style="width: 134px">
-                                <p><a href="/menu/detailFood/" v-on:click.prevent="detailFood(value.id)">@{{ value.ten_mon_an }}</a></p>
+                                <p><a href="#" v-on:click.prevent="detailFood(value.id)">@{{ value.ten_mon_an }}</a></p>
                             </div>
                             <span style="font-size: 16px;margin-left: 6px">@{{ (value.don_gia_khuyen_mai == 0 ? value.don_gia_ban : value.don_gia_khuyen_mai).toLocaleString() }} VND</span>
                         </div>

@@ -10,6 +10,7 @@ use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithStyles;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 use Maatwebsite\Excel\Concerns\Exportable;
+use Illuminate\Support\Arr;
 
 class DonHangExport implements FromCollection, WithHeadings, WithStrictNullComparison,ShouldAutoSize, WithStyles
 {
@@ -17,7 +18,9 @@ class DonHangExport implements FromCollection, WithHeadings, WithStrictNullCompa
 
     public function collection()
     {
-        return DonHang::all();
+        $donHang = DonHang::where('trang_thai_don_hang',2)
+                    ->select('ma_don_hang','id_khach_hang','ten_khach_hang','email_khach_hang','phone_khach_hang','ten_ship','phone_ship','dia_chi_ship','trang_thai_thanh_toan','tong_tien','updated_at')->get();
+        return $donHang;
     }
 
     public function styles(Worksheet $sheet)
@@ -27,18 +30,16 @@ class DonHangExport implements FromCollection, WithHeadings, WithStrictNullCompa
 
     public function headings(): array {
         return [
-            '#',
-            'ma_don_hang',
-            'id_khach_hang',
-            'ten_khach_hang',
-            'email_khach_hang',
-            'phone_khach_hang',
-            'ten_ship',
-            'phone_ship',
-            'dia_chi_ship',
-            'trang_thai_thanh_toan',
-            'trang_thai_don_hang',
-            'tong_tien',
+            'Mã Đơn Hàng',
+            'ID Khách Hàng',
+            'Tên Khách Hàng',
+            'Email Khách Hàng',
+            'Số Điện Thoại',
+            'Tên ngườI nhận',
+            'Điện Thoại Người Nhận',
+            'Địa Chỉ Nhận',
+            'Trạng Thái Thanh Toán',
+            'Tổng Tiền',
             'Ngày Tạo',
         ];
       }
