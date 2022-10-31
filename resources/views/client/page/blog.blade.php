@@ -1,5 +1,7 @@
 @extends('client.share.master')
-
+<head>
+    <title>Bài viết</title>
+</head>
 @section('content')
     <!-- Start Bradcaump area -->
     <div class="ht__bradcaump__area bg-image--19">
