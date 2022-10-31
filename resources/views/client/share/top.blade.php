@@ -12,7 +12,7 @@
                     <div class="col-lg-3 col-sm-4 col-md-6 order-1 order-lg-1">
                         <div class="logo">
                             <a href="/home">
-                                <img style="width:140x; height: 70px;" src="/assets_client/images/logo/foody3.png" alt="logo images">
+                                <img style="width:140x; height: 70px;" src="/assets_client/images/logo/foody4.png" alt="logo images">
                             </a>
                         </div>
                     </div>
