@@ -3910,11 +3910,12 @@ div.slide__pizza img {
     max-width: 100px;
     flex-basis: 20%;
 }
+
 .food__menu__thumb img{
-    max-width: 100%;
-    height: 100%;
+    height:100%;
     object-fit: cover;
 }
+
 .special__food__menu .fd__tab__content .single__tab__panel .tab__content__wrap .single__tab__content .food__menu .food__menu__details {
     flex-basis: 80%;
 }
