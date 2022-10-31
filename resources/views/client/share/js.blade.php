@@ -14,7 +14,7 @@
     };
     $(document).ready(function() {
         $('.log__in img').hover(function() {
-            let data = `</li><a href="">Quản lí tài khoản</a></li>
+            let data = `</li><a href="/user_profile">Quản lí tài khoản</a></li>
             </li><a href="/customer/order">Quản lý đơn hàng</a></li>
             </li><a href="/customer/cart">Quản lý giỏ hàng</a></li>
             </li><a href="/logout" id="logout_home">Đăng xuất</a></li>`
