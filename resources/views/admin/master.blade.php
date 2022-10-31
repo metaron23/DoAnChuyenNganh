@@ -18,10 +18,11 @@
         }
 
         .active_menu {
-            background-color: rgba(115,102,255,0.12);
+            background-color: rgba(115, 102, 255, 0.12);
             color: var(--theme-deafult);
         }
-        .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li.sidebar-list:hover>a:hover{
+
+        .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li.sidebar-list:hover>a:hover {
             background-color: transparent;
         }
     </style>
