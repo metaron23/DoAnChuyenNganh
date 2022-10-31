@@ -22,21 +22,7 @@
     </div>
     <!-- End Bradcaump area -->
     <!-- Start Contact Map -->
-    <div class="contact__map__area">
-        <div class="contact__map__wrapper">
-            <div class="contact__map__left">
-                <div class="map__thumb">
-                    <img src="images/banner/contact/1.jpg" alt="images">
-                </div>
-            </div>
-            <div class="contact__map__right">
-                <div class="htc__google__map">
-                    <div class="map-contacts">
-                        <div id="googlemap"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
     <!-- End Contact Map -->
     <!-- Start Address -->
