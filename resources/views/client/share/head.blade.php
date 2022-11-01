@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>Customer-B-Restaurant</title>
-<meta name="Mô tả" content="">
+<meta name="discription" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Favicons -->
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="/assets_client/css/bootstrap.min.css">
 <link rel="stylesheet" href="/assets_client/css/plugins.css">
 <link rel="stylesheet" href="/assets_client/style.css">
-<link rel="stylesheet" href="/assets_client/css/profile.css">
+
 
 
 <!-- Cusom css -->

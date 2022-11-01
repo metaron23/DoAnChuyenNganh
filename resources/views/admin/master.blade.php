@@ -10,7 +10,8 @@
             position: fixed;
             z-index: 9999;
             background: url("/assets_client/images/load.gif") no-repeat center center rgba(0, 0, 0, 0.25);
-            background-size: 4%;
+            background-size: cover;
+            
         }
 
         #contents {
