@@ -12,7 +12,7 @@ class HomepageController extends Controller
 {
     public function viewHome()
     {
-        $monAnMoi = MonAn::orderByDesc('id')->take(8)->get();
+        $monAnMoi = MonAn::orderByDesc('id')->where('tinh_trang', 1)->take(8)->get();
         $checkNav = 'home';
         return view('client.page.home', compact('monAnMoi', 'checkNav'));
     }

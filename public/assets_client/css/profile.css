@@ -1,87 +1,50 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,800");
-@import url("https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,500i,600,700i,700,900");
-* { 
-    box-sizing: border-box;
-  }
-  html {
-    font-size: 100%;
-    overflow-y: scroll;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-  }
-  
-  html,
-  button,
-  input,
-  select,
-  textarea {
-    font-family: "Open Sans", sans-serif;
-  }
-/* Style the list */
-  .breadcrumb_ {
-    height: 70px;
-  }
-ul.breadcrumb_ {
-    padding: 10px 16px;
-    list-style: none;
-  }
-  
-  /* Display list items side by side */
-  ul.breadcrumb_ li {
-    display: inline;
-    font-size: 18px;
+body {
+    background-color: #f2f6fc;
+    color: #69707a;
+}
 
-  }
-  
-  /* Add a slash symbol (/) before/behind each list item */
-  ul.breadcrumb_ li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
-  }
-  .breadcrumb_ li a.breadcrumb_active{
-    color: rgb(192, 181, 181);
-    
-  }
-  /* Add a color to all links inside the list */
-  ul.breadcrumb_ li a {
-    color: #d50c0d ;
+.img-account-profile {
+    height: 10rem;
+}
 
-    text-decoration: none;
-  }
-  
-  /* Add a color on mouse-over */
-  ul.breadcrumb_ li a:hover {
-    color: #ffff;
-    transition: 0.5s;
-    text-align: center;
-    background-color: #d50c0d;
-    margin: 20px;
-    font-size: 22px;
-    padding: 5px;
-    border-radius: 15px;
-    text-decoration: underline;
-    text-decoration: none;
-  }
-  .container{
-    display: flex;
-    column-gap: 25px;
-    position: relative;
-  }
-  .col-4{
-    padding: 10px;
-    width: 40%;
-    display: inline-block;
-    text-align: center;
+.rounded-circle {
+    border-radius: 50% !important;
+}
 
-  }
-  .col-6{
-    padding: 10px;
-    width: 60%;
-  }
-  .row{
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+}
+
+.card .card-header {
+    font-weight: 500;
+}
+
+.card-header:first-child {
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+
+.card-header {
+    padding: 1rem 1.35rem;
+    margin-bottom: 0;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+}
+
+.form-control,
+.dataTable-input {
+    display: block;
     width: 100%;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-  }
+    padding: 0.875rem 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #69707a;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c5ccd6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.35rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
