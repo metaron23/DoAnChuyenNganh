@@ -11,8 +11,8 @@
 <!-- Stylesheets -->
 <link rel="stylesheet" href="/assets_client/css/bootstrap.min.css">
 <link rel="stylesheet" href="/assets_client/css/plugins.css">
-<link rel="stylesheet" href="/css/app.css">
 <link rel="stylesheet" href="/assets_client/style.css">
+<link rel="stylesheet" href="/css/app.css">
 
 
 <!-- Cusom css -->
