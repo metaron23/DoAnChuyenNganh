@@ -59,6 +59,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'checkAdminTaiKhoan'], funct
     Route::group(['prefix' => '/don-hang'], function () {
         Route::get('/', [\App\Http\Controllers\Admin\OrderController::class, 'index']);
         Route::get('/get-data', [\App\Http\Controllers\Admin\OrderController::class, 'getData']);
+        Route::get('/get-dataDetail/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'getDataDetail']);
         Route::get('/changeToShipping/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'changeToShipping']);
         Route::get('/changeToShipped/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'changeToShipped']);
         Route::get('/changeToShippingAll', [\App\Http\Controllers\Admin\OrderController::class, 'changeToShippingAll']);

@@ -3,25 +3,11 @@
 
 <head>
     @include('client.share.head')
-    <style>
-        #load {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            z-index: 9999;
-            background: url("/assets_client/images/load.gif") no-repeat center center rgba(0, 0, 0, 0.25);
-            background-size: cover;
-        }
-
-        #contents {
-            visibility: hidden;
-        }
-    </style>
 </head>
 
 <body>
     <div id="load">
-        
+
     </div>
     <div id="contents">
         <!-- Main wrapper -->

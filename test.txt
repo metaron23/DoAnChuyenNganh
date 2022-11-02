@@ -1,25 +1,54 @@
-let content = "";
-content+=`<tr class = "align-middle text-center" >`;
-content+=`<th scope = "row">`+stt+`</th>`;
-content+=`<td>`+taiKhoan.email+`</td>`;
-content+=`<td>`+taiKhoan.ten_tai_khoan+`</td>`;
-content+=`<td>`+taiKhoan.nam_sinh+`</td>`;
-content+=`<td>`+taiKhoan.gioi_tinh+`</td>`;
-content+=`<td>`+taiKhoan.so_dien_thoai+`</td>`;
-content+=`<td>`;
-if(tai_khoan.tinh_trang==1)
-content+=`<button class = "btn btn-primary doiTrangThai">Hoạt Động</button>`;
-else
-content+=`<button class = "btn btn-danger doiTrangThai">Khoá</button>`;
-content+=`</td>`;
-if(tai_khoan.loai_tai_khoan==0)
-content+=`<td>Admin</td>`;
-else if(tai_khoan.loai_tai_khoan==1)
-content+=`<td>Nhân Viên</td>`;
-else
-content+=`<td>Khách Hàng</td>`;
-content+=`<td>`;
-content+=`<button class="btn btn-info m-1 edit" data-bs-toggle="modal" data-bs-target="#editModal"> Sửa </button>`;
-content+=`<button class = "btn btn-danger m-1 delete" data-bs-toggle="modal" data-bs-target="#deleteModal"> Xoá </button>`;
-content+=`</td>`;
-content+=`</tr>`;
+content+=`<div class="row">
+    <table class="table table-bordered">
+        <thead>
+            <tr class="text-center">
+                <th class="col">Hình Ảnh</th>
+                <th class="col">Món Ăn</th>
+                <th class="col">Giá</th>
+                <th class="col">Số lượng</th>
+                <th class="col">Tiền</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">`;
+        donHang.food.forearch(element=>{
+            content+=`<tr>
+                <td><a href="#" data-id="25">
+                        <img src="`+element.hinh_anh+`" alt="product img" style="width: 100px"></a></td>
+                <td>element.ten_mon_an</td>
+                <td>
+                    <span>
+                        `+element.ten_mon_andon_gia_mua+`
+                    </span>
+                </td>
+                <td><input type="text" readonly v-bind:value="value.so_luong_mua">
+                </td>
+                <td>
+                    `+ element.don_gia_mua * element.so_luong_mua +`
+                </td>
+            </tr>`
+        });
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b>TỔNG TIỀN</b></td>
+                <td><b>`+ donHang.tong_tien.toLocaleString() +` VND</b></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="row mt-4">
+    <div class="col">
+        <label for="formGroupExampleInput" class="form-label">Tên người giao</label>
+        <input type="text" class="form-control" value="`+donHang.ten_ship+`">
+    </div>
+    <div class="col">
+        <label for="formGroupExampleInput2" class="form-label">Số điện thoại giao hàng</label>
+        <input type="text" class="form-control" value="`+donHang.phone_ship+`">
+    </div>
+</div>
+<div class="mb-3 mt-2">
+    <label for="formGroupExampleInput2" class="form-label">Địa chỉ giao hàng</label>
+    <input type="text" class="form-control" value="`+donHang.dia_chi_ship+`">
+</div>`

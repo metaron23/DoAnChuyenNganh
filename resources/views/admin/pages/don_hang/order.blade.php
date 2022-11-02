@@ -1,356 +1,271 @@
 @extends('admin.master')
 
 @section('content')
-    <style>
-        .btn-block {
-            display: block;
-            width: 200px;
-            font-size: 20px;
-        }
-
-        #mn_order .btn-block {
-            margin: 20px 6px;
-        }
-
-        .btn-order-admin {
-            opacity: 0.6;
-        }
-
-        .img-160 {
-            width: 160px !important;
-        }
-
-        .rating {
-            padding-left: 6px;
-        }
-
-        .prooduct-details-box .product-name .disable {
-            pointer-events: none;
-            cursor: default;
-        }
-    </style>
-    <div id="mn_order">
-    @section('title')
-        <h2>Quản Lý Đơn Hàng</h2>
-    @endsection
-    <div class="row">
-        <button class="btn btn-primary btn-block" type="button" data-id="0" v-on:click="clickTab($event)"
-            v-bind:class="{ 'btn-order-admin' : checkActive == 0 }">
-            Chờ Xác Nhận</button>
-        <button class="btn btn-primary btn-block" type="button" data-id="1" v-on:click="clickTab($event)"
-            v-bind:class="{ 'btn-order-admin' : checkActive == 1 }">
-            Đang Giao</button>
-        <button class="btn btn-primary btn-block" type="button" data-id="2" v-on:click="clickTab($event)"
-            v-bind:class="{ 'btn-order-admin' : checkActive == 2 }">
-            Đã Hoàn Trả</button>
-    </div>
-    <div class="row" v-if="checkContentOrder==0" id="newOrders">
+    <div class="col-sm-12 col-xl-6 xl-100">
         <div class="card">
             <div class="card-header">
-                <h4>Danh sách đơn hàng chờ xác nhận</h4>
-                <a href="#" style="right:0;top:0;position: absolute; margin:46px 20px">
-                    <h6 v-on:click.prevent="changeToShippingAll">Xác Nhận Tất Cả</h6>
-                </a>
+                <h5>Quản lý đơn hàng</h5><span>Xem, Xác nhận <code>các đơn hàng</code></span>
             </div>
             <div class="card-body">
-                <div class="row">
-                    <div class="col-xxl-6 col-md-6" v-for="(value, key) in listNew">
-                        <div class="prooduct-details-box">
-                            <div class="media">
-                                <a href="#"><img class="align-self-center img-fluid img-160"
-                                        v-on:click.prevent="getDetailOrder($event), showModal=true" v-bind:data-id="value.id"
-                                        v-bind:src="value.food[0].hinh_anh" alt="#"></a>
-                                <div class="media-body ms-3">
-                                    <div class="product-name">
-                                        <a href="#">
-                                            <h6 class="text-danger" v-on:click.prevent="getDetailOrder($event), showModal=true" v-bind:data-id="value.id">
-                                                Mã đơn hàng: @{{ value.ma_don_hang }}</h6>
-                                        </a>
-                                        <h6><a class="disable">@{{ value.food[0].ten_mon_an }}</a></h6>
-                                    </div>
-                                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                            class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                    <div class="price d-flex">
-                                        <div class="text-muted me-2">Tổng tiền</div>: @{{ value.tong_tien.toLocaleString() }} VND
-                                    </div>
-                                    <div class="avaiabilty">
-                                        <div class="text-success">@{{ value.trang_thai_thanh_toan == 1 ? "Đã thanh toán" : "Chưa thanh toán" }}</div>
-                                    </div><a class="btn btn-primary btn-xs p-2" href="#" v-bind:data-id="value.id" v-on:click.prevent="changeToShipping($event)">Chờ xác nhận</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row" v-if="checkContentOrder==1" id="shippingOrders">
-        <div class="card">
-            <div class="card-header">
-                <h4>Danh sách đơn hàng đang giao</h4>
-                <a href="#" style="right:0;top:0;position: absolute; margin:46px 20px">
-                    <h6 v-on:click.prevent="changeToShippedAll">Xác Nhận Tất Cả</h6>
-                </a>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-xxl-6 col-md-6" v-for="(value, key) in listShipping">
-                        <div class="prooduct-details-box">
-                            <div class="media">
-                                <a href="#"><img class="align-self-center img-fluid img-160"
-                                        v-on:click.prevent="getDetailOrder($event), showModal=true" v-bind:data-id="value.id"
-                                        v-bind:src="value.food[0].hinh_anh" alt="#"></a>
-                                <div class="media-body ms-3">
-                                    <div class="product-name">
-                                        <a href="#">
-                                            <h6 class="text-danger" v-on:click="getDetailOrder($event),showModal=true" v-bind:data-id="value.id">Mã đơn
-                                                hàng: @{{ value.ma_don_hang }}</h6>
-                                        </a>
-                                        <h6><a class="disable">@{{ value.food[0].ten_mon_an }}</a></h6>
-                                    </div>
-                                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                            class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                    <div class="price d-flex">
-                                        <div class="text-muted me-2">Tổng tiền</div>: @{{ value.tong_tien.toLocaleString() }} VND
-                                    </div>
-                                    <div class="avaiabilty">
-                                        <div class="text-success">@{{ value.trang_thai_thanh_toan == 1 ? "Đã thanh toán" : "Chưa thanh toán" }}</div>
-                                    </div><a class="btn btn-success btn-xs p-2" href="#" v-bind:data-id="value.id" v-on:click.prevent="changeToShipped($event)">Đang vận chuyển</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row" v-if="checkContentOrder==2" id="cancelledOrders">
-        <div class="card">
-            <div class="card-header">
-                <h4>Danh sách đơn hàng đã hoàn trả</h4>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-xxl-6 col-md-6" v-for="(value, key) in listCancelled">
-                        <div class="prooduct-details-box">
-                            <div class="media">
-                                <a href="#"><img class="align-self-center img-fluid img-160"
-                                        v-on:click.prevent="getDetailOrder($event), showModal=true" v-bind:data-id="value.id"
-                                        v-bind:src="value.food[0].hinh_anh" alt="#"></a>
-                                <div class="media-body ms-3">
-                                    <div class="product-name">
-                                        <a href="#">
-                                            <h6 class="text-danger" v-on:click="getDetailOrder($event),showModal=true" v-bind:data-id="value.id">Mã
-                                                đơn hàng: @{{ value.ma_don_hang }}</h6>
-                                        </a>
-                                        <h6><a class="disable">@{{ value.food[0].ten_mon_an }}</a></h6>
-                                    </div>
-                                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                            class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                    <div class="price d-flex">
-                                        <div class="text-muted me-2">Tổng tiền</div>: @{{ value.tong_tien.toLocaleString() }} VND
-                                    </div>
-                                    <div class="avaiabilty">
-                                        <div class="text-success">@{{ value.trang_thai_thanh_toan == 1 ? "Đã thanh toán" : "Chưa thanh toán" }}</div>
-                                    </div><a class="btn btn-danger btn-xs p-2" style="pointer-events: none; cursor: default;">Đơn huỷ</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div v-if="showModal">
-        <div class="modal fade show" id="exampleModalXl" tabindex="-1" style="display: block;">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="myLargeModalLabel">Chi Tiết Đơn Hàng</h4>
-                        <button type="button" class="btn-close" v-on:click.prevent="showModal=false"></button>
-                    </div>
-                    <div class="modal-body">
+                <ul class="nav nav-tabs border-tab nav-primary" id="info-tab" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" id="orderNews-info-tab" data-bs-toggle="tab" href="#info-orderNews" role="tab"
+                            aria-controls="info-home" aria-selected="true" data-bs-original-title="" title=""><i
+                                class="icofont icofont-ui-home"></i>Đơn Mới</a></li>
+                    <li class="nav-item"><a class="nav-link" id="orderShipping-info-tab" data-bs-toggle="tab" href="#info-orderShipping" role="tab"
+                            aria-controls="info-profile" aria-selected="false" data-bs-original-title="" title=""><i
+                                class="icofont icofont-man-in-glasses"></i>Đang Giao</a></li>
+                    <li class="nav-item"><a class="nav-link" id="orderCancelled-info-tab" data-bs-toggle="tab" href="#info-orderCancelled" role="tab"
+                            aria-controls="info-contact" aria-selected="false" data-bs-original-title="" title=""><i
+                                class="icofont icofont-contacts"></i>Đơn Huỷ</a></li>
+                </ul>
+                <div class="tab-content" id="info-tabContent">
+                    <div class="tab-pane fade active show" id="info-orderNews" role="tabpanel">
                         <div class="row">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr class="text-center">
-                                        <th class="col">Hình Ảnh</th>
-                                        <th class="col">Món Ăn</th>
-                                        <th class="col">Giá</th>
-                                        <th class="col">Số lượng</th>
-                                        <th class="col">Tiền</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-center">
-                                    <tr v-for="(value, key) in listDetailOrder.food">
-                                        <td><a href="#" data-id="25">
-                                                <img v-bind:src="value.hinh_anh" alt="product img" style="width: 100px"></a></td>
-                                        <td>@{{ value.ten_mon_an }}</td>
-                                        <td>
-                                            <span>
-                                                @{{ value.don_gia_mua }}
-                                            </span>
-                                        </td>
-                                        <td><input type="text" readonly v-bind:value="value.so_luong_mua">
-                                        </td>
-                                        <td>
-                                            @{{ value.don_gia_mua * value.so_luong_mua }}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td><b>TỔNG TIỀN</b></td>
-                                        <td><b>@{{ listDetailOrder.tong_tien.toLocaleString() }} VND</b></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col">
-                                <label for="formGroupExampleInput" class="form-label">Tên người giao</label>
-                                <input type="text" class="form-control" v-bind:value="listDetailOrder.ten_ship">
-                            </div>
-                            <div class="col">
-                                <label for="formGroupExampleInput2" class="form-label">Số điện thoại giao hàng</label>
-                                <input type="text" class="form-control" v-bind:value="listDetailOrder.phone_ship">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Danh sách đơn hàng chờ xác nhận</h4>
+                                    <a href="#" style="right:0;top:0;position: absolute; margin:46px 20px" class="confirmAllToShipping">
+                                        <h6>Xác Nhận Tất Cả</h6>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="mb-3 mt-2">
-                            <label for="formGroupExampleInput2" class="form-label">Địa chỉ giao hàng</label>
-                            <input type="text" class="form-control" v-bind:value="listDetailOrder.dia_chi_ship">
+                    </div>
+                    <div class="tab-pane fade" id="info-orderShipping" role="tabpanel">
+
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Danh sách đơn hàng đang giao</h4>
+                                    <a href="#" style="right:0;top:0;position: absolute; margin:46px 20px">
+                                        <h6 class="confirmAllToShipped">Xác Nhận Tất Cả</h6>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="info-orderCancelled" role="tabpanel">
+
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Danh sách đơn hàng đã huỷ</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" style="display:none;" id="detailOrder">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myLargeModalLabel">Chi Tiết Đơn Hàng</h4>
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" data-bs-original-title=""
+                                    title=""></button>
+                            </div>
+                            <div class="modal-body">...</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection
 
 @section('js')
-<script>
-    new Vue({
-        el: '#mn_order',
-        data: {
-            checkContentOrder: 0,
-            listOrder: [],
-            listNew: [],
-            listShipping: [],
-            listShipped: [],
-            listCancelled: [],
-            checkActive: 0,
-            showModal: false,
-            listDetailOrder: [],
-        },
-        created() {
-            this.getData();
-        },
-        methods: {
-            getData() {
-                let listNewTest = [];
-                let listShippingTest = [];
-                let listShippedTest = [];
-                let listCancelledTest = [];
+    <script>
+        $(document).ready(function() {
+            function getData() {
                 axios
                     .get('/admin/don-hang/get-data')
                     .then((res) => {
-                        this.listOrder = res.data.donHang;
-                        this.listOrder.forEach(element => {
-                            if (element.trang_thai_don_hang == 0)
-                                listNewTest.push(element);
-                            else if (element.trang_thai_don_hang == 1)
-                                listShippingTest.push(element);
-                            else if (element.trang_thai_don_hang == 2)
-                                listShippedTest.push(element);
-                            else
-                                listCancelledTest.push(element);
+                        let donHangs = res.data.donHang;
+                        $('#info-orderNews .card-body .row').html('');
+                        $('#info-orderShipping .card-body .row').html('');
+                        $('#info-orderCancelled .card-body .row').html('');
+                        donHangs.forEach(element => {
+                            if (element.trang_thai_don_hang == 0) {
+                                $('#info-orderNews .card-body .row').append(createContent(element, 'primary', 'Chờ xác nhận'));
+                            }
+                            if (element.trang_thai_don_hang == 1) {
+                                $('#info-orderShipping .card-body .row').append(createContent(element, 'success', 'Đang giao'));
+                            }
+                            if (element.trang_thai_don_hang == 3) {
+                                $('#info-orderCancelled .card-body .row').append(createContent(element, 'danger', 'Đã huỷ'));
+                            }
                         });
-                        this.listNew = listNewTest;
-                        this.listShipping = listShippingTest;
-                        this.listShipped = listShippedTest;
-                        this.listCancelled = listCancelledTest;
                     });
-            },
-            clickTab(event) {
-                $('.cart__btn__list a').removeAttr('style');
-                try {
-                    event.target.setAttribute("style", "background: #60ba62 none repeat scroll 0 0;color: #fff");
-                    if (event.target.getAttribute('data-id') == 0) {
-                        this.checkContentOrder = 0;
-                        this.checkActive = 0;
-                    } else if (event.target.getAttribute('data-id') == 1) {
-                        this.checkContentOrder = 1;
-                        this.checkActive = 1;
-                    } else {
-                        this.checkContentOrder = 2;
-                        this.checkActive = 2;
-                    }
-                } catch {
-                    $('mn_order button').first().attr("style", "background: #60ba62 none repeat scroll 0 0;color: #fff");
-                }
-            },
-            getDetailOrder(event) {
-                let id = event.target.getAttribute('data-id');
-                console.log(id);
-                this.listOrder.forEach(element => {
-                    if (element.id == id) {
-                        this.listDetailOrder = element;
-                    }
+            };
+
+            getData();
+
+            function createContent(donHang, status, message) {
+                let content = "";
+                content +=
+                    `
+                        <div class="col-xxl-6 col-md-6">
+                        <div class="prooduct-details-box">
+                        <div class="media">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#detailOrder" data-id="` + donHang.id + `" class="showModalDetail"><img
+                        class="align-self-center img-fluid img-160" alt="#" src="` + donHang.food[0].hinh_anh + `"></a>
+                        <div class="media-body ms-3">
+                        <div class="product-name">
+                        <a href="#" data-id="` + donHang.id + `" class="showModalDetail" data-bs-toggle="modal" data-bs-target="#detailOrder">
+                        <span class="badge badge-secondary f-14">Mã đơn hàng: ` + donHang.ma_don_hang + `</span>
+                        </a>
+                        <h6 class="m-t-10"><a class="disable">` + donHang.food[0].ten_mon_an + `</a></h6>
+                        </div>
+                        <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="price d-flex">
+                        <div class="text-muted me-2 f-w-600 m-t-5 f-16">Tổng tiền: ` + donHang.tong_tien.toLocaleString() + ` VND
+                        </div>
+                        <div class="avaiabilty">
+                        <div class="text-success"></div>
+                        </div><a class="btn btn-` + status + ` btn-xs p-2" href="#" data-id="` + donHang.id + `">` + message + `</a>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        `
+                return content;
+            }
+
+            function createContentModal(donHang) {
+                let content = "";
+                content += `<div class="row">
+                        <table class="table table-bordered">
+                        <thead>
+                        <tr class="text-center">
+                            <th class="col">Hình Ảnh</th>
+                            <th class="col">Món Ăn</th>
+                            <th class="col">Giá</th>
+                            <th class="col">Số lượng</th>
+                            <th class="col">Tiền</th>
+                        </tr>
+                        </thead>
+                        <tbody class="text-center">`;
+                donHang.food.forEach(element => {
+                    content += `
+                            <tr>
+                            <td><a href="#" data-id="25">
+                                <img src="` + element.hinh_anh + `" alt="product img" style="width: 100px"></a>
+                            </td>
+                            <td>` + element.ten_mon_an + `</td>
+                            <td>
+                                <span>
+                                    ` + element.don_gia_mua + `
+                                </span>
+                            </td>
+                            <td><input type="text" readonly value="` + element.so_luong_mua + `">
+                            </td>
+                            <td>
+                                ` + element.don_gia_mua * element.so_luong_mua + `
+                            </td>
+                        </tr>`
                 });
-            },
-            changeToShipping(event) {
-                let id = event.target.getAttribute('data-id');
+
+                content += `<tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><b>TỔNG TIỀN</b></td>
+                            <td><b>` + donHang.tong_tien.toLocaleString() + ` VND</b></td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <label for="formGroupExampleInput" class="form-label">Tên người giao</label>
+                                    <input type="text" class="form-control" value="` + donHang.ten_ship + `">
+                                </div>
+                                <div class="col">
+                                    <label for="formGroupExampleInput2" class="form-label">Số điện thoại giao hàng</label>
+                                    <input type="text" class="form-control" value="` + donHang.phone_ship + `">
+                                </div>
+                            </div>
+                            <div class="mb-3 mt-2">
+                                <label for="formGroupExampleInput2" class="form-label">Địa chỉ giao hàng</label>
+                                <input type="text" class="form-control" value="` + donHang.dia_chi_ship + `">
+                            </div>`
+                return content;
+            }
+
+            $('body').on('click', '.showModalDetail', function(e) {
+                e.preventDefault();
+                let id = $(this).data('id');
                 axios
-                    .get('/admin/don-hang/changeToShipping/'+id)
+                    .get('/admin/don-hang/get-dataDetail/' + id)
+                    .then((res) => {
+                        let donHang = res.data.donHangDetail;
+                        $('.modal .modal-body').html(createContentModal(donHang));
+                    });
+            });
+            $('body').on('click', '.price .btn-primary', function() {
+                let id = $(this).data('id');
+                axios
+                    .get('/admin/don-hang/changeToShipping/' + id)
                     .then((res) => {
                         if (res.data.status) {
-                            this.getData();
+                            getData();
                             toastr.success("Xác nhận thành công!");
                         } else {
-                            toastr.error("Lỗi ngiêm trọng!");
+                            toastr.error("Không có đơn hàng nào để xác nhận!");
                         }
                     });
-            },
-            changeToShipped(event) {
-                let id = event.target.getAttribute('data-id');
+            });
+            $('body').on('click', '.price .btn-success', function() {
+                let id = $(this).data('id');
                 axios
-                    .get('/admin/don-hang/changeToShipped/'+id)
+                    .get('/admin/don-hang/changeToShipped/' + id)
                     .then((res) => {
                         if (res.data.status) {
-                            this.getData();
+                            getData();
                             toastr.success("Xác nhận thành công!");
                         } else {
-                            toastr.error("Lỗi ngiêm trọng!");
+                            toastr.error("Không có đơn hàng nào để xác nhận!");
                         }
                     });
-            },
-            changeToShippingAll() {
+            });
+            $('body').on('click', '.confirmAllToShipping', function() {
                 axios
                     .get('/admin/don-hang/changeToShippingAll')
                     .then((res) => {
                         if (res.data.status) {
-                            this.getData();
+                            getData();
                             toastr.success("Xác nhận thành công!");
                         } else {
-                            toastr.error("Không có đơn hàng để xác nhận!");
+                            toastr.error("Không có đơn hàng nào để xác nhận!");
                         }
                     });
-            },
-            changeToShippedAll() {
+            });
+            $('body').on('click', '.confirmAllToShipped', function() {
                 axios
                     .get('/admin/don-hang/changeToShippedAll')
                     .then((res) => {
                         if (res.data.status) {
-                            this.getData();
+                            getData();
                             toastr.success("Xác nhận thành công!");
                         } else {
-                            toastr.error("Không có đơn hàng để xác nhận!");
+                            toastr.error("Không có đơn hàng nào để xác nhận!");
                         }
                     });
-            },
-        }
-    });
-</script>
+            });
+        });
+    </script>
 @endsection
