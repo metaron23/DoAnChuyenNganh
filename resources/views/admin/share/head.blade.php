@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/admin/assets/css/font-awesome.css">
 <!-- ico-font-->
-{{-- <link rel="stylesheet" type="text/css" href="/admin/assets/css/vendors/icofont.css"> --}}
+<link rel="stylesheet" type="text/css" href="/admin/assets/css/vendors/icofont.css">
 <!-- Themify icon-->
 {{-- <link rel="stylesheet" type="text/css" href="/admin/assets/css/vendors/themify.css"> --}}
 <!-- Flag icon-->
@@ -44,8 +44,35 @@
         font-family: Arial, Helvetica, sans-serif;
     }
 
-    i.fa {
-        transform: translateX(-6px);
+    #load {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;
+        background: url("/assets_client/images/load.gif") no-repeat center center rgba(0, 0, 0, 0.25);
+        background-size: 4%;
+    }
+
+    #contents {
+        visibility: hidden;
+    }
+
+    .active_menu {
+        background-color: rgba(115, 102, 255, 0.12);
+        color: var(--theme-deafult);
+    }
+
+    .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li.sidebar-list:hover>a:hover {
+        background-color: transparent;
+    }
+
+    .nav-link {
+        font-weight: 600;
+    }
+
+    .nav-tabs .nav-link.active {
+        font-weight: 600;
+        font-size: 20px !important;
     }
 
     li.sidebar-list {
@@ -76,5 +103,9 @@
 
     td {
         white-space: nowrap;
+    }
+
+    .img-160{
+        width: 160px;
     }
 </style>

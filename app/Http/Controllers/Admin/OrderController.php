@@ -94,4 +94,17 @@ class OrderController extends Controller
             'donHang' => $donHang,
         ]);
     }
+    public function getDataDetail($id)
+    {
+        $admin = Auth::guard('admin')->user();
+        $donHang = DonHang::where('id', $id)->orderBy('created_at', 'DESC')
+                        ->first();
+        $food = GioHang::where('id_don_hang', $id)
+                    ->get();
+        $donHang['food'] = $food;
+
+        return response()->json([
+            'donHangDetail' => $donHang,
+        ]);
+    }
 }

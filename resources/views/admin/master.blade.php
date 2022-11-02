@@ -3,29 +3,6 @@
 
 <head>
     @include('admin.share.head')
-    <style>
-        #load {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            z-index: 9999;
-            background: url("/assets_client/images/load.gif") no-repeat center center rgba(0, 0, 0, 0.25);
-            background-size: 4%;
-        }
-
-        #contents {
-            visibility: hidden;
-        }
-
-        .active_menu {
-            background-color: rgba(115, 102, 255, 0.12);
-            color: var(--theme-deafult);
-        }
-
-        .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li.sidebar-list:hover>a:hover {
-            background-color: transparent;
-        }
-    </style>
 </head>
 
 <body>
