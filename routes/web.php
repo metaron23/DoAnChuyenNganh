@@ -113,6 +113,7 @@ Route::group(['prefix' => '/customer', 'middleware' => 'checkCustomerTaiKhoan'],
     });
     Route::group(['prefix' => '/account'], function () {
         Route::get('/', [\App\Http\Controllers\Customer\ManagerAccountController::class, 'index']);
+        Route::post('/', [\App\Http\Controllers\Customer\ManagerAccountController::class, 'uploadFile']);
     });
 });
 Route::get('/customer/cart/data', [\App\Http\Controllers\Customer\GioHangController::class, 'dataCart']);

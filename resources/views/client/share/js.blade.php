@@ -7,46 +7,38 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 <script src="\js\app.js"></script>
 <style>
-
-    .drop-link{
-        font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        display:block;
-        text-align:left;
-        text-decoration:none;
-        font-size:15px;
-        padding:10px 15px;
-        transition:all 0.3s ease;
-        color:#000;
-        border-radius: 20px;
+    .drop-link {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 10px 15px;
+        transition: all 0.3s ease;
+        color: #000;
+        /* border-radius: 20px; */
     }
 
     .dropdown__menu {
-        border-radius: 20px;
+        border-radius: 6px;
         font-size: 12px;
 
     }
-    .drop-link:hover{
-        border-radius: 20px;
-        font-size:18px;
+
+    .drop-link:hover {
+        border-radius: 6px;
+        font-size: 18px;
         background: #fba7a7;
     }
 
-    .drop-link:last-of-type{
-        border-radius:0px 0px 7px 7px;
+    .drop-link:not(:first-child) {
+        border-top: 1px solid #fcfcfc;
     }
-
-    .drop-link:not(:first-child){
-        border-top:1px solid #fcfcfc;
-        border-radius: 20px;
-    }
-
-
-
 </style>
 <script>
     toastr.options = {
         "timeOut": "3000",
-        'progressBar' : true,
+        'progressBar': true,
     };
     $(document).ready(function() {
         $('.log__in img').hover(function() {
@@ -66,6 +58,4 @@
             $('.log__in .dropdown__menu').html("");
         });
     });
-
 </script>
-
