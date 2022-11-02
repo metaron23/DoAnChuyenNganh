@@ -16,6 +16,9 @@
             height: 305px;
             object-fit: cover;
         }
+        .mb3 input: :focus{
+            outline: none;
+        }
 
     </style>
 <div class="container px-4 mt-2 mb-3 caret-input">
@@ -24,7 +27,7 @@
         <div class="col-xl-4">
             <!-- Profile picture card-->
             <div class="card mb-4 mb-xl-0">
-                <div class="card-header">Ảnh đại diện</div>
+                <div class="card-header"><h6>Ảnh đại diện</h6></div>
                 <div class="card-body text-center">
                     <!-- Profile picture image-->
                     <img id="holder" class="img-account-profile rounded-circle mb-2" src="{{ Auth::guard('customer')->user()->anh_dai_dien }}" alt="Thêm ảnh đại diện" class="icon_login">
@@ -42,7 +45,7 @@
         <div class="col-xl-8">
             <!-- Account details card-->
             <div class="card mb-4 ">
-                <div class="card-header">Thông tin tài khoản</div>
+                <div class="card-header"><h6>Thông tin tài khoản</h6></div>
                 <div class="card-body">
                     <form>
                         <!-- Form Group (username)-->
