@@ -6,7 +6,9 @@
 </head>
 
 <body>
-    <div id="load"></div>
+    <div id="load">
+
+    </div>
     <div id="contents">
         <!-- Main wrapper -->
         <div class="wrapper" id="wrapper">

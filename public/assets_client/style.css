@@ -360,8 +360,11 @@ img {
 img:hover {
     opacity: 0.6;
     cursor: pointer;
+    transition: 0.5s;
 }
-
+.logo img:hover{
+    opacity: 1;
+}
 svg:not(:root) {
     overflow: hidden;
 }
