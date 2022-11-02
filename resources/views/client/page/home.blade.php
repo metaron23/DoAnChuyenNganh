@@ -22,10 +22,10 @@
                     </div>
                 </div>
                 <div class="slide__pizza--2 wow fadeInLeft" data-wow-delay="0.4s">
-                    <img src="/assets_client/images/shape/sli-2.png" alt="pizza images">
+                    <img style="opacity: 1;" src="/assets_client/images/shape/sli-2.png" alt="pizza images">
                 </div>
                 <div class="slide__pizza--3 wow fadeInRight" data-wow-delay="0.4s">
-                    <img src="/assets_client/images/shape/sli-3.png" alt="pizza images">
+                    <img style="opacity: 1;" src="/assets_client/images/shape/sli-3.png" alt="pizza images">
                 </div>
             </div>
             <!-- End Single Slide -->
@@ -167,8 +167,8 @@
                                 </div>
                                 <div class="offer__btn">
                                     @if (Auth::guard('customer')->check())
-                                        <a class="food__btn grey--btn mid-height addToCart mt-4" href="" data-id={{ $value->id }}>Order
-                                            Now</a>
+                                        <a class="food__btn grey--btn mid-height addToCart mt-4" href="" data-id={{ $value->id }}>Đặt
+                                            món</a>
                                     @else
                                         <a class="food__btn grey--btn mid-height accountbox-trigger mt-4" href="" data-id={{ $value->id }}>Đặt món</a>
                                     @endif
@@ -182,7 +182,7 @@
             </div>
         </div>
         <div style="text-align:center;font-size:18px;font-weight:600; border-bottom:1px solid #ccc">
-            <a href="/menu.blade.php">View All</a>
+            <a href="/menu">Xem tất cả các món</a>
         </div>
         <!-- Start Banner Area -->
         <div class="banner__area mt--40">

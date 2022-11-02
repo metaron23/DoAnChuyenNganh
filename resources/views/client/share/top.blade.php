@@ -9,14 +9,14 @@
         <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-4 col-md-6 order-1 order-lg-1">
+                    <div class="col-lg-2 col-sm-4 col-md-6 order-1 order-lg-1">
                         <div class="logo">
                             <a href="/home">
-                                <img style="width:140x; height: 70px;" src="/assets_client/images/logo/foody4.png" alt="logo images">
+                                <img style=" height: 70px;" src="/assets_client/images/logo/foody4.png" alt="logo images">
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-8 col-sm-4 col-md-2 order-3 order-lg-2">
+                    <div class="col-lg-9 col-sm-4 col-md-2 order-3 order-lg-2">
                         <div class="main__menu__wrap">
                             <nav class="main__menu__nav d-none d-lg-block">
                                 <ul class="mainmenu">
