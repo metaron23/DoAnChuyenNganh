@@ -9,6 +9,7 @@
 <style>
 
     .drop-link{
+        font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         display:block;
         text-align:left;
         text-decoration:none;
@@ -16,11 +17,18 @@
         padding:10px 15px;
         transition:all 0.3s ease;
         color:#000;
+        border-radius: 20px;
     }
 
+    .dropdown__menu {
+        border-radius: 20px;
+        font-size: 12px;
+
+    }
     .drop-link:hover{
+        border-radius: 20px;
         font-size:18px;
-        background: #d4dade;
+        background: #fba7a7;
     }
 
     .drop-link:last-of-type{
@@ -28,8 +36,10 @@
     }
 
     .drop-link:not(:first-child){
-        border-top:1px solid #d4dade;
+        border-top:1px solid #fcfcfc;
+        border-radius: 20px;
     }
+
 
 
 </style>
@@ -41,22 +51,19 @@
     $(document).ready(function() {
         $('.log__in img').hover(function() {
             let data =
+                `<a class='drop-link' href="/customer/account">Quản lí tài khoản</a>
+                <a class='drop-link' href="/customer/order">Quản lí đơn hàng</a>
+                <a class='drop-link' href="/customer/cart">Quản lí giỏ hàng</a>
+                <a class='drop-link' href="/logout" id="logout_home">Đăng xuất</a>`
 
-            `<div class='dropdown'>
-                <a class='drop-link' href='#'>Link1</a>
-                <a class='drop-link' href='#'>Link2</a>
-                <a class='drop-link' href='#'>Link3</a>
-                <a class='drop-link' href='#'>Link4</a>
-                <a class='drop-link' href='#'>Link5</a>
-            // </div>`
-            // `</li><a href="/customer/account">Quản lí tài khoản</a></li>
+            //</li><a href="/customer/account">Quản lí tài khoản</a></li>
             // </li><a href="/customer/order">Quản lý đơn hàng</a></li>
             // </li><a href="/customer/cart">Quản lý giỏ hàng</a></li>
             // </li><a href="/logout" id="logout_home">Đăng xuất</a></li>`
-            $('.log__in .dropdown').html(data);
+            $('.log__in .dropdown__menu').html(data);
         });
         $('.log__in').mouseleave(function() {
-            $('.log__in .dropdownu').html("");
+            $('.log__in .dropdown__menu').html("");
         });
     });
 
