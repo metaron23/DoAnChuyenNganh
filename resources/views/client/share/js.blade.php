@@ -7,31 +7,31 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 <script src="\js\app.js"></script>
 <style>
-    .dropdown__menu{
-        drop-link{
-  display:block;
-  text-align:left;
-  text-decoration:none;
-  font-size:15px;
-  padding:10px 15px;
-  transition:all 0.3s ease;
-  color:#000;
-}
 
-.drop-link:hover{
-  font-size:18px;
-  background: #d4dade;
-}
-
-.drop-link:last-of-type{
-  border-radius:0px 0px 7px 7px;
-}
-
-.drop-link:not(:first-child){
-  border-top:1px solid #d4dade;
-}
-
+    .drop-link{
+        display:block;
+        text-align:left;
+        text-decoration:none;
+        font-size:15px;
+        padding:10px 15px;
+        transition:all 0.3s ease;
+        color:#000;
     }
+
+    .drop-link:hover{
+        font-size:18px;
+        background: #d4dade;
+    }
+
+    .drop-link:last-of-type{
+        border-radius:0px 0px 7px 7px;
+    }
+
+    .drop-link:not(:first-child){
+        border-top:1px solid #d4dade;
+    }
+
+
 </style>
 <script>
     toastr.options = {
