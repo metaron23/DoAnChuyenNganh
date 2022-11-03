@@ -5,29 +5,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Mô tả"
-        content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="pixelstrap">
     <!-- Favicons -->
-    <link rel="shortcut icon" href="/assets_client/images/favicon.ico">
     <link rel="apple-touch-icon" href="/assets_client/images/icon.png">
     <title>Login-Client</title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/admin/assets/css/font-awesome.css">
-    <!-- ico-font-->
-    <link rel="stylesheet" type="text/css" href="/admin/assets/css/vendors/icofont.css">
-    <!-- Themify icon-->
     <link rel="stylesheet" type="text/css" href="/admin/assets/css/vendors/themify.css">
-    <!-- Flag icon-->
-    <link rel="stylesheet" type="text/css" href="/admin/assets/css/vendors/flag-icon.css">
-    <!-- Feather icon-->
-    <link rel="stylesheet" type="text/css" href="/admin/assets/css/vendors/feather-icon.css">
-    <!-- Plugins css start-->
-    <!-- Plugins css Ends-->
-    <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="/admin/assets/css/vendors/bootstrap.css">
     <!-- App css-->
     <link rel="stylesheet" type="text/css" href="/admin/assets/css/style.css">
@@ -88,8 +72,7 @@
                                     <div class="col">
                                         <div class="mb-3">
                                             <label class="form-label">Email</label>
-                                            <input class="form-control" id="email" name="email" type="email"
-                                                placeholder="Nhập vào Email">
+                                            <input class="form-control" id="email" name="email" type="email" placeholder="Nhập vào Email">
                                             <small style="font-weight:600" id="message_email"></small>
                                         </div>
                                     </div>

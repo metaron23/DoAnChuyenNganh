@@ -13,10 +13,11 @@
 <link rel="stylesheet" href="/assets_client/css/plugins.css">
 <link rel="stylesheet" href="/assets_client/style.css">
 <link rel="stylesheet" href="/css/app.css">
+<link rel="stylesheet" href="/assets_client/style_client_me.css">
 
 
 <!-- Cusom css -->
-{{-- <link rel="stylesheet" href="/assets_client/css/custom.css"> --}}
+<link rel="stylesheet" href="/assets_client/css/custom.css">
 
 <!-- Modernizer js -->
 <script src="/assets_client/js/vendor/modernizr-3.5.0.min.js"></script>

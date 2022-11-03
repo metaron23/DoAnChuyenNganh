@@ -4,26 +4,6 @@
     <title>Quản lí tài khoản</title>
 </head>
 @section('content')
-    <style>
-        .btn {
-            background-color: #d50c0d;
-            color: white;
-        }
-
-        .caret-input {
-            caret-color: #d50c0d;
-        }
-
-        .img-account-profile {
-            width: 305px;
-            height: 305px;
-            object-fit: cover;
-        }
-
-        .mb3 input: :focus {
-            outline: none;
-        }
-    </style>
     <div class="container px-4 mt-2 mb-3 caret-input">
         <hr class="mt-0 mb-4">
         <div class="row">

@@ -87,3 +87,22 @@ body {
     display: table-cell;
     vertical-align: middle;
 }
+
+.btn {
+    background-color: #d50c0d;
+    color: white;
+}
+
+.caret-input {
+    caret-color: #d50c0d;
+}
+
+.img-account-profile {
+    width: 305px;
+    height: 305px;
+    object-fit: cover;
+}
+
+.mb3 input::focus {
+    outline: none;
+}
