@@ -22,16 +22,9 @@
                 @include('admin.share.menu')
                 <!-- Page Sidebar Ends-->
                 <div class="page-body">
-                    <div class="container-fluid">
-                        <div class="page-title">
-                            @yield('title')
-                        </div>
-                    </div>
                     <!-- Container-fluid starts-->
                     <div class="container-fluid">
-                        <div class="row">
-                            @yield('content')
-                        </div>
+                        @yield('content')
                     </div>
                     <!-- Container-fluid Ends-->
                 </div>

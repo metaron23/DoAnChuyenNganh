@@ -23,7 +23,7 @@ class OrderController extends Controller
         if ($order) {
             $order->trang_thai_don_hang = 1;
             $order->id_nguoi_xac_nhan = $admin->id;
-            $order->ten_nguoi_xac_nhan = $admin->ho_va_ten;
+            $order->email_nguoi_xac_nhan = $admin->email;
             $order->save();
             return response()->json(['status' => true]);
         } else {
@@ -38,7 +38,7 @@ class OrderController extends Controller
         if ($order) {
             $order->trang_thai_don_hang = 2;
             $order->id_nguoi_xac_nhan = $admin->id;
-            $order->ten_nguoi_xac_nhan = $admin->ho_va_ten;
+            $order->email_nguoi_xac_nhan = $admin->email;
             $order->save();
             return response()->json(['status' => true]);
         } else {
@@ -54,7 +54,7 @@ class OrderController extends Controller
             foreach ($order as $key => $value) {
                 $value->trang_thai_don_hang = 1;
                 $value->id_nguoi_xac_nhan = $admin->id;
-                $value->ten_nguoi_xac_nhan = $admin->ho_va_ten;
+                $value->email_nguoi_xac_nhan = $admin->email;
                 $value->save();
             };
             return response()->json(['status' => true]);
@@ -71,7 +71,7 @@ class OrderController extends Controller
             foreach ($order as $key => $value) {
                 $value->trang_thai_don_hang = 2;
                 $value->id_nguoi_xac_nhan = $admin->id;
-                $value->ten_nguoi_xac_nhan = $admin->ho_va_ten;
+                $value->email_nguoi_xac_nhan = $admin->email;
                 $value->save();
             };
             return response()->json(['status' => true]);

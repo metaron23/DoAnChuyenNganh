@@ -36,6 +36,11 @@
     }
 </style>
 <script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
     toastr.options = {
         "timeOut": "3000",
         'progressBar': true,

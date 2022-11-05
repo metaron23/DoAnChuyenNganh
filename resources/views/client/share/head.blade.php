@@ -29,3 +29,4 @@
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
+<meta name="csrf-token" content="{{ csrf_token() }}">

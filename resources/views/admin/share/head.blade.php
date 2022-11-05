@@ -34,78 +34,9 @@
 <link id="color" rel="stylesheet" href="/admin/assets/css/color-1.css" media="screen">
 <!-- Responsive css-->
 <link rel="stylesheet" type="text/css" href="/admin/assets/css/responsive.css">
+<link rel="stylesheet" type="text/css" href="/admin/style_of_me_admin.css">
 {{-- toastr link --}}
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
 {{-- csrf_token ajax --}}
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-<style>
-    * {
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #load {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        z-index: 9999;
-        background: url("/assets_client/images/load.gif") no-repeat center center rgba(0, 0, 0, 0.25);
-        background-size: cover;
-    }
-
-    #contents {
-        visibility: hidden;
-    }
-
-    .active_menu {
-        background-color: rgba(115, 102, 255, 0.12);
-        color: var(--theme-deafult);
-    }
-
-    .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li.sidebar-list:hover>a:hover {
-        background-color: transparent;
-    }
-
-    .nav-link {
-        font-weight: 600;
-    }
-
-    .nav-tabs .nav-link.active {
-        font-weight: 600;
-        font-size: 20px !important;
-    }
-
-    li.sidebar-list {
-        border-bottom: 1px solid #ccc;
-    }
-
-    .simplebar-content {
-        border-bottom: 1px solid #ccc;
-    }
-
-    .logo-icon-wrapper .fs_icon {
-        font-size: 32px;
-    }
-
-    .sidebar-wrapper .logo-icon-wrapper {
-        padding: 23px !important;
-    }
-
-    .page-wrapper.compact-wrapper .page-header {
-        width: 100%;
-        height: 80px;
-        margin: 0;
-        background-image: url("/assets_client/images/gallery/big-img/4.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    td {
-        white-space: nowrap;
-    }
-
-    .img-160{
-        width: 160px;
-    }
-</style>

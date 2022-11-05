@@ -12,25 +12,32 @@ use App\Models\GioHang;
 
 class HoaDonController extends Controller
 {
-    public function index(){
-        $checkMenu = 5;
-        return view('admin.pages.hoa_don.hoa_don', compact('checkMenu'));
-    }
-
-    public function export()
+    public function index()
     {
-        return (new DonHangExport)->download('invoices.xlsx');
-    }
-
-    public function getData(){
-        $admin = Auth::guard('admin')->user();
-        $hoaDon = DonHang::where('trang_thai_don_hang',2)->orderBy('created_at', 'DESC')
-                        ->get();
+        $countHoaDon =DonHang::where('trang_thai_don_hang', 2)->count();
+        $hoaDon = DonHang::where('trang_thai_don_hang', 2)->orderBy('created_at', 'DESC')
+        ->paginate(4);
         foreach ($hoaDon as $key => $value) {
             $food = GioHang::where('id_don_hang', $value->id)
-                        ->get();
+                    ->get();
             $value['food'] = $food;
         }
+        $checkMenu = 5;
+        return view('admin.pages.hoa_don.hoa_don', compact('checkMenu', 'hoaDon', 'countHoaDon'));
+    }
+
+    public function export($amount)
+    {
+        return (new DonHangExport($amount))->download('invoices_'.$amount.'.xlsx');
+    }
+
+    public function getData($id)
+    {
+        $hoaDon = DonHang::where('id', $id)->first();
+        $food = GioHang::where('id_don_hang', $id)
+                ->get();
+        $hoaDon['food'] = $food;
+
         return response()->json([
             'hoaDon' => $hoaDon,
         ]);

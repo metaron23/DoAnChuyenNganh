@@ -68,8 +68,8 @@ Route::group(['prefix' => '/admin', 'middleware' => 'checkAdminTaiKhoan'], funct
 
     Route::group(['prefix' => '/hoa-don'], function () {
         Route::get('/', [\App\Http\Controllers\Admin\HoaDonController::class, 'index']);
-        Route::get('/export', [\App\Http\Controllers\Admin\HoaDonController::class, 'export']);
-        Route::get('/get-data', [\App\Http\Controllers\Admin\HoaDonController::class, 'getData']);
+        Route::get('/export/{amount}', [\App\Http\Controllers\Admin\HoaDonController::class, 'export']);
+        Route::get('/getData/{id}', [\App\Http\Controllers\Admin\HoaDonController::class, 'getData']);
     });
 });
 

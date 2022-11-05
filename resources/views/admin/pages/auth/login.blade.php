@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     {{-- axios --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"></script>
-    
+
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -96,13 +96,12 @@
                     'username': $('#user_name').val(),
                     'password': $('#password').val(),
                 };
-                console.log(payLoad);
                 $.ajax({
                     url: '/admin/login',
                     type: 'post',
                     data: payLoad,
                     success: function(res) {
-                        if (res.status) window.location.href = "/admin/tai-khoan/index";
+                        if (res.status) window.location.href = "/admin/danh-muc-mon-an/index";
                         else toastr.error('Đăng nhập thất bại!');
                     },
                     error: function(res) {

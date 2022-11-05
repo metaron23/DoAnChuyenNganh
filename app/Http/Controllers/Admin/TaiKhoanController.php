@@ -10,6 +10,7 @@ use App\Models\TaiKhoan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 class TaiKhoanController extends Controller
 {
@@ -134,10 +135,14 @@ class TaiKhoanController extends Controller
             'password'  =>  $request->password,
         ]);
 
-        if ($checkMail) {
-            return response()->json(['status'=>true]);
+        if (!$checkMail) {
+            return response()->json([
+                'status'=>false
+            ]);
         } else {
-            return response()->json(['status'=>false]);
+            return response()->json([
+                'status'=>true
+            ]);
         }
     }
 

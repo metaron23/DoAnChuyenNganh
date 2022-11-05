@@ -1,9 +1,11 @@
 <div class="sidebar-wrapper close_icon">
     <div>
         <div class="logo-wrapper">
-            <div style="width:400px"><a class="logo text-start" href="/home"><img style="    max-width: 100%;
-                object-fit: scale-down; height: 63px;"class="img-fluid for-light w-50"
-                        src="/assets_client/images/logo/foody4.png" alt="icon_login"></a>
+            <div style="width:400px">
+                <a class="logo text-start" href="/admin/danh-muc-mon-an/index">
+                    <img style="max-width: 100%;object-fit: scale-down; height: 63px;"class="img-fluid for-light w-50"
+                        src="/assets_client/images/logo/foody4.png" alt="icon_login">
+                </a>
             </div>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
         </div>
@@ -39,19 +41,22 @@
                                                 </p>
                                             </div>
                                         </li>
-                                        <li class="sidebar-list" data-id='1'><a class="sidebar-link sidebar-title link-nav" href="/admin/danh-muc-mon-an/index">
+                                        <li class="sidebar-list" data-id='1'><a class="sidebar-link sidebar-title link-nav"
+                                                href="/admin/danh-muc-mon-an/index">
                                                 <i class="fa fa-align-justify"></i>
                                                 <span>Quản Lý Danh Mục Món Ăn</span>
                                                 <div class="according-menu"></div>
                                             </a>
                                         </li>
-                                        <li class="sidebar-list" data-id='2'><a class="sidebar-link sidebar-title link-nav" href="/admin/mon-an/index">
+                                        <li class="sidebar-list" data-id='2'><a class="sidebar-link sidebar-title link-nav"
+                                                href="/admin/mon-an/index">
                                                 <i class="fa fa-coffee"></i>
                                                 <span>Quản Lý Món Ăn</span>
                                                 <div class="according-menu"></div>
                                             </a>
                                         </li>
-                                        <li class="sidebar-list" data-id='3'><a class="sidebar-link sidebar-title link-nav" href="/admin/tai-khoan/index">
+                                        <li class="sidebar-list" data-id='3'><a class="sidebar-link sidebar-title link-nav"
+                                                href="/admin/tai-khoan/index">
                                                 <i class="fa fa-users"></i>
                                                 <span>Quản Lý Tài Khoản</span>
                                                 <div class="according-menu"></div>
@@ -64,7 +69,7 @@
                                             </a>
                                         </li>
                                         <li class="sidebar-list" data-id='5'><a class="sidebar-link sidebar-title link-nav" href="/admin/hoa-don/">
-                                            <i class="fa fa-credit-card"></i>
+                                                <i class="fa fa-credit-card"></i>
                                                 <span>Quản Lý Hoá Đơn</span>
                                                 <div class="according-menu"></div>
                                             </a>

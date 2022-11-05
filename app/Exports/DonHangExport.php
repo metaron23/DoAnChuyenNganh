@@ -16,10 +16,19 @@ class DonHangExport implements FromCollection, WithHeadings, WithStrictNullCompa
 {
     use Exportable;
 
+    public function __construct($amount) {
+    	$this->amount = $amount;
+    }
+
     public function collection()
     {
-        $donHang = DonHang::where('trang_thai_don_hang',2)
+        if($this->amount=='all'){
+            $donHang = DonHang::where('trang_thai_don_hang',2)
                     ->select('ma_don_hang','id_khach_hang','ten_khach_hang','email_khach_hang','phone_khach_hang','ten_ship','phone_ship','dia_chi_ship','trang_thai_thanh_toan','tong_tien','updated_at')->get();
+        }else{
+            $donHang = DonHang::where('trang_thai_don_hang',2)
+            ->select('ma_don_hang','id_khach_hang','ten_khach_hang','email_khach_hang','phone_khach_hang','ten_ship','phone_ship','dia_chi_ship','trang_thai_thanh_toan','tong_tien','updated_at')->take($this->amount)->get();
+        }
         return $donHang;
     }
 

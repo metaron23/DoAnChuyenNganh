@@ -28,7 +28,8 @@
 <script src="/admin/assets/js/typeahead/typeahead.bundle.js"></script>
 <script src="/admin/assets/js/typeahead/typeahead.custom.js"></script>
 <script src="/admin/assets/js/typeahead-search/handlebars.js"></script>
-<script src="/admin/assets/js/typeahead-search/typeahead-custom.js"></script>
+<script src="/admin/assets/js/tooltip-init.js"></script>
+{{-- <script src="/admin/assets/js/typeahead-search/typeahead-custom.js"></script> --}}
 <!-- Plugins JS Ends-->
 <!-- Theme js-->
 <script src="/admin/assets/js/script.js"></script>
