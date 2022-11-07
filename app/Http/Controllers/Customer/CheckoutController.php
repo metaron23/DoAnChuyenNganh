@@ -21,8 +21,8 @@ class CheckoutController extends Controller
     {
         $user = Auth::guard('customer')->user();
         $data = GioHang::where('id_tai_khoan', $user->id)
-                                ->whereNull('id_don_hang')
-                                ->get();
+                    ->whereNull('id_don_hang')
+                    ->get();
 
         $totalCart = 0;
         foreach ($data as $key => $value) {
@@ -42,8 +42,8 @@ class CheckoutController extends Controller
         // try {
         $user = Auth::guard('customer')->user();
         $cart = GioHang::where('id_tai_khoan', $user->id)
-                                        ->whereNull('id_don_hang')
-                                        ->get();
+                    ->whereNull('id_don_hang')
+                    ->get();
         if ($cart == null) {
             toastr()->success('Vui lòng thêm món ăn vào giỏ hàng!');
         } else {
