@@ -47,8 +47,8 @@
                             <div class="portfolio__action">
                                 <ul class="portfolio__list">
                                     <li><a href="/assets_client/images/gallery/big-img/1.jpg" data-lightbox="grportimg" data-title="My caption"><i
-                                                class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                                class="fa fa-eye" style="line-height:2"></i></a></li>
+                                    <li><a href="#"><i style="line-height:2" class="fa fa-link"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -63,8 +63,8 @@
                             <div class="portfolio__action">
                                 <ul class="portfolio__list">
                                     <li><a href="/assets_client/images/gallery/big-img/2.jpg" data-lightbox="grportimg" data-title="My caption"><i
-                                                class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                                class="fa fa-eye" style="line-height:2"></i></a></li>
+                                    <li><a href="#"><i style="line-height:2" class="fa fa-link"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -79,8 +79,8 @@
                             <div class="portfolio__action">
                                 <ul class="portfolio__list">
                                     <li><a href="/assets_client/images/gallery/big-img/3.jpg" data-lightbox="grportimg" data-title="My caption"><i
-                                                class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                                class="fa fa-eye" style="line-height:2"></i></a></li>
+                                    <li><a href="#"><i style="line-height:2" class="fa fa-link"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -95,8 +95,8 @@
                             <div class="portfolio__action">
                                 <ul class="portfolio__list">
                                     <li><a href="/assets_client/images/gallery/big-img/4.jpg" data-lightbox="grportimg" data-title="My caption"><i
-                                                class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                                class="fa fa-eye" style="line-height:2"></i></a></li>
+                                    <li><a href="#"><i style="line-height:2" class="fa fa-link"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -111,8 +111,8 @@
                             <div class="portfolio__action">
                                 <ul class="portfolio__list">
                                     <li><a href="/assets_client/images/gallery/big-img/5.jpg" data-lightbox="grportimg" data-title="My caption"><i
-                                                class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                                class="fa fa-eye" style="line-height:2"></i></a></li>
+                                    <li><a href="#"><i style="line-height:2" class="fa fa-link"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -127,8 +127,8 @@
                             <div class="portfolio__action">
                                 <ul class="portfolio__list">
                                     <li><a href="/assets_client/images/gallery/big-img/6.jpg" data-lightbox="grportimg" data-title="My caption"><i
-                                                class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                                class="fa fa-eye" style="line-height:2"></i></a></li>
+                                    <li><a href="#"><i style="line-height:2" class="fa fa-link"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -143,8 +143,8 @@
                             <div class="portfolio__action">
                                 <ul class="portfolio__list">
                                     <li><a href="/assets_client/images/gallery/big-img/7.jpg" data-lightbox="grportimg" data-title="My caption"><i
-                                                class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                                class="fa fa-eye" style="line-height:2"></i></a></li>
+                                    <li><a href="#"><i style="line-height:2" class="fa fa-link"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -159,8 +159,8 @@
                             <div class="portfolio__action">
                                 <ul class="portfolio__list">
                                     <li><a href="/assets_client/images/gallery/big-img/8.jpg" data-lightbox="grportimg" data-title="My caption"><i
-                                                class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                                class="fa fa-eye" style="line-height:2"></i></a></li>
+                                    <li><a href="#"><i style="line-height:2" class="fa fa-link"></i></a></li>
                                 </ul>
                             </div>
                         </div>

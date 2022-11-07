@@ -97,13 +97,13 @@
                         $('#info-orderCancelled .card-body .row').html('');
                         donHangs.forEach(element => {
                             if (element.trang_thai_don_hang == 0) {
-                                $('#info-orderNews .card-body .row').append(createContent(element, 'primary', 'Chờ xác nhận'));
+                                $('#info-orderNews .card-body .row').append(createContent(element, 'primary', 'Chờ Xác Nhận'));
                             }
                             if (element.trang_thai_don_hang == 1) {
-                                $('#info-orderShipping .card-body .row').append(createContent(element, 'success', 'Đang giao'));
+                                $('#info-orderShipping .card-body .row').append(createContent(element, 'success', 'Đang Giao'));
                             }
                             if (element.trang_thai_don_hang == 3) {
-                                $('#info-orderCancelled .card-body .row').append(createContent(element, 'danger', 'Đã huỷ'));
+                                $('#info-orderCancelled .card-body .row').append(createContent(element, 'danger', 'Đã Huỷ'));
                             }
                         });
                     });
@@ -133,13 +133,19 @@
                         <div class="text-muted me-2 f-w-600 m-t-5 f-16">Tổng tiền: ` + donHang.tong_tien.toLocaleString() + ` VND
                         </div>
                         <div class="avaiabilty">
-                        <div class="text-success"></div>
-                        </div><a class="btn btn-` + status + ` btn-xs p-2" href="#" data-id="` + donHang.id + `">` + message + `</a>
+                        <div class="text-success"></div>`;
+                if (status == 'danger') {
+                    content += `</div><a class="btn btn-` + status + ` btn-xs p-2 disabledButton" href="#" data-id="` + donHang.id + `">` +
+                        message + `</a>`;
+                } else {
+                    content += `</div><a class="btn btn-` + status + ` btn-xs p-2" href="#" data-id="` + donHang.id + `">` + message + `</a>`;
+                }
+                content += `
                         </div>
                         </div>
                         </div>
                         </div>
-                        `
+                        `;
                 return content;
             }
 

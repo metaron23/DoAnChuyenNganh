@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="/assets_client/images/icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets_client/images/favicon.ico">
     <title>Login-Client</title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
@@ -24,11 +24,6 @@
     {{-- axios --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"></script>
 </head>
-    <style>
-        .link{
-           color: #dc4545 !important;
-        }
-    </style>
 <body>
     <!-- login page start-->
     <div class="container-fluid">
@@ -42,7 +37,8 @@
                         </div> --}}
                         <div class="login-main">
                             <form class="theme-form" id="loginForm">
-                                <h4>Đăng nhập tài khoản</h4>
+                                <div class="mb-4" ><a  href="/home"><img style="max-width: 100%;object-fit: scale-down; height: 73px;" src="/assets_client/images/logo/foody4.png" alt=""></a></div>
+                                <h4>Đăng nhập tài khoản </h4>
                                 <p>Nhập email và mật khẩu để đăng nhập</p>
                                 <div class="form-group">
                                     <label class="col-form-label">Email</label>
@@ -65,11 +61,7 @@
                                     <a class="link" href="#" id="forgetPass" data-bs-toggle="modal" data-bs-target="#exampleModal">Quên mật
                                         khẩu?</a>
                                     <div class="text-center mt-3">
-                                        <button class=" btn text-center wit-50" id="login" type="submit">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
+                                        <button class=" btn-login btn text-center wit-50" id="login" type="submit">
                                             đăng nhập
                                         </button>
                                     </div>
@@ -124,9 +116,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-footer text-end">
-                                    <button class="btn " type="submit" id="createTaiKhoan">Đăng ký</button>
-                                    <input class="btn btn-light" type="reset" value="Huỷ">
+                                <div class="card-footer text-center" style="background-color: transparent">
+                                    <button class="btn btn-login " type="submit" id="createTaiKhoan">Đăng ký</button>
+                                    <input class="btn btn-dark" type="reset" value="Huỷ">
                                 </div>
                                 <p class="mt-4 mb-0 text-center">Quay lại trang đăng nhập?<a class="ms-2" style="color: #dc4545" role="button" id="loginButton">Đăng
                                         Nhập</a></p>

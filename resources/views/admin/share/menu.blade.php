@@ -1,4 +1,4 @@
-<div class="sidebar-wrapper close_icon">
+<div class="sidebar-wrapper">
     <div>
         <div class="logo-wrapper">
             <div style="width:400px">
@@ -120,3 +120,4 @@
         </nav>
     </div>
 </div>
+
