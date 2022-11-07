@@ -65,7 +65,7 @@
                                     <a class="link" href="#" id="forgetPass" data-bs-toggle="modal" data-bs-target="#exampleModal">Quên mật
                                         khẩu?</a>
                                     <div class="text-center mt-3">
-                                        <button class=" btn text-center wit-50" id="login" type="submit">
+                                        <button class=" btn-login btn text-center wit-50" id="login" type="submit">
                                             <span></span>
                                             <span></span>
                                             <span></span>
