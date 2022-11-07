@@ -137,3 +137,7 @@ body {
 a:hover {
     opacity: 0.8;
 }
+
+.log__in .icon_login{
+    object-fit: cover;
+}

@@ -1,6 +1,17 @@
 @extends('admin.master')
 
 @section('content')
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" style="display:none;" id="detailOrder">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Chi Tiết Đơn Hàng</h4>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" data-bs-original-title="" title=""></button>
+                </div>
+                <div class="modal-body"></div>
+            </div>
+        </div>
+    </div>
     <div class="col-sm-12 col-xl-12 xl-100">
         <div class="row p-20">
             <h3>Quản lý đơn hàng</h3><span>Xem, Xác nhận <code>các đơn hàng</code></span>
@@ -65,18 +76,6 @@
                             </div>
 
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade bd-example-modal-lg" tabindex="-1" style="display:none;" id="detailOrder">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myLargeModalLabel">Chi Tiết Đơn Hàng</h4>
-                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" data-bs-original-title=""
-                                title=""></button>
-                        </div>
-                        <div class="modal-body">...</div>
                     </div>
                 </div>
             </div>

@@ -55,7 +55,9 @@
             let menuList = $('.sidebar-main .sidebar-list');
             for (const child of menuList) {
                 if (child.getAttribute('data-id') == check) {
-                    child.classList.add('active_menu');
+                    child.classList.add('active_background_menu');
+                    $('.sidebar-main .sidebar-list[data-id="'+check+'"]>a i').addClass('active_color_menu');
+                    $('.sidebar-main .sidebar-list[data-id="'+check+'"]>a span').addClass('active_color_menu');
                 }
             }
         });

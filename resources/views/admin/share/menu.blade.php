@@ -1,5 +1,5 @@
 <div class="sidebar-wrapper">
-    <div>
+    <div style="width:100px;height: 100%;">
         <div class="logo-wrapper">
             <div style="width:400px">
                 <a class="logo text-start" href="/admin/danh-muc-mon-an/index">
@@ -22,9 +22,6 @@
             <div id="sidebar-menu">
                 <ul class="sidebar-links" id="simple-bar" data-simplebar="init" style="display: block;">
                     <div class="simplebar-wrapper" style="margin: 0px;">
-                        <div class="simplebar-height-auto-observer-wrapper">
-                            <div class="simplebar-height-auto-observer"></div>
-                        </div>
                         <div class="simplebar-mask">
                             <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
                                 <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;">
@@ -34,50 +31,43 @@
                                             <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2"
                                                     aria-hidden="true"></i></div>
                                         </li>
-                                        <li class="sidebar-main-title">
-                                            <div>
-                                                <h6>Tổng quát</h6>
-                                                <p>Các chức năng chính của Admin.
-                                                </p>
-                                            </div>
-                                        </li>
                                         <li class="sidebar-list" data-id='1'><a class="sidebar-link sidebar-title link-nav"
                                                 href="/admin/danh-muc-mon-an/index">
                                                 <i class="fa fa-align-justify"></i>
-                                                <span>Quản Lý Danh Mục Món Ăn</span>
+                                                <span>Danh Mục</span>
                                                 <div class="according-menu"></div>
                                             </a>
                                         </li>
                                         <li class="sidebar-list" data-id='2'><a class="sidebar-link sidebar-title link-nav"
                                                 href="/admin/mon-an/index">
                                                 <i class="fa fa-coffee"></i>
-                                                <span>Quản Lý Món Ăn</span>
+                                                <span>Món Ăn</span>
                                                 <div class="according-menu"></div>
                                             </a>
                                         </li>
                                         <li class="sidebar-list" data-id='3'><a class="sidebar-link sidebar-title link-nav"
                                                 href="/admin/tai-khoan/index">
                                                 <i class="fa fa-users"></i>
-                                                <span>Quản Lý Tài Khoản</span>
+                                                <span>Tài Khoản</span>
                                                 <div class="according-menu"></div>
                                             </a>
                                         </li>
                                         <li class="sidebar-list" data-id='4'><a class="sidebar-link sidebar-title link-nav" href="/admin/don-hang">
                                                 <i class="fa fa-shopping-bag"></i>
-                                                <span>Quản Lý Đơn Hàng</span>
+                                                <span>Đơn Hàng</span>
                                                 <div class="according-menu"></div>
                                             </a>
                                         </li>
                                         <li class="sidebar-list" data-id='5'><a class="sidebar-link sidebar-title link-nav" href="/admin/hoa-don/">
                                                 <i class="fa fa-credit-card"></i>
-                                                <span>Quản Lý Hoá Đơn</span>
+                                                <span>Hoá Đơn</span>
                                                 <div class="according-menu"></div>
                                             </a>
                                         </li>
                                         {{-- <li class="sidebar-list">
                                             <a class="sidebar-link sidebar-title active" href="#">
                                                 <i class="fa fa-credit-card"></i>
-                                                <span>Quản lý hoá đơn</span>
+                                                <span>hoá đơn</span>
                                                 <div class="according-menu">
                                                     <i class="fa fa-angle-down"></i>
                                                 </div>
@@ -120,4 +110,3 @@
         </nav>
     </div>
 </div>
-
