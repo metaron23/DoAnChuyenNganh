@@ -133,6 +133,10 @@ li.sidebar-main-title {
     margin-left: 74px;
 }
 
+.footer{
+    margin-left: 74px;
+}
+
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
