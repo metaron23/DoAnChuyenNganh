@@ -18,17 +18,22 @@
     <link id="color" rel="stylesheet" href="/admin/assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="/admin/assets/css/responsive.css">
-
+    {{-- Css for login page --}}
+    <link rel="stylesheet"  href="/assets_client/style_client_me.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     {{-- axios --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"></script>
 </head>
-
+    <style>
+        .link{
+           color: #dc4545 !important;
+        }
+    </style>
 <body>
     <!-- login page start-->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-5"><img class="bg-img-cover bg-center" src="/assets_client/images/banner/bann-1/1.png" alt="looginpage"></div>
+            <div class="col-md-5"><img class="bg-img-cover bg-center" src="//cdn.dribbble.com/users/118246/screenshots/5343519/wifi.gif" alt="looginpage"></div>
             <div class="col-md-7 p-0">
                 <div class="login-card">
                     <div>
@@ -49,7 +54,7 @@
                                     <div class="form-input position-relative">
                                         <input class="form-control" type="password" autocomplete="on" id="password1" name="password" required=""
                                             placeholder="Nhập vào mật khẩu">
-                                        <div class="show-hide"><span class="show"> </span></div>
+                                        <div  class="show-hide"><span class="show"> </span></div>
                                     </div>
                                 </div>
                                 <div class="form-group mb-0">
@@ -59,13 +64,18 @@
                                     </div>
                                     <a class="link" href="#" id="forgetPass" data-bs-toggle="modal" data-bs-target="#exampleModal">Quên mật
                                         khẩu?</a>
-                                    <div class="text-end mt-3">
-                                        <button class="btn btn-primary btn-block w-100" id="login" type="submit">Đăng nhập</button>
+                                    <div class="text-center mt-3">
+                                        <button class=" btn text-center wit-50" id="login" type="submit">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            đăng nhập
+                                        </button>
                                     </div>
                                 </div>
-                                <p class="mt-4 mb-0 text-center">Chưa có tài khoản?<a class="ms-2" role="button" id="registerButton">Tạo
+                                <p class="mt-4 mb-0 text-center">Chưa có tài khoản?<a class="ms-2" style="color:#dc4545" role="button" id="registerButton">Tạo
                                         mới</a></p>
-                                <script></script>
                             </form>
                             <form class="form theme-form" id="registerForm">
                                 <div class="row">
@@ -115,10 +125,10 @@
                                     </div>
                                 </div>
                                 <div class="card-footer text-end">
-                                    <button class="btn btn-primary" type="submit" id="createTaiKhoan">Đăng ký</button>
+                                    <button class="btn " type="submit" id="createTaiKhoan">Đăng ký</button>
                                     <input class="btn btn-light" type="reset" value="Huỷ">
                                 </div>
-                                <p class="mt-4 mb-0 text-center">Quay lại trang đăng nhập?<a class="ms-2" role="button" id="loginButton">Đăng
+                                <p class="mt-4 mb-0 text-center">Quay lại trang đăng nhập?<a class="ms-2" style="color: #dc4545" role="button" id="loginButton">Đăng
                                         Nhập</a></p>
                             </form>
                         </div>
