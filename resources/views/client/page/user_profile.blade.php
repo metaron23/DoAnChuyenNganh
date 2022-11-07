@@ -74,7 +74,7 @@
                                 <!-- Form Group (birthday)-->
                                 <div class="col-md-6">
                                     <label class="small " for="inputBirthday">Giới tính</label>
-                                    <select class="form-control" style="padding:0px 18px" value="{{ Auth::guard('customer')->user()->gioi_tinh }}"
+                                    <select class="form-control" style="padding:0px 18px; height: 50px !important;" value="{{ Auth::guard('customer')->user()->gioi_tinh }}"
                                         disabled name="gioi_tinh">
                                         <option value="1">Nam</option>
                                         <option value="0">Nữ</option>
