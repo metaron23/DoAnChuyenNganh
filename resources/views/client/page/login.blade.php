@@ -42,7 +42,8 @@
                         </div> --}}
                         <div class="login-main">
                             <form class="theme-form" id="loginForm">
-                                <h4>Đăng nhập tài khoản</h4>
+                                <div class="mb-4" ><a  href="/home"><img style="max-width: 100%;object-fit: scale-down; height: 73px;" src="/assets_client/images/logo/foody4.png" alt=""></a></div>
+                                <h4>Đăng nhập tài khoản </h4>
                                 <p>Nhập email và mật khẩu để đăng nhập</p>
                                 <div class="form-group">
                                     <label class="col-form-label">Email</label>
@@ -124,9 +125,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-footer text-end">
+                                <div class="card-footer text-center" style="background-color: transparent">
                                     <button class="btn " type="submit" id="createTaiKhoan">Đăng ký</button>
-                                    <input class="btn btn-light" type="reset" value="Huỷ">
+                                    <input class="btn btn-dark" type="reset" value="Huỷ">
                                 </div>
                                 <p class="mt-4 mb-0 text-center">Quay lại trang đăng nhập?<a class="ms-2" style="color: #dc4545" role="button" id="loginButton">Đăng
                                         Nhập</a></p>

@@ -21,8 +21,8 @@
                             <!-- Profile picture help block-->
                             <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
                             <!-- Profile picture upload button-->
-                            <input class="btn btn-login " type="file" id="avatar" accept="image/png, image/jpeg" hidden name="link">
-                            <input type="button" class="btn btn-login " name="anh_dai_dien" onclick="$('#avatar').click()" value="Thêm Ảnh">
+                            <input class="btn   " type="file" id="avatar" accept="image/png, image/jpeg" hidden name="link">
+                            <input type="button" class="btn   " name="anh_dai_dien" onclick="$('#avatar').click()" value="Thêm Ảnh">
                         </form>
                         {{-- edit --}}
                     </div>
@@ -81,8 +81,8 @@
                                 </div>
                             </div>
                             <!-- Save changes button-->
-                            <button class="btn btn-login  mt-4" type="button" id="editFormAccount">Sửa</button>
-                            <button class="btn btn-login  mt-4" type="submit" id="saveFormAccount">Lưu thay đổi</button>
+                            <button class="btn   mt-4" type="button" id="editFormAccount">Sửa</button>
+                            <button class="btn   mt-4" type="submit" id="saveFormAccount">Lưu thay đổi</button>
                         </form>
                     </div>
                 </div>
