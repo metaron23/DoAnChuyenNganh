@@ -126,7 +126,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer text-center" style="background-color: transparent">
-                                    <button class="btn " type="submit" id="createTaiKhoan">Đăng ký</button>
+                                    <button class="btn btn-login " type="submit" id="createTaiKhoan">Đăng ký</button>
                                     <input class="btn btn-dark" type="reset" value="Huỷ">
                                 </div>
                                 <p class="mt-4 mb-0 text-center">Quay lại trang đăng nhập?<a class="ms-2" style="color: #dc4545" role="button" id="loginButton">Đăng

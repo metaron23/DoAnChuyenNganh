@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Customer;
+
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\Client\UpdateCartRequest;
@@ -63,16 +64,16 @@ class GioHangController extends Controller
         if ($check) {
             $user = Auth::guard('customer')->user();
             $cart = GioHang::join('mon_ans', 'gio_hangs.id_mon_an', 'mon_ans.id')
-                                            ->select(
-                                                'gio_hangs.*',
-                                                'mon_ans.ten_mon_an',
-                                                'mon_ans.hinh_anh',
-                                                'mon_ans.don_gia_ban',
-                                                'mon_ans.don_gia_khuyen_mai'
-                                            )
-                                            ->where('id_tai_khoan', $user->id)
-                                            ->whereNull('id_don_hang')
-                                            ->get();
+                        ->select(
+                            'gio_hangs.*',
+                            'mon_ans.ten_mon_an',
+                            'mon_ans.hinh_anh',
+                            'mon_ans.don_gia_ban',
+                            'mon_ans.don_gia_khuyen_mai'
+                        )
+                        ->where('id_tai_khoan', $user->id)
+                        ->whereNull('id_don_hang')
+                        ->get();
             return response()->json(['data'=>$cart]);
         }
     }
@@ -82,9 +83,9 @@ class GioHangController extends Controller
         $customer = Auth::guard('customer')->user();
 
         GioHang::where('id', $id)
-                    ->where('id_tai_khoan', $customer->id)
-                    ->whereNull('id_don_hang')
-                    ->first()->delete();
+                ->where('id_tai_khoan', $customer->id)
+                ->whereNull('id_don_hang')
+                ->first()->delete();
     }
 
     public function updateCart(UpdateCartRequest $request)
@@ -92,9 +93,9 @@ class GioHangController extends Controller
         $customer = Auth::guard('customer')->user();
 
         $chiTiet = GioHang::where('id', $request->id)
-                                ->where('id_tai_khoan', $customer->id)
-                                ->whereNull('id_don_hang')
-                                ->first();
+                        ->where('id_tai_khoan', $customer->id)
+                        ->whereNull('id_don_hang')
+                        ->first();
 
         $chiTiet->so_luong_mua = $request->so_luong_mua;
         $chiTiet->don_gia_mua  = $chiTiet->so_luong_mua*($request->don_gia_khuyen_mai==null ? $request->don_gia_ban : $request->don_gia_khuyen_mai);
@@ -142,9 +143,9 @@ class GioHangController extends Controller
         };
 
         $count = GioHang::where('id_tai_khoan', $customer->id)
-                                            ->whereNull('id_don_hang')
-                                            ->get()
-                                            ->count();
+                        ->whereNull('id_don_hang')
+                        ->get()
+                        ->count();
         return response()->json([
             'status'    =>  true,
             'message'   =>  'Đã thêm vào giỏ hàng thành công!',
