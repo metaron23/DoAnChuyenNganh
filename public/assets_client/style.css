@@ -6562,7 +6562,7 @@ div.slide__pizza img {
 
 .single__food__list .food__list__inner {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding-left: 40px;
+    padding: 15px;
 }
 
 .single__food__list .food__list__inner .food__list__details {
@@ -6673,6 +6673,7 @@ div.slide__pizza img {
     .single__food__list .food__list__inner {
         padding-bottom: 20px;
         padding-top: 20px;
+        width: 467px;
     }
 }
 
@@ -9073,11 +9074,11 @@ div.slide__pizza img {
     left: 48px;
     position: relative;
     text-align: center;
-    width: 40px;
+    width: 100px;
 }
 
 .add__to__cart__btn {
-    left: 120px;
+    left: 80px ;
     position: relative;
 }
 

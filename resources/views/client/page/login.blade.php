@@ -42,7 +42,8 @@
                         </div> --}}
                         <div class="login-main">
                             <form class="theme-form" id="loginForm">
-                                <div class="mb-4" ><a  href="/home"><img style="max-width: 100%;object-fit: scale-down; height: 73px;" src="/assets_client/images/logo/foody4.png" alt=""></a></div>
+                                <div class="mb-4 " ><a  href="/home"><img class="fish-logo" src="/assets_client/images/logo/foody4.png" alt=""></a></div>
+                                <div class="fish-shadow"></div>
                                 <h4>Đăng nhập tài khoản </h4>
                                 <p>Nhập email và mật khẩu để đăng nhập</p>
                                 <div class="form-group">

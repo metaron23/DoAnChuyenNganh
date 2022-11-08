@@ -370,7 +370,7 @@
 /*=============  Plus Minus Button ==============*/
 
 
-    $(".cart-plus-minus").append('<div class="dec qtybutton">-</i></div><div class="inc qtybutton">+</div>');
+    $(".cart-plus-minus").append('');
 
     $(".qtybutton").on("click", function () {
         var $button = $(this);
