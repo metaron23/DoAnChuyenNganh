@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Customer;
+
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\Client\TaiKhoan\LoginRequest;
@@ -44,9 +45,8 @@ class CustomerController extends Controller
     {
         $request['email']   =   $request->user_name;
         unset($request['user_name']);
-
-        $data       =   $request->all();
-        $check      =   Auth::guard('customer')->attempt($data);
+        $data               =   $request->all();
+        $check              =   Auth::guard('customer')->attempt($data);
         $user = Auth::guard('customer')->user();
         if ($check && $user->loai_tai_khoan==2) {
             if ($user->tinh_trang == 0) {

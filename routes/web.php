@@ -98,7 +98,6 @@ Route::group(['prefix' => '/customer', 'middleware' => 'checkCustomerTaiKhoan'],
         Route::get('/', [\App\Http\Controllers\Customer\GioHangController::class, 'index']);
         Route::get('/remove/{id}', [\App\Http\Controllers\Customer\GioHangController::class, 'removeCart']);
         Route::post('/update', [\App\Http\Controllers\Customer\GioHangController::class, 'updateCart']);
-
         Route::post('/addCartFromDetail', [\App\Http\Controllers\Customer\GioHangController::class, 'addCartFromDetail']);
     });
     Route::group(['prefix' => '/checkout'], function () {

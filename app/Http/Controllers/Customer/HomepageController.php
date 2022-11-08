@@ -30,9 +30,9 @@ class HomepageController extends Controller
         $count = 0;
         if($check){
             $count += GioHang::where('id_tai_khoan', $user->id)
-                                    ->whereNull('id_don_hang')
-                                    ->get()
-                                    ->count();
+                    ->whereNull('id_don_hang')
+                    ->get()
+                    ->count();
         }
         return response()->json(['countCart' => $count]);
     }

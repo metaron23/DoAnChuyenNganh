@@ -1,16 +1,9 @@
 <div class="sidebar-wrapper">
     <div style="width:100px;height: 100%;">
-        <div class="logo-wrapper">
-            <div style="width:400px">
-                <a class="logo text-start" href="/admin/danh-muc-mon-an/index">
-                    <img style="max-width: 100%;object-fit: scale-down; height: 63px;"class="img-fluid for-light w-50"
-                        src="/assets_client/images/logo/foody4.png" alt="icon_login">
-                </a>
-            </div>
-            <div class="back-btn"><i class="fa fa-angle-left"></i></div>
-        </div>
         <div class="logo-icon-wrapper">
-            <i class="fa fa-spin fa-cog fs_icon"></i>
+            <a href="">
+                <img src="/assets_client/images/logo/foody4.png" alt="logo" style="width:80px">
+            </a>
         </div>
         <nav class="sidebar-main">
             <div class="left-arrow disabled" id="left-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"

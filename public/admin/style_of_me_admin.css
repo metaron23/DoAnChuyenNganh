@@ -63,7 +63,7 @@ li.sidebar-list {
 }
 
 .sidebar-wrapper .logo-icon-wrapper {
-    padding: 23px !important;
+    padding: 18px 8px !important;
 }
 
 .page-wrapper.compact-wrapper .page-header {
@@ -215,6 +215,7 @@ button:not(:disabled):hover,
 
 .sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li {
     margin-right: 0;
+    margin-top: 4px;
 }
 
 .page-wrapper.compact-sidebar .page-body-wrapper .page-body {

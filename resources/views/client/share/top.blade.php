@@ -1,8 +1,5 @@
-<div id="app_miniCart">
-    @if (isset($checkNav))
-
-    @else
-        {{$checkNav = ""}}
+    @if (!isset($checkNav))
+        {{ $checkNav = '' }}
     @endif
     <header class="htc__header bg--white">
         <!-- Start Mainmenu Area -->
@@ -38,21 +35,53 @@
                     </div>
                     <div class="col-lg-1 col-sm-4 col-md-4 order-2 order-lg-3">
                         <div class="header__right d-flex justify-content-end">
-                            <div class="log__in">
-                                @if (Auth::guard('customer')->check())
+                            @if (Auth::guard('customer')->check())
+                                <div class="log__in">
                                     <img src="{{ Auth::guard('customer')->user()->anh_dai_dien }}" alt="" class="icon_login">
-                                @else
-                                    <a href="/login"><i class="zmdi zmdi-account-o"></i></a>
-                                @endif
-                                <ul class="dropdown__menu">
-                                </ul>
-                            </div>
-                            <div class="shopping__cart">
-                                <a class="minicart-trigger" href="" v-on:click="refreshCart"><i class="zmdi zmdi-shopping-basket"></i></a>
-                                <div class="shop__qun">
-                                    <span id="countCart">@{{ countCart }}</span>
+                                    <p class="typed-out">{{ Auth::guard('customer')->user()->ho_va_ten }}</p>
+                                    <ul class="dropdown__menu">
+                                        <a class='drop-link' href="/customer/account">
+                                            <div class="icon-drop">
+                                                <i class="fa-solid fa-user"></i>
+                                            </div>
+                                            <span>Quản lí tài khoản</span>
+                                        </a>
+                                        <a class='drop-link' href="/customer/order">
+                                            <div class="icon-drop">
+                                                <i class="fa-solid fa-mug-saucer"></i>
+                                            </div>
+                                            <span>Quản lí đơn hàng</span>
+                                        </a>
+                                        <a class='drop-link' href="/customer/cart">
+                                            <div class="icon-drop">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </div>
+                                            <span>Quản lí giỏ hàng</span>
+                                        </a>
+                                        <a class='drop-link' href="/logout" id="logout_home">
+                                            <div class="icon-drop">
+                                                <i class="fa-solid fa-right-to-bracket"></i>
+                                            </div>
+                                            <span>Đăng xuất</span>
+                                        </a>
+                                    </ul>
                                 </div>
-                            </div>
+                                <div class="shopping__cart">
+                                    <a class="minicart-trigger" href=""><i class="zmdi zmdi-shopping-basket"></i></a>
+                                    <div class="shop__qun">
+                                    </div>
+                                </div>
+                            @else
+                                <div class="log__in">
+                                    <a href="/login"><i class="zmdi zmdi-account-o"></i></a>
+                                </div>
+                                <div class="shopping__cart">
+                                    <a class="minicart-trigger" href=""><i class="zmdi zmdi-shopping-basket"></i></a>
+                                    <div class="shop__qun">
+                                        <span id="countCart">0</span>
+                                    </div>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -138,32 +167,9 @@
     <!-- Cartbox -->
     <div class="cartbox-wrap">
         <div class="cartbox text-right">
-            <button class="cartbox-close"><i class="zmdi zmdi-close" v-on:click="loadCountCart"></i></button>
+            <button class="cartbox-close"><i class="zmdi zmdi-close"></i></button>
             <div class="cartbox__inner text-left">
-                <div v-for="(value, key) in listCart" class="cartbox__items">
-                    <!-- Cartbox Single Item -->
-                    <div class="cartbox__item">
-                        <div class="cartbox__item__thumb">
-                            <a href="product-details.html">
-                                <img v-bind:src="value.hinh_anh" alt="small thumbnail">
-                            </a>
-                        </div>
-                        <div class="cartbox__item__content">
-                            <h5><a href="product-details.html" class="product-name">@{{ value.ten_mon_an }}</a></h5>
-                            <p>Qty: <span>@{{ value.so_luong_mua < 1 ? 0 : value.so_luong_mua }}</span></p>
-                            <span class="price">@{{ (donGia(value.don_gia_khuyen_mai, value.don_gia_ban) * value.so_luong_mua).toLocaleString() }} VND</span>
-                        </div>
-                        <button class="cartbox__item__remove">
-                            <i class="fa fa-trash" v-on:click.prevent="remove(value.id)"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="cartbox__total">
-                    <ul>
-                        <li><span class="cartbox__total__title">Tổng tiền</span><span class="price">@{{ total.toLocaleString() }} VND</span></li>
-                        <li class="shipping-charge"><span class="cartbox__total__title">Phí giao hàng</span><span class="price"></span></li>
-                        <li class="grandtotal">Thành tiền<span class="price">@{{ total.toLocaleString() }} VND</span></li>
-                    </ul>
+                <div class="cartbox__items">
                 </div>
                 <div class="cartbox__buttons">
                     <a class="food__btn" href="/customer/cart"><span>Xem giỏ hàng</span></a>
@@ -172,75 +178,77 @@
             </div>
         </div>
     </div>
-</div>
-<!-- //Cartbox -->
-<script>
-    new Vue({
-        el: '#app_miniCart',
-        data: {
-            listCart: [],
-            total: 0,
-            countCart: 0,
-        },
-        created() {
-            this.getData();
-            this.totalCart();
-            this.loadCountCart();
-            this.addColorMenu();
-        },
-        methods: {
-            getData() {
-                axios
-                    .get('/customer/cart/data')
-                    .then((res) => {
-                        if (res.data.data == undefined)
-                            this.listCart = 0;
-                        else
-                            this.listCart = res.data.data;
-                    });
-            },
-            donGia(x, y) {
-                if (x == 0) {
-                    return y;
-                } else {
-                    return x;
+    <!-- //Cartbox -->
+
+    <script>
+        setTimeout(() => {
+            $(document).ready(function() {
+                function getDataMiniCart() {
+                    axios
+                        .get('/customer/cart/data')
+                        .then((res) => {
+                            if (res.data.status) {
+                                $('.cartbox__items').html("");
+                                $('.cartbox__items').prepend(createMiniCart(res.data.cart));
+                            }
+                        });
                 }
-            },
-            remove(id) {
-                axios
-                    .get('/customer/cart/remove/' + id)
-                    .then((res) => {
-                        toastr.success('Xoá thành công!');
-                        this.getData();
-                        this.totalCart();
-                        this.loadCountCart();
+                getDataMiniCart();
+
+                function createMiniCart(carts) {
+                    let content = "";
+                    let total = 0;
+                    let countCart = 0;
+                    carts.forEach(cart => {
+                        content += `<div class="cartbox__item">`;
+                        content += `<div class="cartbox__item__thumb">`;
+                        content += `<a href="product-details.html">`;
+                        content += `<img src="` + cart.hinh_anh + `" alt="small thumbnail" data-id="` + cart.id + `">`;
+                        content += `</a>`
+                        content += `</div>`
+                        content += `<div class="cartbox__item__content">`
+                        content += `<h5><a href="product-details.html" class="product-name" data-id="` + cart.id + `">` +
+                            cart.ten_mon_an + `</a></h5>`;
+                        content += `<p>Số lượng: <span>` + cart.so_luong_mua + `</span></p>`
+                        content += `<span class="price">` +
+                            cart.don_gia_mua.toLocaleString() + ` VND
+                                    </span>`;
+                        content += `</div>`;
+                        content += `<button class="cartbox__item__remove" data-id="` + cart.id + `">`;
+                        content += `<i class="fa fa-trash"></i>`;
+                        content += `</button>`;
+                        content += `</div>`;
+                        total += cart.don_gia_mua;
+                        countCart += 1;
                     });
-            },
-            totalCart() {
-                axios
-                    .get('/customer/cart/total')
-                    .then((res) => {
-                        if (res.data.totalCart == undefined)
-                            this.total = 0;
-                        else
-                            this.total = res.data.totalCart;
-                    });
-            },
-            refreshCart() {
-                this.getData();
-                this.totalCart();
-                this.loadCountCart();
-            },
-            loadCountCart() {
-                axios
-                    .get('/home/countCart')
-                    .then((res) => {
-                        this.countCart = res.data.countCart;
-                        $('#countCart').html(this.countCart);
-                    });
-            },
-            addColorMenu() {
-                setTimeout(() => {
+                    content += `</div>`;
+                    content += `<div class="cartbox__total">`;
+                    content += `<ul>`;
+                    content += `<li><span class="cartbox__total__title">Tổng tiền</span><span class="price">
+                                ` + total.toLocaleString() + ` VND</span></li>`;
+                    content += `<li class="shipping-charge"><span class="cartbox__total__title">Phí giao hàng</span>
+                                    <span class="price">0</span></li>`;
+                    content += `<li class="grandtotal">Thành tiền<span class="price">
+                                        ` + total.toLocaleString() + ` VND</span></li>`;
+                    content += `</ul>`;
+                    $('.shop__qun').html('<span id="countCart">' + countCart + '</span>');
+                    return content;
+                }
+
+                $('body').on('click', '.cartbox__item__remove', function() {
+                    let id = $(this).data('id');
+                    axios
+                        .get('/customer/cart/remove/' + id)
+                        .then((res) => {
+                            toastr.success('Xoá thành công!');
+                            getDataMiniCart();
+                        });
+                });
+                $('body').on('click', '.minicart-trigger', function() {
+                    getDataMiniCart();
+                });
+
+                function addColorMenu() {
                     let check = {!! json_encode($checkNav, JSON_HEX_TAG) !!};
                     if (check == 'home') {
                         $('#home').css("color", "#d50c0d");
@@ -260,8 +268,8 @@
                     if (check == 'contact') {
                         $('#contact').css("color", "#d50c0d");
                     };
-                }, 500);
-            },
-        }
-    });
-</script>
+                };
+                addColorMenu();
+            });
+        }, 400);
+    </script>
