@@ -140,8 +140,9 @@ class TaiKhoanController extends Controller
                 'status'=>false
             ]);
         } else {
+            toastr()->success('Đăng nhập thành công!');
             return response()->json([
-                'status'=>true
+                'status'=>true,
             ]);
         }
     }

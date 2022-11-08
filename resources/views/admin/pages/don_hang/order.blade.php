@@ -1,6 +1,17 @@
 @extends('admin.master')
 
 @section('content')
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" style="display:none;" id="detailOrder">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Chi Tiết Đơn Hàng</h4>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" data-bs-original-title="" title=""></button>
+                </div>
+                <div class="modal-body"></div>
+            </div>
+        </div>
+    </div>
     <div class="col-sm-12 col-xl-12 xl-100">
         <div class="row p-20">
             <h3>Quản lý đơn hàng</h3><span>Xem, Xác nhận <code>các đơn hàng</code></span>
@@ -68,18 +79,6 @@
                     </div>
                 </div>
             </div>
-            <div class="modal fade bd-example-modal-lg" tabindex="-1" style="display:none;" id="detailOrder">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myLargeModalLabel">Chi Tiết Đơn Hàng</h4>
-                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" data-bs-original-title=""
-                                title=""></button>
-                        </div>
-                        <div class="modal-body">...</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 @endsection
@@ -97,13 +96,13 @@
                         $('#info-orderCancelled .card-body .row').html('');
                         donHangs.forEach(element => {
                             if (element.trang_thai_don_hang == 0) {
-                                $('#info-orderNews .card-body .row').append(createContent(element, 'primary', 'Chờ xác nhận'));
+                                $('#info-orderNews .card-body .row').append(createContent(element, 'primary', 'Chờ Xác Nhận'));
                             }
                             if (element.trang_thai_don_hang == 1) {
-                                $('#info-orderShipping .card-body .row').append(createContent(element, 'success', 'Đang giao'));
+                                $('#info-orderShipping .card-body .row').append(createContent(element, 'success', 'Đang Giao'));
                             }
                             if (element.trang_thai_don_hang == 3) {
-                                $('#info-orderCancelled .card-body .row').append(createContent(element, 'danger', 'Đã huỷ'));
+                                $('#info-orderCancelled .card-body .row').append(createContent(element, 'danger', 'Đã Huỷ'));
                             }
                         });
                     });
@@ -133,13 +132,19 @@
                         <div class="text-muted me-2 f-w-600 m-t-5 f-16">Tổng tiền: ` + donHang.tong_tien.toLocaleString() + ` VND
                         </div>
                         <div class="avaiabilty">
-                        <div class="text-success"></div>
-                        </div><a class="btn btn-` + status + ` btn-xs p-2" href="#" data-id="` + donHang.id + `">` + message + `</a>
+                        <div class="text-success"></div>`;
+                if (status == 'danger') {
+                    content += `</div><a class="btn btn-` + status + ` btn-xs p-2 disabledButton" href="#" data-id="` + donHang.id + `">` +
+                        message + `</a>`;
+                } else {
+                    content += `</div><a class="btn btn-` + status + ` btn-xs p-2" href="#" data-id="` + donHang.id + `">` + message + `</a>`;
+                }
+                content += `
                         </div>
                         </div>
                         </div>
                         </div>
-                        `
+                        `;
                 return content;
             }
 

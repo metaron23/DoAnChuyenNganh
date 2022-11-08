@@ -112,10 +112,11 @@ body {
     color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 5px #d50c0d,
-                0 0 15px #d50c0d,
-                0 0 20px #d50c0d,
-                0 0 50px #d50c0d;
+        0 0 15px #d50c0d,
+        0 0 20px #d50c0d,
+        0 0 50px #d50c0d;
 }
+
 .show-hide span {
     color: #d50c0d !important;
 }
@@ -150,3 +151,132 @@ body {
         width: 468px !important ;
     }
   }
+
+.card-footer {
+    border-top: 0px solid rgba(0, 0, 0, 0.125) !important;
+
+}
+
+.link {
+    color: #dc4545 !important;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.log__in .icon_login {
+    object-fit: cover;
+}
+
+.cartbox__item__thumb {
+    width: 120px;
+}
+
+.cartbox__item__thumb img {
+    object-fit: cover;
+}
+
+.log__in ul {
+    width: 180px;
+    transform: translate(-27px, 64px);
+    font-size: 14px;
+}
+
+.header__right .log__in a i {
+    font-size: 20px;
+}
+
+.drop-link:hover {
+    font-size: 16px !important;
+    transition: 0.3 !important;
+}
+
+.drop-link:hover i {
+    color: #d50c0d !important;
+}
+
+.dropdown__menu {
+    display: none !important;
+}
+
+.log__in:hover .dropdown__menu {
+    display: block !important;
+}
+
+.log__in:hover,
+.log__in:hover img {
+    cursor: pointer;
+}
+
+.log__in:hover img {
+    opacity: 0.8;
+}
+
+.dropdown__menu .drop-link {
+    display: flex !important;
+}
+
+.icon-drop {
+    width: 18px;
+    text-align: center;
+    margin-right: 6px;
+}
+
+.header__right .shopping__cart {
+    margin-left: 0;
+    padding-right: 20px;
+}
+
+.log__in {
+    padding: 0 20px;
+}
+
+.log__in p {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 6px;
+    text-align: center;
+    transform: translateX(-16px);
+    font-weight: 600;
+}
+
+.log__in img {
+    transform: translateY(30px);
+    width: 35px !important;
+    height: 35px !important;
+}
+
+.typed-out {
+    border-right: 0.25rem solid #db2d2e !important;
+    animation: typing 8s steps(40) infinite, blinking 1s infinite;
+}
+
+@keyframes typing {
+
+    0%,
+    100% {
+        width: 0;
+    }
+
+
+    90% {
+        width: 100%;
+    }
+}
+
+@keyframes blinking {
+
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #fff;
+    }
+}

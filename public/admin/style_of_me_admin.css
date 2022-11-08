@@ -2,6 +2,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 th,
 td {
     font-size: 14px !important;
@@ -20,9 +26,13 @@ td {
     visibility: hidden;
 }
 
-.active_menu {
+.active_background_menu {
     background-color: rgba(115, 102, 255, 0.12);
-    color: var(--theme-deafult);
+}
+
+.active_color_menu {
+    color: #7366ff !important;
+    font-weight: 520 !important;
 }
 
 .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li.sidebar-list:hover>a:hover {
@@ -53,14 +63,13 @@ li.sidebar-list {
 }
 
 .sidebar-wrapper .logo-icon-wrapper {
-    padding: 23px !important;
+    padding: 18px 8px !important;
 }
 
 .page-wrapper.compact-wrapper .page-header {
     width: 100%;
     height: 80px;
     margin: 0;
-    background-image: url("/assets_client/images/gallery/big-img/4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -133,8 +142,8 @@ li.sidebar-main-title {
     margin-left: 74px;
 }
 
-.footer{
-    margin-left: 74px;
+.footer {
+    margin-left: 100px;
 }
 
 button:not(:disabled),
@@ -161,20 +170,90 @@ button:not(:disabled):hover,
     background-color: transparent;
     padding: 0px 10px;
 }
-.page-body{
+
+.page-body {
     background-color: #fff;
 }
 
-.exportExelInput{
+.exportExelInput {
     height: 100%;
-    border:1px solid #ced4ca;
+    border: 1px solid #ced4ca;
 }
 
 .exportExelInput:active,
-.exportExelInput:focus{
-    outline:1px solid #2b2b2b;
+.exportExelInput:focus {
+    outline: 1px solid #2b2b2b;
 }
 
-.d-flex{
+.d-flex {
     display: flex;
+}
+
+.theme-form input[type=text],
+.theme-form input[type=email],
+.theme-form input[type=search],
+.theme-form input[type=password],
+.theme-form input[type=number],
+.theme-form input[type=tel],
+.theme-form input[type=date],
+.theme-form input[type=datetime-local],
+.theme-form input[type=time],
+.theme-form input[type=datetime-local],
+.theme-form input[type=month],
+.theme-form input[type=week],
+.theme-form input[type=url],
+.theme-form input[type=file],
+.theme-form textarea,
+.theme-form select {
+    color: #212529;
+}
+
+.disabledButton {
+    cursor: default;
+    opacity: 1;
+}
+
+.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li {
+    margin-right: 0;
+    margin-top: 4px;
+}
+
+.page-wrapper.compact-sidebar .page-body-wrapper .page-body {
+    margin-left: 100px;
+}
+
+.page-wrapper.compact-sidebar .page-header {
+    margin-left: 100px;
+    width: calc(100% - 100px);
+}
+
+.sidebar-links {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.simplebar-mask {
+    top: 80px;
+}
+
+.page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list .sidebar-link:hover {
+    opacity: 0.8;
+    font-size: 20px;
+    transition: all linear 0.2s;
+}
+
+.page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list .sidebar-link>span{
+    font-size: 14px;
+}
+
+.onhover-dropdown{
+    cursor: default;
+}
+
+.sidebar-wrapper{
+    height: 100%;
+}
+
+.simplebar-content-wrapper{
+    padding-bottom: 0 !important;
 }

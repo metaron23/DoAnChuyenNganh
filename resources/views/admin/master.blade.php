@@ -12,7 +12,7 @@
         <div class="tap-top"><i data-feather="chevrons-up"></i></div>
         <!-- tap on tap ends-->
         <!-- page-wrapper Start-->
-        <div class="page-wrapper compact-wrapper" id="pageWrapper">
+        <div class="page-wrapper compact-sidebar" id="pageWrapper">
             <!-- Page Header Start-->
             @include('admin.share.top')
             <!-- Page Header Ends-->
@@ -55,7 +55,9 @@
             let menuList = $('.sidebar-main .sidebar-list');
             for (const child of menuList) {
                 if (child.getAttribute('data-id') == check) {
-                    child.classList.add('active_menu');
+                    child.classList.add('active_background_menu');
+                    $('.sidebar-main .sidebar-list[data-id="'+check+'"]>a i').addClass('active_color_menu');
+                    $('.sidebar-main .sidebar-list[data-id="'+check+'"]>a span').addClass('active_color_menu');
                 }
             }
         });

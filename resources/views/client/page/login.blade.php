@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="/assets_client/images/icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets_client/images/favicon.ico">
     <title>Login-Client</title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
@@ -24,11 +24,6 @@
     {{-- axios --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"></script>
 </head>
-    <style>
-        .link{
-           color: #dc4545 !important;
-        }
-    </style>
 <body>
     <!-- login page start-->
     <div class="container-fluid">
@@ -68,10 +63,6 @@
                                         khẩu?</a>
                                     <div class="text-center mt-3">
                                         <button class=" btn-login btn text-center wit-50" id="login" type="submit">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
                                             đăng nhập
                                         </button>
                                     </div>

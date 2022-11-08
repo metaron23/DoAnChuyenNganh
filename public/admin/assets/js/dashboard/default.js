@@ -1,6 +1,7 @@
 // greeting
 var today = new Date()
 var curHr = today.getHours()
+
 try {
     if (curHr >= 0 && curHr < 4) {
         document.getElementById("greeting").innerHTML = 'Good Night';
@@ -11,6 +12,7 @@ try {
     } else {
         document.getElementById("greeting").innerHTML = 'Good Evening';
     }
+    // time
     function startTime() {
         var today = new Date();
         var h = today.getHours();
@@ -429,6 +431,6 @@ try {
     );
 
     chart1.render();
-} catch (err) { }
+} catch (err) {
 
-// time
+}

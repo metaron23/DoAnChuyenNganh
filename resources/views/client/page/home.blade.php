@@ -120,7 +120,7 @@
                             bạn chỉ có thể tìm thấy ở nhà hàng chúng tôi.
                         </p>
                         <div class="chooseus__btn">
-                            <a class="food__btn" href="#">Xem thêm</a>
+                            <a class="food__btn" href="/menu">Xem thêm</a>
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                 <!-- Start Single Offer -->
             </div>
         </div>
-        <div style="text-align:center;font-size:18px;font-weight:600; border-bottom:1px solid #ccc">
+        <div style="text-align:center;font-size:18px;font-weight:600; border-bottom:1px solid #ccc; padding-bottom:16px">
             <a href="/menu">Xem tất cả các món</a>
         </div>
         <!-- Start Banner Area -->
