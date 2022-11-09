@@ -88,13 +88,13 @@ body {
     vertical-align: middle;
 }
 
-.btn {
-    background-color: #d50c0d;
-    color: white;
+.food__btn {
+    border: none;
+    cursor: pointer !important;
 }
 
 .caret-input {
-    caret-color: #d50c0d;
+    caret-color: #d92d2d;
 }
 
 .img-account-profile {
@@ -112,17 +112,17 @@ body {
 }
 
 .btn-login:hover {
-    background: #dc4545;
+    background: #d92d2d;
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #d50c0d,
-        0 0 15px #d50c0d,
-        0 0 20px #d50c0d,
-        0 0 50px #d50c0d;
+    box-shadow: 0 0 5px #d92d2d,
+        0 0 15px #d92d2d,
+        0 0 20px #d92d2d,
+        0 0 50px #d92d2d;
 }
 
 .show-hide span {
-    color: #d50c0d !important;
+    color: #d92d2d !important;
 }
 
 .card-footer {
@@ -166,7 +166,7 @@ a:hover {
 }
 
 .drop-link:hover i {
-    color: #d50c0d !important;
+    color: #d92d2d !important;
 }
 
 .dropdown__menu {
@@ -252,4 +252,46 @@ a:hover {
     50% {
         border-color: #fff;
     }
+}
+
+.card-footer {
+    border-top: 0px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+.fish-logo {
+    max-width: 100%;
+    object-fit: scale-down;
+    height: 73px;
+
+}
+
+.fish-shadow {
+    box-shadow: 0 0 100px 0 solid rgba(0, 0, 0, 0.125) !important;
+
+}
+
+.btn-menu-list {
+    cursor: pointer;
+}
+
+.search-result {
+    z-index: 99999;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (min-width: 900px) {
+    .responsive-menu-item {
+        width: 468px !important;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .responsive-menu-item {
+        width: 468px !important;
+    }
+}
+
+a:hover i, a:hover{
+    color: #d92d2d !important;
 }

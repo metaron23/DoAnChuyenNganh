@@ -1,6 +1,7 @@
 @extends('client.share.master')
 <head>
     <title>Thực đơn</title>
+    <link rel="stylesheet" href="/assets_client/style_client_me.css">
 </head>
 @section('content')
     <div id="menu_client">
@@ -32,8 +33,8 @@
                     <input type="text" placeholder="Tìm món" v-model="keySearch" v-on:keyup="getDataSearch()">
                     <a href="#"><i class="fa fa-search"></i></a>
                 </div>
-                <div id="content_search"
-                    style="position: absolute;z-index: 99999;background-color: #fff; width: 400px;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div id="content_search" class="search-result"
+                   >
                     <div class="row" v-for="(value, key) in dataSearch">
                         <div class="m-3 d-flex flex-row justify-content-between">
                             <a href="#" v-on:click.prevent="detailFood(value.id)">
@@ -63,23 +64,23 @@
                     </div>
                 </div>
                 <div class="row mt--30">
-                    <div class="col-lg-12">
+                    <div class="  col-lg-12">
                         <div class="fd__tab__content tab-content" id="nav-tabContent">
                             <!-- Start Single Content -->
                             <div class="food__list__tab__content tab-pane fade show active" id="nav-all" role="tabpanel">
                                 <!-- Start Single Food -->
                                 <div class="single__food__list d-flex wow fadeInUp" v-for="(value,key) in listFood">
-                                    <div class="food__list__thumb">
+                                    <div class="food__list__thumbv">
                                         <a href="#">
                                             <img v-bind:src="value.hinh_anh" alt="list food images" style="max-width:468px" v-on:click.prevent="detailFood(value.id)">
                                         </a>
                                     </div>
-                                    <div class="food__list__inner d-flex align-items-center justify-content-between" style="min-width:678px">
+                                    <div class=" responsive-menu-item food__list__inner d-flex align-items-center justify-content-between " >
                                         <div class="food__list__details">
                                             <h2><a href="/menu/detailFood" v-on:click.prevent="detailFood(value.id)">@{{ value.ten_mon_an }}</a></h2>
                                             <p>@{{ value.mo_ta_ngan }}</p>
                                             <div class="list__btn">
-                                                <a class="food__btn grey--btn theme--hover" href="menu-details.html">Đặt món</a>
+                                                <a class="food__btn grey--btn theme--hover btn-menu-list" v-on:click.prevent="detailFood(value.id)">Đặt món</a>
                                             </div>
                                         </div>
                                         <div class="food__rating">
@@ -127,74 +128,5 @@
 @endsection
 
 @section('js')
-    <script>
-        new Vue({
-            el: '#menu_client',
-            data: {
-                listCategoryFood: [],
-                listFood: [],
-                totalPage: 0,
-                page: 1,
-                id: 0,
-                keySearch: "",
-                dataSearch: [],
-            },
-            created() {
-                this.loadListCategoryFood();
-                this.loadListFood(0);
-            },
-            methods: {
-                loadListFood(id, event) {
-                    this.id = id;
-                    this.page = 1;
-                    axios
-                        .get("/menu/getFood/" + id + "?page=" + this.page)
-                        .then((res) => {
-                            this.listFood = res.data.listFood.data;
-                            this.totalPage = res.data.listFood.last_page;
-                            $('.nav-tab').removeAttr("style");
-                            try {
-                                event.target.setAttribute("style", "color:#d50c0d;font-weight:600;");
-                            } catch {
-                                $('body .nav-tab-all').attr("style", "color:#d50c0d;font-weight:600;");
-                            }
-                        });
-                    setTimeout(function() {
-                        $('.food__pagination li>a[data-id="1"]').parentsUntil("ul").addClass('active');
-                    }, 2000);
-                },
-                loadPaginate(page, event) {
-                    $('.food__pagination li').removeClass('active');
-                    axios
-                        .get("/menu/getFood/" + this.id + "?page=" + page)
-                        .then((res) => {
-                            this.listFood = res.data.listFood.data;
-                            event.target.parentElement.setAttribute("class", "active");
-                        });
-                },
-                loadListCategoryFood() {
-                    axios
-                        .get("/menu/category")
-                        .then((res) => {
-                            this.listCategoryFood = res.data.category;
-                        });
-                },
-                getDataSearch() {
-                    if (this.keySearch == "") this.keySearch = null;
-                    axios
-                        .get("/menu/search/" + this.keySearch)
-                        .then((res) => {
-                            this.dataSearch = res.data.foodSearch;
-                        });
-                },
-                detailFood(id) {
-                    axios
-                        .get("/menu/detailFood/" + id)
-                        .then((res) => {
-                            window.location.href = "/menu/detailFood/"+id;
-                        });
-                },
-            }
-        });
-    </script>
+    <script src="/js/client/menu.js"></script>
 @endsection

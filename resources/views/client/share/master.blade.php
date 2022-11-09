@@ -23,14 +23,14 @@
     @include('client.share.js')
     @yield('footer')
     <script>
-        document.onreadystatechange = function() {
-            var state = document.readyState;
-            if (state == 'complete') {
-                document.getElementById('load').style.visibility = "hidden";
-                document.getElementById('contents').style.visibility = "visible";
-            }
-        }
+        var check = "";
     </script>
+    @isset($checkNav)
+        <script>
+            check = {!! json_encode($checkNav, JSON_HEX_TAG) !!};
+        </script>
+    @endisset
+    <script src="/js/client/master.js"></script>
     @yield('js')
 </body>
 

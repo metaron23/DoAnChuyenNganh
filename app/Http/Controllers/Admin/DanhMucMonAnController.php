@@ -16,7 +16,7 @@ class DanhMucMonAnController extends Controller
     public function index()
     {
         $checkMenu = 1;
-        return view('admin.pages.danh_muc_mon_an.index', compact('checkMenu'));
+        return view('admin.pages.food_list.food_list', compact('checkMenu'));
     }
     public function getData()
     {

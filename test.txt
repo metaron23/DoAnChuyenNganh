@@ -1,24 +1,31 @@
-                content+=`<div class="cartbox__items">`
-                content+=`    <div class="cartbox__item">`
-                content+=`        <div class="cartbox__item__thumb">`
-                content+=`            <a href="product-details.html">`
-                content+=`                <img src="`+cart->hinh_anh+`" alt="small thumbnail">`
-                content+=`            </a>`
-                content+=`        </div>`
-                content+=`        <div class="cartbox__item__content">`
-                content+=`            <h5><a href="product-details.html" class="product-name">`+cart.ten_mon_an+`</a></h5>`
-                content+=`            <p>Qty: <span>`+cart.so_luong_mua < 1 ? 0 : cart.so_luong_mua+`</span></p>`
-                content+=`            <span class="price">(donGia(value.don_gia_khuyen_mai, value.don_gia_ban) * value.so_luong_mua).toLocaleString() VND</span>`
-                content+=`        </div>`
-                content+=`        <button class="cartbox__item__remove">`
-                content+=`            <i class="fa fa-trash"></i>`
-                content+=`        </button>`
-                content+=`    </div>`
-                content+=`</div>`
-                content+=`<div class="cartbox__total">`
-                content+=`    <ul>`
-                content+=`        <li><span class="cartbox__total__title">Tổng tiền</span><span class="price"></span></li>`
-                content+=`        <li class="shipping-charge"><span class="cartbox__total__title">Phí giao hàng</span><span class="price"></span></li>`
-                content+=`        <li class="grandtotal">Thành tiền<span class="price"></span></li>`
-                content+=`    </ul>`
-                content+=`</div>`
+content+=`<div class="row">`;
+    content+=`<div class="col-xxl-4 col-md-6">`;
+        content+=`<div class="prooduct-details-box">`;
+            content+=`<div class="media">`;
+                content+=`<img class="align-self-center img-fluid" style="height: 100px" src="`+order.food[0].hinh_anh+`" alt="#">`;
+                content+=`<div class="media-body ms-3">`;
+                    content+=`<div class="product-name">`;
+                        content+=`<h6><a href="#">`+order.food[0].ten_mon_an+`</a>`;
+                        content+=`</h6>`;
+                    content+=`</div>`;
+                    content+=`<div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i></div>`;
+                    content+=`<div class="price d-flex">`;
+                        content+=`<div class="text-muted me-2">Price</div>:`+order.tong_tien.toLocaleString()+` VND`;
+                    content+=`</div>`;
+                    content+=`<div class="avaiabilty">`;
+                        content+=`<div class="text-success">`+order.trang_thai_thanh_toan==0?'Chưa Thanh Toán':'Đã Thanh Toán'+
+                        `</div>`;
+                    content+=`</div>`;
+                    content+=`<a class="btn btn-`+status+` btn-xs" href="#" data-bs-original-title="" title=""
+                        style="pointer-events: none;cursor: default;font-size:14px">Chờ xác nhận</a>`;
+                    content+=`<div class="cancel_order">`;
+                        content+=`<a href="">`;
+                            content+=`<i class="fa fa-spin fa-spinner"></i>`;
+                        content+=`</a>`;
+                    content+=`</div>`;
+                content+=`</div>`;
+            content+=`</div>`;
+        content+=`</div>`;
+    content+=`</div>`;
+content+=`</div>`;
