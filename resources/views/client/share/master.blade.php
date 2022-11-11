@@ -22,15 +22,6 @@
     </div>
     @include('client.share.js')
     @yield('footer')
-    <script>
-        var check = "";
-    </script>
-    @isset($checkNav)
-        <script>
-            check = {!! json_encode($checkNav, JSON_HEX_TAG) !!};
-        </script>
-    @endisset
-    <script src="/js/client/master.js"></script>
     @yield('js')
 </body>
 

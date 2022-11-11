@@ -12,7 +12,6 @@ document.onreadystatechange = function () {
 };
 
 $(document).ready(function () {
-
     let menuList = $('.sidebar-main .sidebar-list');
     for (const child of menuList) {
         if (child.getAttribute('data-id') == check) {

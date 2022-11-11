@@ -21,8 +21,8 @@
                             <!-- Profile picture help block-->
                             <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
                             <!-- Profile picture upload button-->
-                            <input class="btn   " type="file" id="avatar" accept="image/png, image/jpeg" hidden name="link">
-                            <input type="button" class="food__btn" name="anh_dai_dien" onclick="$('#avatar').click()" value="Thêm Ảnh">
+                            <input class="btn" type="file" id="avatar" accept="image/png, image/jpeg" hidden name="link">
+                            <input type="button" class="btn" name="anh_dai_dien" onclick="$('#avatar').click()" value="Thêm Ảnh">
                         </form>
                         {{-- edit --}}
                     </div>
@@ -87,7 +87,7 @@
                             </div>
                             <!-- Save changes button-->
                             <button class="food__btn grey--btn mt-4" type="button" id="editFormAccount">Sửa</button>
-                            <button class="food__btn  mt-4" type="submit" id="saveFormAccount" disabled>Lưu thay đổi</button>
+                            <button class="food__btn  mt-4" type="submit" id="saveFormAccount" hidden>Lưu thay đổi</button>
                         </form>
                     </div>
                 </div>
@@ -95,6 +95,11 @@
         </div>
     </div>
 @endsection
+
+@section('footer')
+    @include('client.share.footer')
+@endsection
+
 @section('js')
     <script src="/js/client/user_profile.js"></script>
 @endsection

@@ -1,4 +1,5 @@
 @extends('client.share.master')
+
 <head>
     <title>Chi tiết món ăn</title>
 </head>
@@ -13,7 +14,7 @@
                             <div class="bradcaump__inner text-center">
                                 <h2 class="bradcaump-title">Chi tiết món ăn</h2>
                                 <nav class="bradcaump-inner">
-                                    <a class="breadcrumb-item" href="/home">Home</a>
+                                    <a class="breadcrumb-item" href="/home">Trang Chủ</a>
                                     <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
                                     <span class="breadcrumb-item active">Chi tiết món ăn</span>
                                 </nav>
@@ -32,14 +33,14 @@
                         <div class="food__menu__container">
                             <div class="food__menu__inner d-flex flex-wrap flex-md-nowrap flex-lg-nowrap">
                                 <div class="food__menu__thumb">
-                                    <img v-bind:src="detailFood.hinh_anh" alt="images" width="380px">
+                                    <img src="{!! $detailFood->hinh_anh !!}" alt="images" width="380px">
                                 </div>
                                 <div class="food__menu__details">
                                     <div class="food__menu__content">
-                                        <h2>@{{ detailFood.ten_mon_an }}</h2>
+                                        <h2>{!! $detailFood->ten_mon_an !!}</h2>
                                         <ul class="food__dtl__prize d-flex">
-                                            <li class="old__prize">@{{ detailFood.don_gia_ban.toLocaleString() }}VND</li>
-                                            {{-- <li>@{{ detailFood.don_gia_khuyen_mai.toLocaleString() }}VND</li> --}}
+                                            <li class="old__prize">{!! number_format($detailFood->don_gia_ban) !!} VND</li>
+                                            {{-- <li>{{ $detailFood->don_gia_khuyen_mai.toLocaleString() }} VND</li> --}}
                                         </ul>
                                         <ul class="rating">
                                             <li><i class="fa fa-star"></i></li>
@@ -50,12 +51,18 @@
                                         </ul>
                                         <p v-html="detailFood.mo_ta_ngan"></p>
                                         <div class="product-action-wrap">
-                                            <div class="prodict-statas"><span>Food Type : @{{ detailFood.ten_danh_muc }}</span></div>
+                                            <div class="prodict-statas"><span>Loại: {!! $detailFood->ten_danh_muc !!}</span></div>
                                             <div class="product-quantity">
                                                 <div class="cart-plus-minus">
-                                                    <input type="number" value="1" min="1" v-model="amountCart">
+                                                    <input type="number" value="1" min="1">
                                                     <div class="add__to__cart__btn">
-                                                        <a class="food__btn" v-bind:href="linkDetailFood" v-on:click="update(detailFood)">Thêm vào giỏ</a>
+                                                        @if (Auth::guard('customer')->check())
+                                                            <a class="food__btn addToCart" href="" data-id={{ $detailFood->id }}>Đặt
+                                                                món</a>
+                                                        @else
+                                                            <a class="food__btn accountbox-trigger" href="" data-id={{ $detailFood->id }}>Đặt
+                                                                món</a>
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </div>
@@ -72,7 +79,8 @@
                                 <!-- Start Tab Content -->
                                 <div class="menu__tab__content tab-content" id="nav-tabContent">
                                     <!-- Start Single Content -->
-                                    <div class="single__dec__content fade show active" id="nav-all" role="tabpanel" v-html="detailFood.mo_ta_chi_tiet">
+                                    <div class="single__dec__content fade show active" id="nav-all" role="tabpanel">
+                                        {!! $detailFood->mo_ta_chi_tiet !!}
                                     </div>
                                     <!-- End Single Content -->
                                     <!-- Start Single Content -->
@@ -135,7 +143,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="popupal__menu">
-                                    <h4>Popular Menu</h4>
+                                    <h4>Món Ăn Phổ Biến</h4>
                                 </div>
                             </div>
                         </div>
@@ -158,7 +166,7 @@
                                         <h4><a href="menu-details.html">Bánh Bơ gơ Bò</a></h4>
                                         <ul class="beef__prize">
 
-                                             <li>79,000 VNĐ</li>
+                                            <li>79,000 VNĐ</li>
                                         </ul>
                                         <p>erve armesan may be added to the top of apLem ip, consectetur</p>
                                         <div class="beef__cart__btn">
@@ -180,7 +188,7 @@
                                         <h4><a href="menu-details.html">Bánh Bơ gơ Bò</a></h4>
                                         <ul class="beef__prize">
 
-                                             <li>79,000 VNĐ</li>
+                                            <li>79,000 VNĐ</li>
                                         </ul>
                                         <p>erve armesan may be added to the top of apLem ip, consectetur</p>
                                         <div class="beef__cart__btn">
@@ -208,7 +216,7 @@
                                         <h4><a href="menu-details.html">Bánh Bơ gơ Bò</a></h4>
                                         <ul class="beef__prize">
 
-                                             <li>79,000 VNĐ</li>
+                                            <li>79,000 VNĐ</li>
                                         </ul>
                                         <p>erve armesan may be added to the top of apLem ip, consectetur</p>
                                         <div class="beef__cart__btn">
@@ -301,13 +309,6 @@
                                     <li><a href="#">Đồ uống <span>(20)</span></a></li>
                                 </ul>
                             </div>
-                            <!-- End Category Area -->
-                            <!-- Start Sidebar Contact -->
-
-                            <!-- End Sidebar Contact -->
-                            <!-- Start Sidebar Newsletter -->
-
-                            <!-- End Sidebar Instagram -->
                         </div>
                     </div>
                 </div>
@@ -315,8 +316,13 @@
         </section>
         <!-- End Blog List View Area -->
     </div>
+    @include('client.share.footer')
 @endsection
 
+
 @section('js')
-<script src="/js/client/detail_product.js"></script>
+    <script>
+        var detailFood = {!! json_encode($detailFood, JSON_HEX_TAG) !!};
+    </script>
+    <script src="/js/client/detail_product.js"></script>
 @endsection

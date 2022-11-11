@@ -1,31 +1,11 @@
-content+=`<div class="row">`;
-    content+=`<div class="col-xxl-4 col-md-6">`;
-        content+=`<div class="prooduct-details-box">`;
-            content+=`<div class="media">`;
-                content+=`<img class="align-self-center img-fluid" style="height: 100px" src="`+order.food[0].hinh_anh+`" alt="#">`;
-                content+=`<div class="media-body ms-3">`;
-                    content+=`<div class="product-name">`;
-                        content+=`<h6><a href="#">`+order.food[0].ten_mon_an+`</a>`;
-                        content+=`</h6>`;
-                    content+=`</div>`;
-                    content+=`<div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                            class="fa fa-star"></i><i class="fa fa-star"></i></div>`;
-                    content+=`<div class="price d-flex">`;
-                        content+=`<div class="text-muted me-2">Price</div>:`+order.tong_tien.toLocaleString()+` VND`;
-                    content+=`</div>`;
-                    content+=`<div class="avaiabilty">`;
-                        content+=`<div class="text-success">`+order.trang_thai_thanh_toan==0?'Chưa Thanh Toán':'Đã Thanh Toán'+
-                        `</div>`;
-                    content+=`</div>`;
-                    content+=`<a class="btn btn-`+status+` btn-xs" href="#" data-bs-original-title="" title=""
-                        style="pointer-events: none;cursor: default;font-size:14px">Chờ xác nhận</a>`;
-                    content+=`<div class="cancel_order">`;
-                        content+=`<a href="">`;
-                            content+=`<i class="fa fa-spin fa-spinner"></i>`;
-                        content+=`</a>`;
-                    content+=`</div>`;
-                content+=`</div>`;
+            content+=`<div class="col-sm-6">`;
+                content+=`<input id="ten_ship" type="text" placeholder="Tên người nhận"`;
+                    content+=`value="{{ Auth::guard('customer')->user()->ho_va_ten }}">`;
             content+=`</div>`;
-        content+=`</div>`;
-    content+=`</div>`;
-content+=`</div>`;
+            content+=`<div class="col-sm-6 mb-2">`;
+                content+=`<input id="phone_ship" type="text" placeholder="Số điện thoại người nhận"`;
+                    value="{{ Auth::guard('customer')->user()->so_dien_thoai }}">
+            content+=`</div>`;
+            content+=`<div class="col-12">`;
+                content+=`<textarea id="dia_chi_ship" cols="30" rows="2" placeholder="Địa chỉ người nhận">{{ Auth::guard('customer')->user()->dia_chi }}</textarea>`;
+            content+=`</div>`;

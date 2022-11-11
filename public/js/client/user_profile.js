@@ -66,9 +66,9 @@ $(document).ready(function() {
         }
         $('input[type="email"]').attr('readonly', 'readonly');
         if ($('#edit_form .form-control').attr('readonly') == 'readonly') {
-            $('#saveFormAccount').attr('disabled', 'disabled');
+            $('#saveFormAccount').attr('hidden', 'hidden');
         } else {
-            $('#saveFormAccount').removeAttr('disabled');
+            $('#saveFormAccount').removeAttr('hidden');
         }
     });
 
