@@ -12,7 +12,6 @@ class MenuController extends Controller
     public function index()
     {
         $checkNav = 'menu';
-
         return view('client.page.menu', compact('checkNav'));
     }
 

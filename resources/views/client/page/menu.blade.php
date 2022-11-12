@@ -26,7 +26,7 @@
         </div>
         <!-- End Bradcaump area -->
         <!-- Start Menu Grid Area -->
-        <div class="row">
+        {{-- <div class="row">
             <div class="food__search" style="width:30%;margin:20px 106px;">
                 <h4 class="side__title">Tìm Kiếm </h4>
                 <div class="serch__box">
@@ -48,18 +48,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <section class="food__menu__grid__area section-padding--lg" style="padding-top: 0">
             <div class="container">
-
                 <div class="row mt--30">
                     <div class="col-lg-12">
                         <div class="food__nav nav nav-tabs">
-                            <a class="nav-tab nav-tab-all" href="" v-on:click.prevent="loadListFood(0, $event)" v-bind:data-id="0">Tất cả</a>
-                            <div v-for="(value, key) in listCategoryFood">
-                                <a class="nav-tab" href="" v-bind:data-id="value.id"
-                                    v-on:click.prevent="loadListFood(value.id, $event)">@{{ value.ten_danh_muc }} </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -69,34 +64,7 @@
                             <!-- Start Single Content -->
                             <div class="food__list__tab__content tab-pane fade show active" id="nav-all" role="tabpanel">
                                 <!-- Start Single Food -->
-                                <div class="single__food__list d-flex wow fadeInUp" v-for="(value,key) in listFood">
-                                    <div class="food__list__thumbv">
-                                        <a href="#">
-                                            <img v-bind:src="value.hinh_anh" alt="list food images" style="max-width:468px" v-on:click.prevent="detailFood(value.id)">
-                                        </a>
-                                    </div>
-                                    <div class=" responsive-menu-item food__list__inner d-flex align-items-center justify-content-between " >
-                                        <div class="food__list__details">
-                                            <h2><a href="/menu/detailFood" v-on:click.prevent="detailFood(value.id)">@{{ value.ten_mon_an }}</a></h2>
-                                            <p>@{{ value.mo_ta_ngan }}</p>
-                                            <div class="list__btn">
-                                                <a class="food__btn grey--btn theme--hover btn-menu-list" v-on:click.prevent="detailFood(value.id)">Đặt món</a>
-                                            </div>
-                                        </div>
-                                        <div class="food__rating">
-                                            <div class="list__food__prize">
-                                                <span style="font-size: 32px">@{{ (value.don_gia_khuyen_mai == 0 ? value.don_gia_ban : value.don_gia_khuyen_mai).toLocaleString() }}</span>
-                                            </div>
-                                            <ul class="rating">
-                                                <li><i class="zmdi zmdi-star"></i></li>
-                                                <li><i class="zmdi zmdi-star"></i></li>
-                                                <li><i class="zmdi zmdi-star"></i></li>
-                                                <li><i class="zmdi zmdi-star"></i></li>
-                                                <li class="rating__opasity"><i class="zmdi zmdi-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <!-- End Single Food -->
                             </div>
                             <!-- End Single Content -->
