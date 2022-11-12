@@ -6,7 +6,16 @@
         <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2 col-sm-4 col-md-6 order-1 order-lg-1">
+                    <div class="mt-3">
+
+                        <div class="icon-toggle">
+                            <a  href="javascript:void(0);" onclick="toggleMenu()">
+                                <i class="fa-solid fa-bars" ></i>
+                            </a>
+                    </div>
+
+                    </div>
+                    <div class="col-lg-2 col-sm-2 col-md-6 order-1 order-lg-1">
                         <div class="logo">
                             <a href="/home">
                                 <img style=" height: 70px;" src="/assets_client/images/logo/foody4.png" alt="logo images">
@@ -33,6 +42,7 @@
                             </nav>
                         </div>
                     </div>
+
                     <div class="col-lg-1 col-sm-4 col-md-4 order-2 order-lg-3">
                         <div class="header__right d-flex justify-content-end">
                             @if (Auth::guard('customer')->check())
@@ -71,7 +81,7 @@
                                     <div class="shop__qun">
                                     </div>
                                 </div>
-                            @else
+                                @else
                                 <div class="log__in">
                                     <a href="/login"><i class="zmdi zmdi-account-o"></i></a>
                                 </div>
@@ -81,13 +91,31 @@
                                         <span id="countCart">0</span>
                                     </div>
                                 </div>
-                            @endif
+                                @endif
+                            </div>
                         </div>
                     </div>
+                    <!-- Mobile Menu -->
+
+                <!-- Mobile Menu -->
+            </div>
+            <div  class="mobile-menu-2">
+                <div class="main__mobile">
+                        <ul class="mainmobile" id="nav-mobile">
+                            <li><a href="/home" id="home">Trang Chủ</a>
+                            </li>
+                            <li><a href="/menu" id="menu">Thực đơn</a>
+                            </li>
+                            <li><a href="/about" id="about">Thông tin</a>
+                            </li>
+                            <li><a href="/gallery" id="gallery">Hình Ảnh</a>
+                            </li>
+                            <li><a href="/blog" id="blog">Bài viết</a>
+                            </li>
+                            <li><a href="/contact" id="contact">Liên hệ</a>
+                            </li>
+                        </ul>
                 </div>
-                <!-- Mobile Menu -->
-                <div class="mobile-menu d-block d-lg-none"></div>
-                <!-- Mobile Menu -->
             </div>
         </div>
         <!-- End Mainmenu Area -->
@@ -179,8 +207,46 @@
         </div>
     </div>
     <!-- //Cartbox -->
-
     <script>
+        function toggleMenu() {
+            var x = document.getElementById("nav-mobile");
+            if(x.style.display == "none"){
+                x.style.display = "block";
+            }else{
+                x.style.display = "none";
+                link.style.animation = `navLinkFade 0.5s ease forwards ${
+                        index / 7 + 0.5
+                        }s `;
+            }
+        }
+    </script>
+    {{-- <script>
+        const navSlide = () => {
+                const burger = document.querySelector(".burger");
+                const nav = document.querySelector(".nav-links");
+                const navLinks = document.querySelectorAll(".nav-links a");
+
+                burger.addEventListener("click", () => {
+                    nav.classList.toggle("nav-active");
+
+                    navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = "";
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${
+                        index / 7 + 0.5
+                        }s `;
+                    }
+                    });
+                    burger.classList.toggle("toggle");
+                });
+                //
+                };
+
+                navSlide();
+    </script> --}}
+    <script>
+
         setTimeout(() => {
             $(document).ready(function() {
                 function getDataMiniCart() {
@@ -272,4 +338,5 @@
                 addColorMenu();
             });
         }, 400);
+
     </script>

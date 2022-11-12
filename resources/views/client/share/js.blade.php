@@ -46,6 +46,7 @@
         'progressBar': true,
     };
     $(document).ready(function() {
-        
     });
+
 </script>
+
