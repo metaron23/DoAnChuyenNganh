@@ -1,8 +1,6 @@
 @extends('client.share.master')
 
-<head>
-    <title>Quản lí tài khoản</title>
-</head>
+
 @section('content')
     <div class="container px-4 mt-2 mb-3 caret-input">
         <hr class="mt-0 mb-4">

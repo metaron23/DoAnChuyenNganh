@@ -1,8 +1,5 @@
 @extends('client.share.master')
 
-<head>
-    <title>Chi tiết món ăn</title>
-</head>
 @section('content')
     <div id="detailFood">
         <!-- Start Bradcaump area -->

@@ -1,8 +1,5 @@
 @extends('client.share.master')
 
-<head>
-    <title>Thanh toán</title>
-</head>
 @section('content')
     <div class="ht__bradcaump__area bg-image--18">
         <div class="ht__bradcaump__wrap d-flex align-items-center">

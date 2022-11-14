@@ -1,7 +1,5 @@
 @extends('client.share.master')
-<head>
-    <title>Thông tin</title>
-</head>
+
 @section('content')
     <!-- Main wrapper -->
 	<div class="wrapper" id="wrapper">

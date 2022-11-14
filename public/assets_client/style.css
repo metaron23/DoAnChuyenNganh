@@ -2034,7 +2034,7 @@ a#scrollUp:hover {
     color: #444444;
     font-size: 18px;
     font-weight: 700;
-    width:140px;
+    width: 140px;
 }
 
 .food__btn.grey--btn.mid-height {
@@ -3914,7 +3914,7 @@ div.slide__pizza img {
 .food__menu__thumb img {
     height: 100%;
     object-fit: cover;
-    width:350px;
+    width: 350px;
 }
 
 .special__food__menu .fd__tab__content .single__tab__panel .tab__content__wrap .single__tab__content .food__menu .food__menu__details {
@@ -6584,7 +6584,8 @@ div.slide__pizza img {
 }
 
 .single__food__list .food__list__inner .food__list__details {
-    flex-basis: 75%;
+    flex-basis: 70%;
+    padding: 0 20px;
 }
 
 .single__food__list .food__list__inner .food__list__details h2 {
@@ -6605,9 +6606,10 @@ div.slide__pizza img {
 }
 
 .single__food__list .food__list__inner .food__rating {
-    flex-basis: 20%;
+    flex-basis: 30%;
     align-self: flex-start;
     padding-top: 29px;
+    padding-left: 15px;
 }
 
 .single__food__list .food__list__inner .food__rating .list__food__prize span {
@@ -7517,6 +7519,7 @@ div.slide__pizza img {
 
 .serch__box {
     position: relative;
+    width: 100%;
 }
 
 .serch__box input {
@@ -7530,18 +7533,24 @@ div.slide__pizza img {
     width: 100%;
 }
 
-.serch__box a {
+.serch__box i {
     color: #b5b5b5;
     font-size: 16px;
     position: absolute;
-    right: 30px;
+    right: 20px;
     top: 46%;
-    transform: translateY(-50%);
+    transform: translateY(-43%);
     transition: 0.3s;
 }
 
 .serch__box a:hover {
     color: #d92d2d;
+}
+
+.serch__box input:focus{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border: 1px solid #d66636;
+    outline: 1px solid #d66636;
 }
 
 .recent__post__details {
