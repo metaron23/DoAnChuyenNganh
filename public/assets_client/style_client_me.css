@@ -302,11 +302,6 @@ nav.main__menu__nav ul li a {
     }
 }
 
-@media only screen and (max-width: 468px) {
-    .responsive-menu-item {
-        width: 468px !important;
-    }
-}
 
 /* a:hover i, a:hover{
     color: #d92d2d !important;

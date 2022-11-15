@@ -23,7 +23,7 @@ $(document).ready(function () {
             content += `<div class="single__food__list d-flex wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">`;
             content += `<div class="food__list__thumb">`;
             content += `<a href="/menu/detailFood/` + food.id + `">`;
-            content += `<img src="` + food.hinh_anh + `" alt="list food images" style="max-width:468px">`;
+            content += `<img src="` + food.hinh_anh + `" alt="list food images">`;
             content += `</a>`;
             content += `</div>`;
             content += `<div class=" responsive-menu-item food__list__inner d-flex align-items-center justify-content-between " >`;

@@ -2035,6 +2035,7 @@ a#scrollUp:hover {
     font-size: 18px;
     font-weight: 700;
     width: 140px;
+    text-align: center;
 }
 
 .food__btn.grey--btn.mid-height {
@@ -6555,7 +6556,7 @@ div.slide__pizza img {
 .single__food__list .food__list__thumb {
     display: -moz-flex;
     display: flex;
-    min-width: 470px;
+    width: 82%;
 }
 
 .single__food__list .food__list__thumb a {
@@ -6688,12 +6689,12 @@ div.slide__pizza img {
 
     .single__food__list .food__list__thumb {
         display: block;
+        width:100%;
     }
 
     .single__food__list .food__list__inner {
         padding-bottom: 20px;
         padding-top: 20px;
-        width: 467px;
     }
 }
 
@@ -6704,11 +6705,13 @@ div.slide__pizza img {
 
     .single__food__list .food__list__thumb {
         display: block;
+        width:100%;
     }
 
     .single__food__list .food__list__inner {
         padding-bottom: 20px;
         padding-top: 20px;
+        width:100%;
     }
 }
 
