@@ -6,6 +6,12 @@
         <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
             <div class="container">
                 <div class="row">
+                    <div class="mt-3">
+                        <div class="icon-toggle">
+                            <a  href="javascript:void(0);" onclick="toggleMenu()">
+                                <i class="fa-solid fa-bars" ></i>
+                            </a>
+                    </div>
 
                     </div>
                     <div class="col-lg-2 col-sm-2 col-md-6 order-1 order-lg-1">
@@ -89,7 +95,7 @@
                         </div>
                     </div>
                     <!-- Mobile Menu -->
-                    
+
                 <!-- Mobile Menu -->
             </div>
             <div  class="mobile-menu-2">
