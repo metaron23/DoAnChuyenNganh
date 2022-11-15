@@ -294,11 +294,15 @@ a.icon-toggle{
 .mainmobile{
     display: none;
 }
+ul.mainmobile{
+    position: relative;
+    animation: myAnimation 0.4s;
+}
 .mobile-menu-2{
     display: block;
 }
 ul.mainmobile li a {
-    margin-left: 50px;
+    margin-left: 30px;
     padding: 0 20px;
     display: inline-block;
     display: flex;
@@ -308,9 +312,24 @@ ul.mainmobile li a {
     align-items: center;
     font-size: 15px;
     color: #69707a;
+    border-radius: 25px;
 }
 
+@keyframes myAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+      }
 
+      80% {
+        transform: translateX(-5px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+}
 @media only screen and (min-width: 1024px){
     .brand-name h1 h2 {
         font-size: 100%;

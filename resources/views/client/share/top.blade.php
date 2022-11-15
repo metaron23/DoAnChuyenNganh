@@ -101,7 +101,7 @@
             </div>
             <div  class="mobile-menu-2">
                 <div class="main__mobile">
-                        <ul class="mainmobile" id="nav-mobile">
+                        <ul class="mainmobile" onclick="myanimation()" id="nav-mobile">
                             <li><a href="/home" id="home">Trang Chủ</a>
                             </li>
                             <li><a href="/menu" id="menu">Thực đơn</a>
@@ -210,41 +210,21 @@
     <script>
         function toggleMenu() {
             var x = document.getElementById("nav-mobile");
+            const animation = document.getElementById("nav-mobile")
             if(x.style.display == "none"){
                 x.style.display = "block";
             }else{
                 x.style.display = "none";
-                link.style.animation = `navLinkFade 0.5s ease forwards ${
-                        index / 7 + 0.5
-                        }s `;
+
+            //    return x.style.display
             }
         }
     </script>
-    {{-- <script>
-        const navSlide = () => {
-                const burger = document.querySelector(".burger");
-                const nav = document.querySelector(".nav-links");
-                const navLinks = document.querySelectorAll(".nav-links a");
-
-                burger.addEventListener("click", () => {
-                    nav.classList.toggle("nav-active");
-
-                    navLinks.forEach((link, index) => {
-                    if (link.style.animation) {
-                        link.style.animation = "";
-                    } else {
-                        link.style.animation = `navLinkFade 0.5s ease forwards ${
-                        index / 7 + 0.5
-                        }s `;
-                    }
-                    });
-                    burger.classList.toggle("toggle");
-                });
-                //
-                };
-
-                navSlide();
-    </script> --}}
+    <script>
+        function myanimtion(){
+            document.getElementById("nav-mobile").style.animation = "myAnimation";
+        }
+    </script>
     <script>
 
         setTimeout(() => {
