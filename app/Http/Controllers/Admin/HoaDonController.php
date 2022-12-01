@@ -23,7 +23,7 @@ class HoaDonController extends Controller
             $value['food'] = $food;
         }
         $checkMenu = 5;
-        return view('admin.pages.hoa_don.hoa_don', compact('checkMenu', 'hoaDon', 'countHoaDon'));
+        return view('admin.pages.invoice.invoice', compact('checkMenu', 'hoaDon', 'countHoaDon'));
     }
 
     public function export($amount)

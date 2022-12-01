@@ -1,7 +1,5 @@
 @extends('client.share.master')
-<head>
-    <title>Thanh toán</title>
-</head>
+
 @section('content')
     <div class="ht__bradcaump__area bg-image--18">
         <div class="ht__bradcaump__wrap d-flex align-items-center">
@@ -9,10 +7,11 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="bradcaump__inner text-center">
-                            <h2 class="bradcaump-title">Thanh toán</h2>
+                            <h2 class="bradcaump-title">Đặt Hàng</h2>
                             <nav class="bradcaump-inner">
+                                <a class="breadcrumb-item" href="/home">Trang Chủ</a>
                                 <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
-                                <a class="breadcrumb-item" href="/customer/cart">Đơn hàng</a>
+                                <span class="breadcrumb-item active">Đặt Hàng</span>
                             </nav>
                         </div>
                     </div>
@@ -26,51 +25,80 @@
             <div class="checkout-section">
                 <div class="container">
                     <div class="row">
-
                         <div class="col-lg-6 col-12 mb-30">
-
                             <!-- Checkout Accordion Start -->
                             <div id="checkout-accordion">
                                 <!-- Shipping Method -->
                                 <div class="single-accordion">
-                                    <a class="accordion-head collapsed" data-toggle="collapse" data-parent="#checkout-accordion"
-                                        href="#shipping-method">1. Thông tin nhận hàng</a>
-                                    <div id="shipping-method" class="collapse">
-                                        <div class="accordion-body shipping-method fix">
-                                            <h5>Đia chỉ giao hàng</h5>
-                                            <p id="address_new">@{{ listInfoUser.dia_chi }}</p>
-                                            <button class="shipping-form-toggle" v-on:click="showFormAddress()" style="margin-top:16px">Thay đổi địa chỉ giao hàng ?</button>
-                                            <form action="#" class="shipping-form checkout-form">
-                                                <div class="row">
-                                                    <div class="col-12 mb--20">
-                                                        <input id="ten_ship" type="text" placeholder="Tên người nhận"
-                                                            v-model="listInfoUser.ho_va_ten">
+                                    <form id="form-order">
+                                        <a class="accordion-head collapsed" data-toggle="collapse" data-parent="#checkout-accordion"
+                                            href="#shipping-method">
+                                            1. Thông tin nhận hàng
+                                        </a>
+                                        <div id="shipping-method" class="collapse">
+                                            <div class="accordion-body shipping-method fix">
+                                                <h5>Đia chỉ giao hàng</h5>
+                                                <div class="row mb-4 form-address">
+                                                    <div class="col-sm-6">
+                                                        <input name="ten_ship" readonly id="ten_ship" type="text" placeholder="Tên người nhận"
+                                                            value="{{ Auth::guard('customer')->user()->ho_va_ten }}">
                                                     </div>
-                                                    <div class="col-12 mb--20">
-                                                        <input id="phone_ship" type="text" placeholder="Số điện thoại người nhận"
-                                                            v-model="listInfoUser.so_dien_thoai">
+                                                    <div class="col-sm-6 mb-2">
+                                                        <input name="phone_ship" readonly id="phone_ship" type="text"
+                                                            placeholder="Số điện thoại người nhận"
+                                                            value="{{ Auth::guard('customer')->user()->so_dien_thoai }}">
                                                     </div>
-                                                    <div class="col-12 mb--20">
-                                                        <textarea id="dia_chi_ship" cols="30" rows="10" placeholder="Địa chỉ người nhận" v-model="listInfoUser.dia_chi"></textarea>
+                                                    <div class="col-12">
+                                                        <textarea name="dia_chi_ship" readonly id="dia_chi_ship" cols="30" rows="2" placeholder="Địa chỉ người nhận">{{ Auth::guard('customer')->user()->dia_chi }}</textarea>
                                                     </div>
                                                 </div>
-                                            </form>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input class="" type="radio" name="address" id="homeAddress" value="homeAddress" checked>
+                                                        <label for="homeAddress">Địa chỉ nhà?</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input class="ml-4" type="radio" name="address" id="recentAddress" value="recentAddress">
+                                                        <label for="recentAddress">Địa chỉ đặt gần đây?</label>
+                                                    </div>
+                                                    <div class="col-md-6 mt-2">
+                                                        <div class="food__btn">Sửa</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Xác nhận đặt hàng?</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Bạn đã điền đúng thông tin giao hàng và xác nhận đúng danh sách các món ăn?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn-order btn-canceled" data-dismiss="modal">Đóng</button>
+                                                        <button type="submit" class="btn-order btn-default">Đặt Hàng</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
-
                                 <!-- Payment Method -->
                                 <div class="single-accordion">
                                     <a class="accordion-head collapsed" data-toggle="collapse" data-parent="#checkout-accordion" href="#payment-method">2.
                                         Phương thức thanh toán</a>
                                     <div id="payment-method" class="collapse">
                                         <div class="accordion-body payment-method fix">
-
                                             <ul class="payment-method-list">
-                                                <li class="active" v-on:click="showFormPayment()" id="payment_atHome">Thanh toán khi nhận hàng</li>
-                                                <li class="payment-form-toggle" v-on:click="showFormPayment()" id="payment_online">Online</li>
+                                                <li class="active" id="payment_atHome">Thanh toán khi nhận hàng</li>
+                                                <li class="payment-form-toggle" id="payment_online">Online</li>
                                             </ul>
-
                                             <form action="#" class="payment-form" style="margin-top:16px">
                                                 <div class="row">
                                                     <div class="input-box col-12 mb--20">
@@ -83,42 +111,15 @@
                                         </div>
                                     </div>
                                 </div>
-
-                            </div><!-- Checkout Accordion Start -->
+                            </div>
                         </div>
 
                         <!-- Order Details -->
                         <div class="col-lg-6 col-12 mb-30">
-
                             <div class="order-details-wrapper">
                                 <h2>Đơn hàng của bạn</h2>
                                 <div class="order-details">
-                                    <form action="#">
-                                        <ul>
-                                            <li>
-                                                <p class="strong">Món ăn</p>
-                                            </li>
-                                            <div v-for="(value, key) in listCart">
-                                                <li>
-                                                    <p>@{{ value.ten_mon_an }} x @{{ value.so_luong_mua }}</p>
-                                                    <p>@{{ value.don_gia_mua.toLocaleString() }} VND</p>
-                                                </li>
-                                            </div>
-                                            <li>
-                                                <p class="strong">THÀNH TIỀN</p>
-                                                <p class="strong">@{{ total.toLocaleString() }} VND</p>
-                                            </li>
-                                            <li>
-                                                <p class="strong">MÃ GIẢM GIÁ</p>
-                                                <p>0</p>
-                                            </li>
-                                            <li>
-                                                <p class="strong">TỔNG TIỀNL</p>
-                                                <p class="strong">@{{ total.toLocaleString() }} VND</p>
-                                            </li>
-                                            <li><button class="food__btn" v-on:click="paymentSuccess()">Xác nhận đặt</button></li>
-                                        </ul>
-                                    </form>
+
                                 </div>
                             </div>
                         </div>
@@ -127,75 +128,10 @@
             </div>
         </section>
     </div>
+
+    @include('client.share.footer')
 @endsection
 
 @section('js')
-    <script>
-        new Vue({
-            el: '#checkout',
-            data: {
-                listInfoUser: [],
-                listCart: [],
-                total: 0,
-                attr: {
-                    display_block: 'display:block',
-                },
-                addressNew: "",
-                statusPayment: 0,
-            },
-            created() {
-                this.getData();
-            },
-            methods: {
-                getData() {
-                    axios
-                        .get('/customer/checkout/getData')
-                        .then((res) => {
-                            this.listInfoUser = res.data.user;
-                            this.listCart = res.data.listCart;
-                            this.total = res.data.totalCart;
-                        });
-                },
-                showFormAddress() {
-                    if ($('.checkout-form.shipping-form').css("display") == "none")
-                        $('.checkout-form.shipping-form').css("display", "block");
-                    else
-                        $('.checkout-form.shipping-form').css("display", "none");
-                },
-                showFormPayment() {
-                    if ($('.payment-form').css("display") == "none") {
-                        $('.payment-form').css("display", "block");
-                        $('#payment_atHome').removeClass('active');
-                        $('#payment_online').addClass('active');
-                        this.statusPayment = true;
-                    } else {
-                        $('.payment-form').css("display", "none");
-                        $('#payment_atHome').addClass('active');
-                        $('#payment_online').removeClass('active');
-                        this.statusPayment = false;
-                    }
-                },
-                paymentSuccess() {
-                    let payLoad = {
-                        'ten_ship': this.listInfoUser.ho_va_ten,
-                        'phone_ship': this.listInfoUser.so_dien_thoai,
-                        'dia_chi_ship': this.listInfoUser.dia_chi,
-                        'trang_thai_thanh_toan': this.statusPayment,
-                    };
-                    axios
-                        .post('/customer/checkout/finish', payLoad)
-                        .then((res) => {
-                            if (res.data.status) {
-                            }
-                        })
-                        .catch((res) => {
-                            var listError = res.response.data.errors;
-                            $.each(listError, function(key, value) {
-                                toastr.error(value[0]);
-                            });
-                        });
-                },
-            },
-        });
-    </script>
+    <script src="/js/client/checkout.js"></script>
 @endsection

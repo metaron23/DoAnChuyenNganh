@@ -19,9 +19,9 @@ class GioHangController extends Controller
         $mon_an = MonAn::find($id_mon_an);
         if ($mon_an) {
             $chi_tiet_don_hang = GioHang::where('id_mon_an', $id_mon_an)
-                                                ->where('id_tai_khoan', $customer->id)
-                                                ->whereNull('id_don_hang')
-                                                ->first();
+                            ->where('id_tai_khoan', $customer->id)
+                            ->whereNull('id_don_hang')
+                            ->first();
             if ($chi_tiet_don_hang) {
                 $chi_tiet_don_hang->so_luong_mua++;
                 $chi_tiet_don_hang->don_gia_mua += $mon_an->don_gia_khuyen_mai==null ? $mon_an->don_gia_ban : $mon_an->don_gia_khuyen_mai;
@@ -37,9 +37,9 @@ class GioHangController extends Controller
             };
 
             $count = GioHang::where('id_tai_khoan', $customer->id)
-                                                ->whereNull('id_don_hang')
-                                                ->get()
-                                                ->count();
+                            ->whereNull('id_don_hang')
+                            ->get()
+                            ->count();
             return response()->json([
                 'status'    =>  true,
                 'message'   =>  'Đã thêm vào giỏ hàng thành công!',
@@ -74,9 +74,15 @@ class GioHangController extends Controller
                         ->where('id_tai_khoan', $user->id)
                         ->whereNull('id_don_hang')
                         ->get();
-            return response()->json(['data'=>$cart]);
+            return response()->json([
+                'cart'  =>$cart,
+                'status'=>true
+            ]);
+        } else {
+            return response()->json(['status'=>false]);
         }
     }
+
 
     public function removeCart($id)
     {
@@ -96,12 +102,19 @@ class GioHangController extends Controller
                         ->where('id_tai_khoan', $customer->id)
                         ->whereNull('id_don_hang')
                         ->first();
+        $monAn = MonAn::where('id', $chiTiet->id_mon_an)->first();
 
         $chiTiet->so_luong_mua = $request->so_luong_mua;
-        $chiTiet->don_gia_mua  = $chiTiet->so_luong_mua*($request->don_gia_khuyen_mai==null ? $request->don_gia_ban : $request->don_gia_khuyen_mai);
+        $chiTiet->don_gia_mua  = $chiTiet->so_luong_mua*($monAn->don_gia_khuyen_mai==null ? $monAn->don_gia_ban : $monAn->don_gia_khuyen_mai);
 
-        $chiTiet->save();
+        if ($chiTiet->save()) {
+            return response()->json(['status' => true]);
+        } else {
+            return response()->json(['status' => false]);
+        }
     }
+
+
 
     public function totalCart(Request $request)
     {
@@ -121,24 +134,42 @@ class GioHangController extends Controller
         }
     }
 
+    public function countCart()
+    {
+        $check = Auth::guard('customer')->check();
+        if ($check) {
+            $customer = Auth::guard('customer')->user();
+            $cart = GioHang::where('id_tai_khoan', $customer->id)
+                                ->whereNull('id_don_hang')
+                                ->get();
+            $countCart = $cart->count();
+            return response()->json([
+                'countCart' => $countCart,
+            ]);
+        }
+    }
+
     public function addCartFromDetail(Request $request)
     {
         $customer = Auth::guard('customer')->user();
-        $chi_tiet_don_hang = GioHang::where('id_mon_an', $request->id)
+        $chi_tiet_don_hang = GioHang::where('id_mon_an', $request->id_mon_an)
                                             ->where('id_tai_khoan', $customer->id)
                                             ->whereNull('id_don_hang')
                                             ->first();
+        $mon_an = MonAn::where('id', $request->id_mon_an)->first();
+        $don_gia_mua = $mon_an->don_gia_khuyen_mai==null ? $mon_an->don_gia_ban : $mon_an->don_gia_khuyen_mai;
         if ($chi_tiet_don_hang) {
             $chi_tiet_don_hang->so_luong_mua += $request->so_luong_mua;
-            $chi_tiet_don_hang->don_gia_mua += $request->don_gia_khuyen_mai==null ? $request->don_gia_ban : $request->don_gia_khuyen_mai;
+            $chi_tiet_don_hang->don_gia_mua += $don_gia_mua;
             $chi_tiet_don_hang->save();
         } else {
             GioHang::create([
-                'id_mon_an'     =>  $request->id,
+                'id_mon_an'     =>  $request->id_mon_an,
                 'id_tai_khoan'  =>  $customer->id,
-                'don_gia_mua'   =>  $request->don_gia_khuyen_mai==null ? $request->don_gia_ban : $request->don_gia_khuyen_mai,
-                'ten_mon_an'    =>  $request->ten_request,
-                'hinh_anh'      =>  $request->hinh_anh,
+                'don_gia_mua'   =>  $don_gia_mua,
+                'ten_mon_an'    =>  $mon_an->ten_mon_an,
+                'hinh_anh'      =>  $mon_an->hinh_anh,
+                'so_luong_mua'  =>  $request->so_luong_mua,
             ]);
         };
 
@@ -148,6 +179,7 @@ class GioHangController extends Controller
                         ->count();
         return response()->json([
             'status'    =>  true,
+            'count'     => $count,
             'message'   =>  'Đã thêm vào giỏ hàng thành công!',
         ]);
     }

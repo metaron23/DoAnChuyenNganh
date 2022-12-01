@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Customer;
+
 use App\Http\Controllers\Controller;
 
 use App\Models\GioHang;
@@ -23,16 +24,15 @@ class CheckoutController extends Controller
         $data = GioHang::where('id_tai_khoan', $user->id)
                     ->whereNull('id_don_hang')
                     ->get();
-
-        $totalCart = 0;
-        foreach ($data as $key => $value) {
-            $totalCart += $value->don_gia_mua;
-        }
+        $invoice = DonHang::where('id_khach_hang', $user->id)
+                -> where('trang_thai_don_hang', '2')
+                -> orderBy('updated_at', 'DESC')
+                -> first();
 
         return response() -> json([
-            'user'      =>  $user,
-            'listCart'  =>  $data,
-            'totalCart' =>  $totalCart,
+            'user'          =>  $user,
+            'listCart'      =>  $data,
+            'recentInvoice' =>  $invoice,
         ]);
     }
 
@@ -44,8 +44,11 @@ class CheckoutController extends Controller
         $cart = GioHang::where('id_tai_khoan', $user->id)
                     ->whereNull('id_don_hang')
                     ->get();
-        if ($cart == null) {
-            toastr()->success('Vui lòng thêm món ăn vào giỏ hàng!');
+        if ($cart->count() == 0) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Vui lòng thêm món ăn vào giỏ hàng!',
+            ]);
         } else {
             $bill = DonHang::create([
                 'id_khach_hang'         => $user->id,
@@ -76,7 +79,10 @@ class CheckoutController extends Controller
             // }else{
             //     DB::rollBack();
             // }
-            toastr()->success('Tạo đơn hàng thành công!');
+            return response()->json([
+                'status' => true,
+                'message' => 'Tạo đơn hàng thành công!',
+            ]);
         }
         // } catch(Exception $e) {
         //     DB::rollBack();

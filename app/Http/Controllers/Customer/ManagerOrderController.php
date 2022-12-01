@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Customer;
+
 use App\Http\Controllers\Controller;
 
 use App\Models\DonHang;
@@ -32,13 +33,27 @@ class ManagerOrderController extends Controller
         ]);
     }
 
+    public function getDataID($id)
+    {
+        $user = Auth::guard('customer')->user();
+        $donHang = DonHang::where('id_khach_hang', $user->id)
+                        ->where('id', $id)
+                        ->first();
+        $food = GioHang::where('id_don_hang', $id)
+                    ->get();
+        $donHang['food'] = $food;
+        return response()->json([
+            'donHang' => $donHang,
+        ]);
+    }
+
     public function delete($id)
     {
         $user = Auth::guard('customer')->user();
 
         $donHang = DonHang::where('id_khach_hang', $user->id)
-                                ->where('id', $id)
-                                ->first();
+                            ->where('id', $id)
+                            ->first();
         $donHang->trang_thai_don_hang = 3;
         $donHang->save();
 

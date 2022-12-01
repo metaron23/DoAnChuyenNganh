@@ -34,35 +34,11 @@
         </div>
         @include('admin.share.bottom')
     </div>
-    <script src="\js\app.js"></script>
+    <script src="/js/app.js"></script>
     <script>
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
+        var check = {!! json_encode($checkMenu,JSON_HEX_TAG) !!};
     </script>
-    <script>
-        document.onreadystatechange = function() {
-            var state = document.readyState;
-            if (state == 'complete') {
-                document.getElementById('load').style.visibility = "hidden";
-                document.getElementById('contents').style.visibility = "visible";
-            }
-        }
-        $(document).ready(function() {
-            let check = {!! json_encode($checkMenu, JSON_HEX_TAG) !!};
-            let menuList = $('.sidebar-main .sidebar-list');
-            for (const child of menuList) {
-                if (child.getAttribute('data-id') == check) {
-                    child.classList.add('active_background_menu');
-                    $('.sidebar-main .sidebar-list[data-id="'+check+'"]>a i').addClass('active_color_menu');
-                    $('.sidebar-main .sidebar-list[data-id="'+check+'"]>a span').addClass('active_color_menu');
-                }
-            }
-        });
-    </script>
-
+    <script src="/js/admin/master.js"></script>
     @yield('js')
 </body>
 

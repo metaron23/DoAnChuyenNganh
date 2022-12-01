@@ -13,7 +13,7 @@ class OrderController extends Controller
     public function index()
     {
         $checkMenu = 4;
-        return view('admin.pages.don_hang.order', compact('checkMenu'));
+        return view('admin.pages.order.order', compact('checkMenu'));
     }
 
     public function changeToShipping($id)

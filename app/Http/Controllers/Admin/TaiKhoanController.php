@@ -17,7 +17,7 @@ class TaiKhoanController extends Controller
     public function index()
     {
         $checkMenu = 3;
-        return view('admin.pages.tai_khoan.index', compact('checkMenu'));
+        return view('admin.pages.account.account', compact('checkMenu'));
     }
 
     public function checkEmail(Request $request)
@@ -125,7 +125,7 @@ class TaiKhoanController extends Controller
 
     public function viewLogin()
     {
-        return view('admin.pages.auth.login');
+        return view('admin.pages.login.login');
     }
 
     public function actionLogin(Request $request)
@@ -140,8 +140,9 @@ class TaiKhoanController extends Controller
                 'status'=>false
             ]);
         } else {
+            toastr()->success('Đăng nhập thành công!');
             return response()->json([
-                'status'=>true
+                'status'=>true,
             ]);
         }
     }

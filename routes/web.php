@@ -98,8 +98,8 @@ Route::group(['prefix' => '/customer', 'middleware' => 'checkCustomerTaiKhoan'],
         Route::get('/', [\App\Http\Controllers\Customer\GioHangController::class, 'index']);
         Route::get('/remove/{id}', [\App\Http\Controllers\Customer\GioHangController::class, 'removeCart']);
         Route::post('/update', [\App\Http\Controllers\Customer\GioHangController::class, 'updateCart']);
-
         Route::post('/addCartFromDetail', [\App\Http\Controllers\Customer\GioHangController::class, 'addCartFromDetail']);
+        Route::get('/countCart', [\App\Http\Controllers\Customer\GioHangController::class, 'countCart']);
     });
     Route::group(['prefix' => '/checkout'], function () {
         Route::get('/', [\App\Http\Controllers\Customer\CheckoutController::class, 'index']);
@@ -109,6 +109,7 @@ Route::group(['prefix' => '/customer', 'middleware' => 'checkCustomerTaiKhoan'],
     Route::group(['prefix' => '/order'], function () {
         Route::get('/', [\App\Http\Controllers\Customer\ManagerOrderController::class, 'index']);
         Route::get('/get-data', [\App\Http\Controllers\Customer\ManagerOrderController::class, 'getData']);
+        Route::get('/get-data/{id}', [\App\Http\Controllers\Customer\ManagerOrderController::class, 'getDataID']);
         Route::get('/deleteOrder/{id}', [\App\Http\Controllers\Customer\ManagerOrderController::class, 'delete']);
     });
     Route::group(['prefix' => '/account'], function () {

@@ -1,7 +1,6 @@
 <div class="page-header">
     <div class="header-wrapper row m-0 justify-content-between">
         <div class="header-logo-wrapper img-20 p-0">
-            <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt=""></a></div>
             <div class="toggle-sidebar" checked="checked"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-align-center status_toggle middle sidebar-toggle">

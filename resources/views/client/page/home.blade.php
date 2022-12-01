@@ -12,7 +12,7 @@
                             <div class="slider__content">
                                 <div class="slider__inner">
                                     <h2>Chúng tôi là,</h2>
-                                    <h1 style="font-size: 120px;">"B-restaurant"</h1>
+                                    <h1>"B-restaurant"</h1>
                                     <div class="slider__btn">
                                         <a class="food__btn" href="/blog">Xem thêm</a>
                                     </div>
@@ -49,7 +49,8 @@
                             <div class="feature__details">
                                 <h4><a href="/gallery">Bữa sáng</a></h4>
                                 <h6>Tất cả các món đều đã sẵn sàng chờ bạn !</h6>
-                                <p>Đã có B-restaurant đây rồi, bạn sẽ không phải đau đầu suy nghĩ xem mỗi ngày phải ăn gì hoặc nấu món gì vừa ngon vừa dinh dưỡng. </p>
+                                <p>Đã có B-restaurant đây rồi, bạn sẽ không phải đau đầu suy nghĩ xem mỗi ngày phải ăn gì hoặc nấu món gì vừa ngon vừa
+                                    dinh dưỡng. </p>
                             </div>
                         </div>
                     </div>
@@ -67,7 +68,8 @@
                             <div class="feature__details">
                                 <h4><a href="/gallery">Buổi trưa</a></h4>
                                 <h6>Tất cả các món đều đã sẵn sàng chờ bạn !</h6>
-                                <p>Đã có B-restaurant đây rồi, bạn sẽ không phải đau đầu suy nghĩ xem mỗi ngày phải ăn gì hoặc nấu món gì vừa ngon vừa dinh dưỡng. </p>
+                                <p>Đã có B-restaurant đây rồi, bạn sẽ không phải đau đầu suy nghĩ xem mỗi ngày phải ăn gì hoặc nấu món gì vừa ngon vừa
+                                    dinh dưỡng. </p>
                             </div>
                         </div>
                     </div>
@@ -85,7 +87,8 @@
                             <div class="feature__details">
                                 <h4><a href="/gallery">Buổi tối</a></h4>
                                 <h6>Tất cả các món đều đã sẵn sàng chờ bạn !</h6>
-                                <p>Đã có B-restaurant đây rồi, bạn sẽ không phải đau đầu suy nghĩ xem mỗi ngày phải ăn gì hoặc nấu món gì vừa ngon vừa dinh dưỡng. </p>
+                                <p>Đã có B-restaurant đây rồi, bạn sẽ không phải đau đầu suy nghĩ xem mỗi ngày phải ăn gì hoặc nấu món gì vừa ngon vừa
+                                    dinh dưỡng. </p>
                             </div>
                         </div>
                     </div>
@@ -120,7 +123,7 @@
                             bạn chỉ có thể tìm thấy ở nhà hàng chúng tôi.
                         </p>
                         <div class="chooseus__btn">
-                            <a class="food__btn" href="#">Xem thêm</a>
+                            <a class="food__btn" href="/menu">Xem thêm</a>
                         </div>
                     </div>
                 </div>
@@ -151,26 +154,28 @@
                     <div class="col-md-6 col-sm-12 col-lg-3" style="height:500px">
                         <div class="food__offer text-center foo">
                             <div class="offer__thumb poss--relative">
-                                <a href="/menu/detailFood/{{ $value->id }}"><img src="{{ $value->hinh_anh }}" alt="offer images"></a>
+                                <a href="/menu/detailFood/{{ $value->id }}"><img class="offer__img" src="{{ $value->hinh_anh }}"
+                                        alt="offer images"></a>
                                 <div class="offer__product__prize">
                                     <span>{{ number_format($value->don_gia_khuyen_mai != null ? $value->don_gia_khuyen_mai : $value->don_gia_ban, 0) }}đ</span>
                                 </div>
                             </div>
                             <div class="offer__details">
-                                <div style="min-height: 166px">
-                                    <h2 style="height: 50px;display: -webkit-box;-webkit-line-clamp: 6;-webkit-box-orient: vertical;overflow: hidden;">
-                                        <a href="/menu/detailFood/{{ $value->id }}">{{ $value->ten_mon_an }}</a>
+                                <a href="/menu/detailFood/{{ $value->id }}">
+                                    <h2>
+                                        {{ $value->ten_mon_an }}
                                     </h2>
-                                    <div style="display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;">
-                                        {!! $value->mo_ta_ngan !!}
-                                    </div>
+                                </a>
+                                <div class="offer_des">
+                                    {!! $value->mo_ta_ngan !!}
                                 </div>
                                 <div class="offer__btn">
                                     @if (Auth::guard('customer')->check())
                                         <a class="food__btn grey--btn mid-height addToCart mt-4" href="" data-id={{ $value->id }}>Đặt
                                             món</a>
                                     @else
-                                        <a class="food__btn grey--btn mid-height accountbox-trigger mt-4" href="" data-id={{ $value->id }}>Đặt món</a>
+                                        <a class="food__btn grey--btn mid-height accountbox-trigger mt-2" href="" data-id={{ $value->id }}>Đặt
+                                            món</a>
                                     @endif
 
                                 </div>
@@ -181,7 +186,7 @@
                 <!-- Start Single Offer -->
             </div>
         </div>
-        <div style="text-align:center;font-size:18px;font-weight:600; border-bottom:1px solid #ccc">
+        <div style="text-align:center;font-size:18px;font-weight:600; border-bottom:1px solid #ccc; padding-bottom:16px">
             <a href="/menu">Xem tất cả các món</a>
         </div>
         <!-- Start Banner Area -->
@@ -582,9 +587,9 @@
                         <div class="testimonial-inner--3">
                             <div class="testimonial__inner">
                                 <div class="testimonial__content">
-                                   <p> Với món Salad đặc biệt sẽ mang tới lợi ích của việc ăn uống lành mạnh, kiểm soát được lượng calo in –
-                                    calo out là “chìa khóa”
-                                    giảm cân bền vững và duy trì cân nặng hợp lý.</p>
+                                    <p> Với món Salad đặc biệt sẽ mang tới lợi ích của việc ăn uống lành mạnh, kiểm soát được lượng calo in –
+                                        calo out là “chìa khóa”
+                                        giảm cân bền vững và duy trì cân nặng hợp lý.</p>
                                     <div class="test__info">
                                         <h4>Chuyên gia B-restaurant</h4>
                                         <span>Food Lovers</span>
@@ -684,93 +689,5 @@
 @endsection
 
 @section('js')
-    <script>
-        $(document).ready(function() {
-            $('#loginForm').submit(function(e) {
-                e.preventDefault();
-                let payLoad = window.getFormData($(this));
-                axios
-                    .post('/login', payLoad)
-                    .then((res) => {
-                        if (res.data.status == 1) {
-                            toastr.success('Đã login thành công!');
-                            setTimeout(() => {
-                                window.location.href = "/home";
-                            }, 1000);
-                        } else if (res.data.status == 2) {
-                            toastr.warning('Tài khoản chưa kích hoạt, vui lòng kiểm tra email!');
-                        } else {
-                            toastr.error('Đăng nhập thất bại! Kiểm tra email hoặc mật khẩu!');
-                        }
-                    })
-                    .catch((res) => {
-                        var listError = res.response.data.errors;
-                        $.each(listError, function(key, value) {
-                            toastr.error(value[0]);
-                        });
-                    });
-            });
-
-            function prepareEmail(email) {
-                if (email.indexOf("+") > 0) {
-                    let first = email.substr(0, email.indexOf("+"));
-                    let last = email.substr(email.indexOf('@'));
-                    email = first.concat(last);
-                }
-                if (email.indexOf(".") > 0) {
-                    let first = email.substr(0, email.indexOf("@"));
-                    let last = email.substr(email.indexOf("@"));
-                    first = first.split('.').join('');
-                    email = first.concat(last);
-                    console.log(email);
-                }
-                return email;
-            }
-
-            $('#registerForm').submit(function(e) {
-                e.preventDefault();
-                let payLoad = window.getFormData($(this));
-                payLoad['email'] = prepareEmail(Object.values(payLoad)[0]);
-                axios
-                    .post('/register', payLoad)
-                    .then((res) => {
-                        console.log(res);
-                        if (res.data.status) {
-                            $("#registerForm").trigger("reset");
-                            toastr.success('Đăng ký thành công! Vui lòng xem email để kích hoạt tài khoản');
-                        }
-                    })
-                    .catch((res) => {
-                        var listError = res.response.data.errors;
-                        $.each(listError, function(key, value) {
-                            toastr.error(value[0]);
-                        });
-                    });
-            });
-
-            $('#registerButton').click(function() {
-                window.location.href = "/register";
-            });
-            $('#loginButton').click(function() {
-                window.location.href = "/login";
-            });
-
-            $(".addToCart").click(function(e) {
-                e.preventDefault();
-                let id_mon_an = $(this).data('id');
-                axios
-                    .get('/customer/cart/add-to-cart/' + id_mon_an)
-                    .then((res) => {
-                        if (res.data.status) {
-                            toastr.success(res.data.message);
-                            $("#countCart").text(res.data.count);
-                        } else {
-                            toastr.error(res.data.message);
-                        }
-                    });
-            });
-
-
-        });
-    </script>
+    <script src="/js/client/home.js"></script>
 @endsection
