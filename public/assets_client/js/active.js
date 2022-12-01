@@ -58,7 +58,7 @@
           settings: {
             dots: false,
             slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToScroll: 1,  
             centerPadding: '0px',
             }
         },
@@ -101,7 +101,7 @@
               settings: {
                 dots: false,
                 slidesToShow: 1,
-                slidesToScroll: 1,
+                slidesToScroll: 1,  
                 centerPadding: '10px',
                 }
             },
@@ -167,7 +167,7 @@
               settings: {
                 dots: false,
                 slidesToShow: 1,
-                slidesToScroll: 1,
+                slidesToScroll: 1,  
                 centerPadding: '10px',
                 }
             },
@@ -189,7 +189,7 @@
 
 
 
-
+  
 /*=============  Testimonial Activation 03  ==============*/
 
 
@@ -307,7 +307,7 @@
       var filterValue = $(this).attr('data-filter');
       $grid.isotope({ filter: filterValue });
     });
-
+    
     // change is-checked class on buttons
     $('.portfolio__menu button').on('click', function () {
         $('.portfolio__menu button').removeClass('is-checked');
@@ -342,7 +342,7 @@
       var filterValue = $(this).attr('data-filter');
       $grid.isotope({ filter: filterValue });
     });
-
+    
     // change is-checked class on buttons
     $('.blog__masonry__menu button').on('click', function () {
         $('.blog__masonry__menu button').removeClass('is-checked');
@@ -370,7 +370,7 @@
 /*=============  Plus Minus Button ==============*/
 
 
-    $(".cart-plus-minus").append('');
+    $(".cart-plus-minus").append('<div class="dec qtybutton">-</i></div><div class="inc qtybutton">+</div>');
 
     $(".qtybutton").on("click", function () {
         var $button = $(this);
@@ -413,6 +413,7 @@
         $('span.accountbox-close-button').on('click', function(){
             container.removeClass('is-visible');
         });
+
   };
   loginRegisterForm();
 
@@ -511,7 +512,7 @@ stickyHeader();
         });
     }
     checkoutLoginToggle();
-
+    
 
 
 
@@ -531,7 +532,7 @@ stickyHeader();
         });
     }
     checkoutShippingToggle();
-
+    
 
 
 

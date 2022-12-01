@@ -88,10 +88,12 @@ class GioHangController extends Controller
     {
         $customer = Auth::guard('customer')->user();
 
-        GioHang::where('id', $id)
+        if (GioHang::where('id', $id)
                 ->where('id_tai_khoan', $customer->id)
                 ->whereNull('id_don_hang')
-                ->first()->delete();
+                ->first()->delete()) {
+            return response()->json(['status' => true]);
+        };
     }
 
     public function updateCart(UpdateCartRequest $request)

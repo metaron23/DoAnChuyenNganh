@@ -134,8 +134,12 @@ window.onload = function () {
         axios
             .get('/customer/cart/remove/' + id)
             .then((res) => {
-                toastr.success('Xoá thành công!');
-                getDataMiniCart();
+                if (res.data.status) {
+                    toastr.success('Xoá thành công!');
+                    getDataMiniCart();
+                } else {
+                    location.href = location.href;
+                }
             });
     });
     $('body').on('click', '.minicart-trigger', function () {

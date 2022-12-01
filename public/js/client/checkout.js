@@ -82,6 +82,7 @@ $(document).ready(function () {
             .then((res) => {
                 if (res.data.status) {
                     toastr.success(res.data.message);
+                    getData();
                 } else {
                     toastr.error(res.data.message);
                 }

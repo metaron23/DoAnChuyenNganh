@@ -39,7 +39,7 @@
                         <tbody>
                             @foreach ($hoaDon as $key => $value)
                                 <tr>
-                                    <th scope="row" class="img-30">{{ $key + 1 }}</th>
+                                    <th scope="row" class="img-30">{{ $hoaDon->currentPage()*4 - 4 + 1 + $key}}</th>
                                     <td>
                                         <button data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg" class="detailAccount"
                                             data-id="{{ $value->id }}"><i class="fa fa-eye"></i></button>
@@ -100,3 +100,4 @@
 @section('js')
     <script src="/js/admin/invoice.js"></script>
 @endsection
+

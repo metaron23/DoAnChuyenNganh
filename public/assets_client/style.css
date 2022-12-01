@@ -6284,7 +6284,7 @@ div.slide__pizza img {
 
 /*=======  Our Bradcaump Area =======*/
 .ht__bradcaump__wrap {
-    height: 260px;
+    height: 350px;
 }
 
 .ht__bradcaump__wrap .bradcaump__inner .bradcaump-title {
@@ -6508,6 +6508,7 @@ div.slide__pizza img {
 .food__pagination li a {
     position: relative;
     z-index: 1;
+    font-size: 14px;
 }
 
 .food__pagination li a::before {
@@ -6562,6 +6563,8 @@ div.slide__pizza img {
 .single__food__list .food__list__thumb a {
     display: block;
     position: relative;
+    width: 100%;
+    height:300px;
 }
 
 .single__food__list .food__list__thumb a::before {
@@ -6577,6 +6580,8 @@ div.slide__pizza img {
 
 .single__food__list .food__list__thumb a img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .single__food__list .food__list__inner {
@@ -6689,7 +6694,7 @@ div.slide__pizza img {
 
     .single__food__list .food__list__thumb {
         display: block;
-        width:100%;
+        width: 100%;
     }
 
     .single__food__list .food__list__inner {
@@ -6705,13 +6710,13 @@ div.slide__pizza img {
 
     .single__food__list .food__list__thumb {
         display: block;
-        width:100%;
+        width: 100%;
     }
 
     .single__food__list .food__list__inner {
         padding-bottom: 20px;
         padding-top: 20px;
-        width:100%;
+        width: 100%;
     }
 }
 
@@ -7550,7 +7555,7 @@ div.slide__pizza img {
     color: #d92d2d;
 }
 
-.serch__box input:focus{
+.serch__box input:focus {
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     border: 1px solid #d66636;
     outline: 1px solid #d66636;

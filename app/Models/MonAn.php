@@ -21,7 +21,6 @@ class MonAn extends Model
         'hinh_anh',
         'mo_ta_ngan',
         'mo_ta_chi_tiet',
-        'soluong',
         'id_danh_muc',
     ];
 }

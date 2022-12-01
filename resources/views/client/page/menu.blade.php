@@ -46,6 +46,13 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="food__pagination d-flex mt--30">
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="  col-lg-12">
                         <div class="fd__tab__content tab-content" id="nav-tabContent">
                             <!-- Start Single Content -->
@@ -56,13 +63,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ul class="food__pagination d-flex justify-content-center align-items-center mt--130">
 
-                        </ul>
-                    </div>
-                </div>
             </div>
         </section>
     </div>
