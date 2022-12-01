@@ -3,7 +3,6 @@ toastr.options = {
 };
 $(document).ready(function() {
     $('#loginForm').submit(function(e) {
-        console.log(1);
         e.preventDefault();
         isRememberMe();
         let payLoad = window.getFormData($(this));
